@@ -15,4 +15,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RpgChestMVC.Application\RpgChestMVC.Application.csproj" />
+    <ProjectReference Include="..\RpgChestMVC.Infrastructure\RpgChestMVC.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
