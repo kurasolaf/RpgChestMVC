@@ -8,4 +8,6 @@ namespace RpgChestMVC.web.Models
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
+
+  
 }

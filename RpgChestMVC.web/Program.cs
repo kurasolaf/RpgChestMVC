@@ -11,6 +11,18 @@ namespace RpgChestMVC.web
 {
     public class Program
     {
+        //////////////////////////////////////////////////
+        //TO DO:
+        //Add some VIEWS
+        //Add some MODELS
+        //Add some CONTROLLERS
+        //
+        //////////////////////////////////////////////////
+
+
+
+
+
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
