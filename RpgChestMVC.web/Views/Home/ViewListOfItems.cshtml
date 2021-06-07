@@ -1,0 +1,227 @@
+﻿@model IEnumerable<RpgChestMVC.web.Models.Item>
+
+@{
+    ViewData["Title"] = "ViewListOfItems";
+}
+
+<h1>ViewListOfItems</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemLvl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dmg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CritChance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CritMultiplier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CritBonusDmg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HpDrain)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bonus10ForKpPenetration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BonusSA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BonusWill)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BonusDmgVsSummons)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtraWeaponRange)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtraSocket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtraKpPenetrationForHammer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resistance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BonusDmgFromElemental)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LowerLvlReq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShieldPointDestroyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HpPerLvl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Concentration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BonusBasicStat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResistanceForAll)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BonusAbilitiesPoint)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhysicalAbsorption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MagicalAbsorption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhysicalReduction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MagicalReduction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtraGold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DailyRegenerationFor4Turns)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BonuSecondaryStat)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemLvl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dmg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CritChance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CritMultiplier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CritBonusDmg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HpDrain)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bonus10ForKpPenetration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BonusSA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BonusWill)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BonusDmgVsSummons)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExtraWeaponRange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExtraSocket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExtraKpPenetrationForHammer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resistance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BonusDmgFromElemental)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LowerLvlReq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShieldPointDestroyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HpPerLvl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Concentration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BonusBasicStat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResistanceForAll)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BonusAbilitiesPoint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicalAbsorption)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MagicalAbsorption)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicalReduction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MagicalReduction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExtraGold)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DailyRegenerationFor4Turns)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BonuSecondaryStat)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
+
     public enum GearItemChoose
     {
         Armor = 1,

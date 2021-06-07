@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    public abstract class FullItem
+    public class Item
     {
         public int Id { get; set; }
         public int ItemLvl { get; set; }
@@ -23,7 +24,7 @@ namespace RpgChestMVC.web.Models
         public int ExtraWeaponRange { get; set; }
         public int ExtraSocket { get; set; }
         public int ExtraKpPenetrationForHammer { get; set; }
-        public Resistance Resistance { get; set; }
+        public  Resistance Resistance { get; set; }
         public Resistance BonusDmgFromElemental { get; set; }
         public int LowerLvlReq { get; set; }
         public int ShieldPointDestroyer { get; set; }
