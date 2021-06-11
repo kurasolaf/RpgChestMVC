@@ -12,4 +12,10 @@ namespace RpgChestMVC.web.Models
         Will = 3
 
     }
+
+
+
+
+
+
 }

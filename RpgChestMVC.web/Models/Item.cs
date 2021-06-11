@@ -8,6 +8,7 @@ namespace RpgChestMVC.web.Models
 {
     public class Item
     {
+        // CHange Enums for structs
         public int Id { get; set; }
         public int ItemLvl { get; set; }
         public int Dmg { get; set; }
@@ -24,7 +25,7 @@ namespace RpgChestMVC.web.Models
         public int ExtraWeaponRange { get; set; }
         public int ExtraSocket { get; set; }
         public int ExtraKpPenetrationForHammer { get; set; }
-        public  Resistance Resistance { get; set; }
+        public Resistance Resistance { get; set; }
         public Resistance BonusDmgFromElemental { get; set; }
         public int LowerLvlReq { get; set; }
         public int ShieldPointDestroyer { get; set; }
