@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    public enum Resistance
+    public enum EnumResistance
     {
         Fire = 1,
         Water = 2,

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    public enum BasicStats
+    public enum EnumBasicStats
     {
         Strength = 1,
         Agility = 2,

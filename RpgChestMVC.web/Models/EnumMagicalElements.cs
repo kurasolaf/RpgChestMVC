@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    enum BasicElements
-        {
+    public enum EnumBasicElements
+    {
             Water = 1,
             Fire = 2,
             Wind = 3,
@@ -17,10 +17,10 @@ namespace RpgChestMVC.web.Models
             Curses = 8,
             Nature = 9,
             Necromancy = 10
-        }
+    }
 
-        enum AdvancedElements
-        {
+    public enum EnumAdvancedElements
+    {
             Ice = 1,
             Lava = 2,
             Iron = 3,
@@ -31,6 +31,6 @@ namespace RpgChestMVC.web.Models
             AdvancedElement9 = 9,
             AdvancedElement10 = 10,
 
-        }
+    }
 
 }

@@ -24,15 +24,6 @@ namespace RpgChestMVC.web.Controllers
         }
 
 
-        public IActionResult ViewListOfItems()
-        {
-            List<Item> Items = new List<Item>();
-            Items.Add(new Item(){Id = 1, Concentration = 6, ItemLvl = 5 });
-            Items.Add(new Item() { Id = 2, BonusWill = 4, ItemLvl = 3 });
-            Items.Add(new Item() { Id = 3, CritBonusDmg = 9, ItemLvl = 2 });
-
-            return View(Items);
-        }
 
         public IActionResult Privacy()
         {

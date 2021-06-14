@@ -5,17 +5,9 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    public enum EnumSecondaryStat
+    public struct Abilities
     {
-        Endurance = 1,
-        Reflex = 2,
-        Will = 3
-
+        public int ValueSa;
+        public EnumAbilities enumAbilities;
     }
-
-
-
-
-
-
 }

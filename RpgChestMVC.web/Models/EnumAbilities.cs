@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    public enum Abilities
+    public enum EnumAbilities
     {
         Alchemy = 1,
         Bluff = 2,
