@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    public class FullWeaponItem : ItemStatistics
-
+    interface IFullWeaponItem : IItemStats
     {
 
         public int Dmg { get; set; }
@@ -19,9 +18,7 @@ namespace RpgChestMVC.web.Models
         public int BonusDmgVsSummons { get; set; }
         public int ExtraWeaponRange { get; set; }
         public Resistance BonusDmgFromElemental { get; set; }
-
         public int ShieldPointDestroyer { get; set; }
         public int ExtraKpPenetrationForHammer { get; set; }
-
     }
 }

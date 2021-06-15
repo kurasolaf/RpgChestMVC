@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    public class FullArmorItem : ItemStatistics
-
+    interface IFullArmorItem : IItemStats
     {
+
         public int Kp { get; set; }
         public int Hp { get; set; }
         public Resistance Resistance { get; set; }
@@ -16,12 +16,7 @@ namespace RpgChestMVC.web.Models
         public int MagicalAbsorption { get; set; }
         public int PhysicalReduction { get; set; }
         public int MagicalReduction { get; set; }
-
+        public int HpPerLvl { get; set; }
         public int DailyRegenerationFor4Turns { get; set; }
-
-
-
-
-
     }
 }

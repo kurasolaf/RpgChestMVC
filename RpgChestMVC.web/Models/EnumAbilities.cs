@@ -15,7 +15,7 @@ namespace RpgChestMVC.web.Models
         Diplomacy = 6,
         Falsification = 7,
         Riding = 8,
-        Concentration = 9,
+        SilentCasting = 9,
         Stealing = 10,
         Healing = 11,
         Listening = 12,
@@ -63,5 +63,6 @@ namespace RpgChestMVC.web.Models
         Tailoring = 55,
         Skinning = 57,
         Aiming = 58
+
     }
 }
