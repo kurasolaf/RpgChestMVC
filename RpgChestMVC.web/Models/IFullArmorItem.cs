@@ -7,7 +7,7 @@ namespace RpgChestMVC.web.Models
 {
     interface IFullArmorItem : IItemStats
     {
-
+        public EnumArmorType ArmorType { get; set; }
         public int Kp { get; set; }
         public int Hp { get; set; }
         public Resistance Resistance { get; set; }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    interface IItemStats
+    interface IItemStats 
     {
 
         public string ItemName { get; set; }
