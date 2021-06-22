@@ -5,7 +5,13 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    interface IFullWeaponItem : IItemStats
+   
+
+
+
+
+
+    public class FullWeaponItem : ItemOptionalStats
     {
         public EnumWeaponType WeaponType { get; set; }
         public int Dmg { get; set; }
@@ -20,5 +26,7 @@ namespace RpgChestMVC.web.Models
         public Resistance BonusDmgFromElemental { get; set; }
         public int ShieldPointDestroyer { get; set; }
         public int ExtraKpPenetrationForHammer { get; set; }
+
+
     }
 }

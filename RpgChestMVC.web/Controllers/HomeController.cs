@@ -23,6 +23,11 @@ namespace RpgChestMVC.web.Controllers
             return View();
         }
 
+        public IActionResult ItemDetails()
+        {
+            return PartialView();
+        }
+
 
 
         public IActionResult Privacy()

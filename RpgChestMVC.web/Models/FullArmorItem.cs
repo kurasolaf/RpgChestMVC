@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    interface IFullArmorItem : IItemStats
+    public class FullArmorItem : ItemOptionalStats
     {
         public EnumArmorType ArmorType { get; set; }
         public int Kp { get; set; }
