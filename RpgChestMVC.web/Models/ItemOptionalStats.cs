@@ -5,8 +5,14 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    public abstract class ItemOptionalStats 
+    public abstract class ItemOptionalStats : IItemBasicStats
     {
+        // From Interface
+        public int Id { get; set; }
+        public int ItemLvl { get; set; }
+        public StructRarity Rarity { get; set; }
+        public int Concetration { get; set; }
+        // From Abstract Class
         public string ItemName { get; set; }
         public int ExtraSocket { get; set; }
         public int LowerLvlReq { get; set; }

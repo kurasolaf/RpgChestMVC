@@ -5,11 +5,6 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-   
-
-
-
-
 
     public class FullWeaponItem : ItemOptionalStats
     {

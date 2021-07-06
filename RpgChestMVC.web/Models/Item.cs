@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    public class Item : IItemBasicStats
+    public class Item : ItemOptionalStats
 
     {
 
