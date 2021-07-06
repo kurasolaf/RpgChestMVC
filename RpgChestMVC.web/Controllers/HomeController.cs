@@ -28,16 +28,21 @@ namespace RpgChestMVC.web.Controllers
             List<Item> items = new List<Item>();
             //Rarity określone "na sztywno" //
             StructRarity rarity = new StructRarity();
+
+            rarity.BonusMultiplier = 1;
             rarity.ItemRarity = EnumRarity.Common;
 
-            items.Add(new Item() { Id = 1, ItemLvl = 2, Concetration = 2, Rarity = EnumRarity.Common });
+            StructRarity rarity2;
+            rarity2.BonusMultiplier = 2;
+            rarity2.ItemRarity = EnumRarity.Legendary;
+
+            items.Add(new Item() { Id = 1, ItemLvl = 2,  Rarity = rarity, Concetration = 2,});
                 
-            items.Add(new Item() { Id = 2, ItemLvl = 4, Concetration = 4, Rarity = rarity});
-            items.Add(new Item() { Id = 3, ItemLvl = 6, Concetration = 6, Rarity = rarity});
-            items.Add(new Item() { Id = 4, ItemLvl = 8, Concetration = 8, Rarity = rarity});
+            items.Add(new Item() { Id = 2, ItemLvl = 4, Rarity = rarity2, Concetration = 4 });
+            items.Add(new Item() { Id = 3, ItemLvl = 6, Rarity = rarity, Concetration = 6 });
+            items.Add(new Item() { Id = 4, ItemLvl = 8, Rarity = rarity2, Concetration = 8 });
 
             return View(items);
-
 
         }
 
