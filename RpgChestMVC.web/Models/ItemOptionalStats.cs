@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    public abstract class ItemOptionalStats : IItemBasicStats
+    public abstract class ItemOptionalStats 
     {
         public string ItemName { get; set; }
         public int ExtraSocket { get; set; }
@@ -16,11 +16,8 @@ namespace RpgChestMVC.web.Models
         public int ExtraGold { get; set; }
         public string Description { get; set; }
         public SecondaryStat BonuSecondaryStat { get; set; }
-        // below from IItemBasicStats //
-        public int Id { get; set; }
-        public int ItemLvl { get; set; }
-        public StructRarity Rarity { get; set; }
-        public int Concetration { get; set; }
+        
+        
 
     }
 }

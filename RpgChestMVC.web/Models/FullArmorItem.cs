@@ -7,6 +7,9 @@ namespace RpgChestMVC.web.Models
 {
     public class FullArmorItem : ItemOptionalStats
     {
+
+
+        //Unique for Armors//
         public EnumArmorType ArmorType { get; set; }
         public int Kp { get; set; }
         public int Hp { get; set; }

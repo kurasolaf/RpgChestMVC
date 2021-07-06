@@ -8,7 +8,7 @@ namespace RpgChestMVC.web.Models
     public struct StructRarity
     {
         public int BonusMultiplier;
-        public EnumRarity Rarity;
+        public EnumRarity ItemRarity;
 
     }
 }

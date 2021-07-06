@@ -13,6 +13,9 @@ namespace RpgChestMVC.web.Models
 
     public class FullWeaponItem : ItemOptionalStats
     {
+
+
+        //Unique for Weapons//
         public EnumWeaponType WeaponType { get; set; }
         public int Dmg { get; set; }
         public int CritChance { get; set; }

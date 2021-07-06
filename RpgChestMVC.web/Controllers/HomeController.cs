@@ -23,9 +23,22 @@ namespace RpgChestMVC.web.Controllers
             return View();
         }
 
-        public IActionResult ItemDetails()
+        public IActionResult ViewListOfItems()
         {
-            return PartialView();
+            List<Item> items = new List<Item>();
+            //Rarity określone "na sztywno" //
+            StructRarity rarity = new StructRarity();
+            rarity.ItemRarity = EnumRarity.Common;
+
+            items.Add(new Item() { Id = 1, ItemLvl = 2, Concetration = 2, Rarity = EnumRarity.Common });
+                
+            items.Add(new Item() { Id = 2, ItemLvl = 4, Concetration = 4, Rarity = rarity});
+            items.Add(new Item() { Id = 3, ItemLvl = 6, Concetration = 6, Rarity = rarity});
+            items.Add(new Item() { Id = 4, ItemLvl = 8, Concetration = 8, Rarity = rarity});
+
+            return View(items);
+
+
         }
 
 
