@@ -14,7 +14,7 @@ namespace RpgChestMVC.web.Models
         public StructRarity Rarity { get; set; }
         public int Concetration { get; set; }
 
-
+ 
 
 
     }

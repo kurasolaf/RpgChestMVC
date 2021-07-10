@@ -30,5 +30,6 @@ namespace RpgChestMVC.web.Models
         OtherItem2 = 20
 
 
+
     }
 }
