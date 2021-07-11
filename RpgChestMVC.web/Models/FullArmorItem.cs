@@ -13,6 +13,8 @@ namespace RpgChestMVC.web.Models
         public EnumArmorType ArmorType { get; set; }
         public int Kp { get; set; }
         public int Hp { get; set; }
+
+
         public Resistance Resistance { get; set; }
         public int ResistanceForAll { get; set; }
         public int PhysicalAbsorption { get; set; }

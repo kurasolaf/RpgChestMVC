@@ -21,6 +21,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Concetration)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rarity.BonusMultiplier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rarity.ItemRarity)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -35,6 +41,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Concetration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rarity.BonusMultiplier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rarity.ItemRarity)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |

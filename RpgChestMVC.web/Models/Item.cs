@@ -5,17 +5,23 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Models
 {
-    public class Item : ItemOptionalStats
-
+    public class Item : IItemBasicStats
     {
-
         public int Id { get; set; }
         public int ItemLvl { get; set; }
         public StructRarity Rarity { get; set; }
         public int Concetration { get; set; }
 
- 
-
+        public Item(int Id, int ItemLvl, StructRarity Rarity, int Concetration)
+        {
+            this.Id = Id;
+            this.ItemLvl = ItemLvl;
+            this.Rarity = Rarity;
+            this.Concetration = Concetration;
+        }
 
     }
+
+
+
 }

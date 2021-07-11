@@ -16,6 +16,8 @@ namespace RpgChestMVC.web.Models
         public int CritChance { get; set; }
         public int CritMultiplier { get; set; }
         public int CritBonusDmg { get; set; }
+
+
         public int HpDrain { get; set; }
         public int Bonus10ForKpPenetration { get; set; }
         public int BonusSA { get; set; }
@@ -25,6 +27,14 @@ namespace RpgChestMVC.web.Models
         public int ShieldPointDestroyer { get; set; }
         public int ExtraKpPenetrationForHammer { get; set; }
 
-
+        public FullWeaponItem(EnumWeaponType weaponType, int dmg, int critChance, int critMultiplier, int critBonusDmg)
+        {
+            WeaponType = weaponType;
+            Dmg = dmg;
+            CritChance = critChance;
+            CritMultiplier = critMultiplier;
+            CritBonusDmg = critBonusDmg;
+            }
+        
     }
 }
