@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace RpgChestMVC.web.Models
 {
 
-    // Pamiętać o przeniesieniu do DOMAIN do modeli oraz zrobić klucze własne i obce
+    // Pamiętać o przeniesieniu do DOMAIN do modeli oraz zrobić klucze własne i obce w każdym dac ID
     public class Item : IItemBasicStats
     {
         public int Id { get; set; }
