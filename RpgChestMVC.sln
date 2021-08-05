@@ -15,13 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{6762E145-5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{AA1014A3-E0FA-4368-BEAD-A764E8619DAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgChestMVC.Application", "RpgChestMVC.Application\RpgChestMVC.Application.csproj", "{60F11FC3-8637-4D2E-AD6F-A0CA4AF4AD41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpgChestMVC.Application", "RpgChestMVC.Application\RpgChestMVC.Application.csproj", "{60F11FC3-8637-4D2E-AD6F-A0CA4AF4AD41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgChesrMVC.Domain", "RpgChesrMVC.Domain\RpgChesrMVC.Domain.csproj", "{B73EAFAD-142B-4964-B04A-7D9DE39B0D11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpgChesrMVC.Domain", "RpgChesrMVC.Domain\RpgChesrMVC.Domain.csproj", "{B73EAFAD-142B-4964-B04A-7D9DE39B0D11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgChestMVC.Infrastructure", "RpgChestMVC.Infrastructure\RpgChestMVC.Infrastructure.csproj", "{E0BB0095-0612-4C01-A162-160C846ABDF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpgChestMVC.Infrastructure", "RpgChestMVC.Infrastructure\RpgChestMVC.Infrastructure.csproj", "{E0BB0095-0612-4C01-A162-160C846ABDF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgChestMVC.Test", "RpgChestMVC.Test\RpgChestMVC.Test.csproj", "{D049F8D9-5DB7-49FD-A61C-7254CB90F45B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpgChestMVC.Test", "RpgChestMVC.Test\RpgChestMVC.Test.csproj", "{D049F8D9-5DB7-49FD-A61C-7254CB90F45B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{DC08038C-2724-4712-9A45-5CE3E2434FF2}"
 EndProject
@@ -30,6 +30,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{037ADF73-6146-49F7-9DF9-3AB7CDE73485}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{26F6268C-7517-4239-B5F3-85E338B47D59}"
+	ProjectSection(SolutionItems) = preProject
+		Testowa klasa.cs = Testowa klasa.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{30D1C12A-A2D1-4900-A3BD-8C6A4E1F1830}"
 EndProject
