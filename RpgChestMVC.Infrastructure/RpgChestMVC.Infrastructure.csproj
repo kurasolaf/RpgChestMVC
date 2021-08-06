@@ -17,4 +17,8 @@
     <ProjectReference Include="..\RpgChesrMVC.Domain\RpgChesrMVC.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
