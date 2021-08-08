@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public struct StructRarity
+    class BonusDmgFromElemental
     {
-
-        public int BonusMultiplier;
-        public EnumRarity ItemRarity;
+        public int Id { get; set; }
+        public StructResistance BonusDmgFromElementals { get; set; }
 
     }
 }
