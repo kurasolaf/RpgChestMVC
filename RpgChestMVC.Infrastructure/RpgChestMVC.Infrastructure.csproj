@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RpgChesrMVC.Domain\RpgChesrMVC.Domain.csproj" />
+    <ProjectReference Include="..\RpgChesrMVC.Domain\RpgChestMVC.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

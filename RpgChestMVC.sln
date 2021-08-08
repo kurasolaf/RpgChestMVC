@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{AA1014A3-E0FA-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpgChestMVC.Application", "RpgChestMVC.Application\RpgChestMVC.Application.csproj", "{60F11FC3-8637-4D2E-AD6F-A0CA4AF4AD41}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpgChesrMVC.Domain", "RpgChesrMVC.Domain\RpgChesrMVC.Domain.csproj", "{B73EAFAD-142B-4964-B04A-7D9DE39B0D11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpgChestMVC.Domain", "RpgChesrMVC.Domain\RpgChestMVC.Domain.csproj", "{B73EAFAD-142B-4964-B04A-7D9DE39B0D11}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpgChestMVC.Infrastructure", "RpgChestMVC.Infrastructure\RpgChestMVC.Infrastructure.csproj", "{E0BB0095-0612-4C01-A162-160C846ABDF1}"
 EndProject
