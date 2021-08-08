@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    class FullWeponType
+    public class FullWeponType
     {
         public int Id { get; set; }
         //Unique for Weapons//
-
-        public WeaponType WeaponType { get; set; }
+        public TypeOfWeapon TypeOfWeapon { get; set; }
         public int Dmg { get; set; }
         public int CritChance { get; set; }
         public int CritMultiplier { get; set; }
         public int CritBonusDmg { get; set; }
-
-
         public int HpDrain { get; set; }
         public int Bonus10ForKpPenetration { get; set; }
         public int BonusSA { get; set; }

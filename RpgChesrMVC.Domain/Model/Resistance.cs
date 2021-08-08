@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    class BonusDmgFromElemental
+    public class Resistance
     {
         public int Id { get; set; }
-        public StructResistance BonusDmgFromElementals { get; set; }
+        public StructResistance Resistances { get; set; }
+
 
     }
 }

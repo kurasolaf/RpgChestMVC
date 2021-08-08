@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public class TypeOfWeapon
+    public class BonusDmgFromElemental
     {
         public int Id { get; set; }
-        public EnumWeaponType EnumWeaponType { get; set; }
+        public StructResistance BonusDmgFromElementals { get; set; }
 
     }
 }
