@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public class TypeOfArmor
+    public class Type
     {
+        //problem to solve - connect to many
         public int Id { get; set; }
-        public EnumArmorType EnumArmorType { get; set; }
 
-        public virtual ICollection<FullArmorType> FullArmorTypes { get; set; }
+        /*
 
+        public int FullArmorTypeId { get; set; }
+        public int FullWeaponTypeId { get; set; }
+
+        
+        */
 
     }
 }

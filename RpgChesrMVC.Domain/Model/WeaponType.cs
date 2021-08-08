@@ -11,5 +11,7 @@ namespace RpgChestMVC.Domain.Model
         public int Id { get; set; }
         public EnumWeaponType EnumWeaponType { get; set; }
 
+        public virtual ICollection<FullWeaponType> FullWeaponTypes { get; set; }
+
     }
 }

@@ -9,13 +9,19 @@ namespace RpgChestMVC.Domain.Model
 {
    /**
    Add database connection between classes, Add context, Migration
+   !ADD CONNECTION FROM ARMOR & WEAPONS to ITEM
    **/
-    class Item
+    public class Item
     {
         public int Id { get; set; }
         public int ItemLvl { get; set; }
         public int Concentration { get; set; }
-        public Rarity Rarity { get; set; }
+        
+        //relations below ?
+        public int RarityId { get; set; }
+        public virtual Rarity Rarity { get; set; }
+
+
 
     }
 

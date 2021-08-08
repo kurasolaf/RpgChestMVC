@@ -11,6 +11,6 @@ namespace RpgChestMVC.Domain.Model
         public int Id { get; set; }
         public StructResistance Resistances { get; set; }
 
-
+        public virtual ICollection<FullArmorType> FullArmorTypes { get; set; }
     }
 }

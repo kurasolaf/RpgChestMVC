@@ -11,6 +11,6 @@ namespace RpgChestMVC.Domain.Model
         public int Id { get; set; }
         public StructRarity StructRarity { get; set; }
 
-
+        public virtual ICollection<Item> Items { get; set; }
     }
 }

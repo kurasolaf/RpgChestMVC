@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public class FullWeponType
+    public class FullWeaponType
     {
         public int Id { get; set; }
         //Unique for Weapons//
-        public TypeOfWeapon TypeOfWeapon { get; set; }
+        
         public int Dmg { get; set; }
         public int CritChance { get; set; }
         public int CritMultiplier { get; set; }
@@ -20,11 +20,14 @@ namespace RpgChestMVC.Domain.Model
         public int BonusSA { get; set; }
         public int BonusDmgVsSummons { get; set; }
         public int ExtraWeaponRange { get; set; }
-        public BonusDmgFromElemental BonusDmgFromElemental { get; set; }
+       
         public int ShieldPointDestroyer { get; set; }
         public int ExtraKpPenetrationForHammer { get; set; }
-
-
+        // connections below
+        public int TypeOfWeaponId { get; set; }
+        public int BonusDmgFromElementalId { get; set; }
+        public virtual TypeOfWeapon TypeOfWeapon { get; set; }
+        public virtual BonusDmgFromElemental BonusDmgFromElemental { get; set; }
 
     }
 }
