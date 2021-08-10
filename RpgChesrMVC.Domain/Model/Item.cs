@@ -21,6 +21,8 @@ namespace RpgChestMVC.Domain.Model
         public int RarityId { get; set; }
         public virtual Rarity Rarity { get; set; }
 
+        public virtual FullArmorType FullArmorType { get; set; }
+        public virtual FullWeaponType FullWeaponType { get; set; }
 
 
     }

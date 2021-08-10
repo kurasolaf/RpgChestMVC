@@ -26,5 +26,10 @@ namespace RpgChestMVC.Domain.Model
         public int ResistanceId { get; set; }
         public virtual TypeOfArmor TypeOfArmor { get; set; }
         public virtual Resistance Resistance { get; set; }
+
+        public ICollection<Item> Items { get; set; }
+
+
+
     }
 }

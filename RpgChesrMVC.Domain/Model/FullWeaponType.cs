@@ -29,5 +29,7 @@ namespace RpgChestMVC.Domain.Model
         public virtual TypeOfWeapon TypeOfWeapon { get; set; }
         public virtual BonusDmgFromElemental BonusDmgFromElemental { get; set; }
 
+        public ICollection<Item> Items { get; set; }
+
     }
 }
