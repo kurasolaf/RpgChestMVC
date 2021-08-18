@@ -29,6 +29,7 @@ namespace RpgChestMVC.Infrastructure
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            // connection one to one and many to many
         }
 
     }
