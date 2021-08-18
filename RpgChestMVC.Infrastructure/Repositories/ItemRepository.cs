@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Sources;
+using RpgChestMVC.Domain.Interfaces;
 using RpgChestMVC.Domain.Model;
 
 namespace RpgChestMVC.Infrastructure.Repositories
 {
-    public class ItemRepository
+    public class ItemRepository : IItemRepository
     {
 
 
@@ -41,9 +43,9 @@ namespace RpgChestMVC.Infrastructure.Repositories
             return item.Id;
         }
 
-        public IQueryable<Item> GetItemByRarityId(int RarityId)
+        public IQueryable<Item> GetItemByRarityId(int rarityId)
         {
-            var items = _context.Items.Where(i => i.RarityId == RarityId);
+            var items = _context.Items.Where(i => i.RarityId == rarityId);
             return items;
 
         }
@@ -56,5 +58,18 @@ namespace RpgChestMVC.Infrastructure.Repositories
         }
 
 
+        public Item GetItemByLvl(int itemLvl)
+        {
+            var item = _context.Items.FirstOrDefault(i => i.ItemLvl == itemLvl);
+            return item;
+        }
+
+        /*
+         * Add GetItemByTypeOfArmor method
+         * Add GetItemByTypeOfWeapon method
+         *
+         *
+         *
+        */ 
     }
 }
