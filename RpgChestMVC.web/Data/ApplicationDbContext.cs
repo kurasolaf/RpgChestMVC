@@ -6,6 +6,7 @@ using System.Text;
 
 namespace RpgChestMVC.web.Data
 {
+    /*
     public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -13,4 +14,5 @@ namespace RpgChestMVC.web.Data
         {
         }
     }
+    */
 }

@@ -11,6 +11,11 @@ namespace RpgChestMVC.Domain.Model
         //problem to solve - connect to many
         public int Id { get; set; }
 
+
+
+
+
+
         /*
 
         public int FullArmorTypeId { get; set; }
