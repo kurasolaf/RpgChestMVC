@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public struct StructRarity
+    public class BasicRarity
     {
 
         public int BonusMultiplier;

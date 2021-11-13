@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public enum EnumFullPartType
+    public class BasicResistance
     {
-
-
-
+        public int ValueR;
+        public EnumResistance Resist;
     }
+
+
 }
