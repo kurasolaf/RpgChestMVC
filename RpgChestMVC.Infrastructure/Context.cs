@@ -13,13 +13,20 @@ namespace RpgChestMVC.Infrastructure
     public class Context : IdentityDbContext
     {
 
-        public DbSet<Item> Items { get; set; }
+        public DbSet<BasicRarity> BasicRarities { get; set; }
+        public DbSet<BasicResistance> BasicResistances { get; set; }
+        public DbSet<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
         public DbSet<FullArmorType> FullArmorTypes { get; set; }    
         public DbSet<FullWeaponType> FullWeaponTypes { get; set; }
+
+        public DbSet<Item> Items { get; set; }
+
         public DbSet<Rarity> Rarities { get; set; }
+        public DbSet<Resistance> Resistances { get; set; }
+       
         public DbSet<TypeOfWeapon> TypeOfWeapons { get; set; }
         public DbSet<TypeOfArmor> TypeOfArmors { get; set; }
-        public DbSet<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
+        
 
         public Context(DbContextOptions options) : base(options)
         {

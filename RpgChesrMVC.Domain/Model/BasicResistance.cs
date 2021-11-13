@@ -8,6 +8,7 @@ namespace RpgChestMVC.Domain.Model
 {
     public class BasicResistance
     {
+        int Id;
         public int ValueR;
         public EnumResistance Resist;
     }

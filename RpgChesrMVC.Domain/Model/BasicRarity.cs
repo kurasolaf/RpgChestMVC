@@ -8,7 +8,7 @@ namespace RpgChestMVC.Domain.Model
 {
     public class BasicRarity
     {
-
+        int Id;
         public int BonusMultiplier;
         public EnumRarity ItemRarity;
 
