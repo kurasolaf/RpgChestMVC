@@ -20,7 +20,7 @@ namespace RpgChestMVC.Domain.Model
         //relations below ?
         public int RarityId { get; set; }
         public virtual Rarity Rarity { get; set; }
-
+        //one to many?
         public virtual FullArmorType FullArmorType { get; set; }
         public virtual FullWeaponType FullWeaponType { get; set; }
 
