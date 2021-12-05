@@ -12,5 +12,8 @@ namespace RpgChestMVC.Domain.Model
         public int BonusMultiplier;
         public EnumRarity ItemRarity;
 
+        public int RarityRef { get; set; }
+        public Rarity Rarity { get; set; }
+        // one to one - DONE
     }
 }

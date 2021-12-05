@@ -11,6 +11,15 @@ namespace RpgChestMVC.Domain.Model
         public int Id { get; set; }
         public BasicRarity BasicRarity { get; set; }
 
-        public virtual ICollection<Item> Items { get; set; }
+
+
+
+        public int ItemRef { get; set; }
+        public Item Item { get; set; }
+
+
+        // one to one - DONE
+
+        
     }
 }

@@ -30,6 +30,6 @@ namespace RpgChestMVC.Domain.Model
         public virtual BonusDmgFromElemental BonusDmgFromElemental { get; set; }
 
         public ICollection<Item> Items { get; set; }
-
+        //test comment
     }
 }
