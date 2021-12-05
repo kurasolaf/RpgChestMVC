@@ -24,12 +24,12 @@ namespace RpgChestMVC.Domain.Model
         public int ShieldPointDestroyer { get; set; }
         public int ExtraKpPenetrationForHammer { get; set; }
         // connections below
-        public int TypeOfWeaponId { get; set; }
-        public int BonusDmgFromElementalId { get; set; }
-        public virtual TypeOfWeapon TypeOfWeapon { get; set; }
-        public virtual BonusDmgFromElemental BonusDmgFromElemental { get; set; }
 
-        public ICollection<Item> Items { get; set; }
-        //test comment
+        public TypeOfWeapon TypeOfWeapon { get; set; }
+        // one to one - DONE
+        public BonusDmgFromElemental BonusDmgFromElemental { get; set; }
+        // one to MANY - UNDONE
+
+
     }
 }

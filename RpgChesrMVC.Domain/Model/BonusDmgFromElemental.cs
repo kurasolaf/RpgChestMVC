@@ -11,7 +11,8 @@ namespace RpgChestMVC.Domain.Model
         public int Id { get; set; }
         public BasicResistance BonusDmgFromElementals { get; set; }
 
-        public virtual ICollection<FullWeaponType> FullWeaponTypes { get; set; }
+        public int FullWeaponTypeRef { get; set; }
+        public FullWeaponType FullWeaponTypes { get; set; }
 
     }
 }
