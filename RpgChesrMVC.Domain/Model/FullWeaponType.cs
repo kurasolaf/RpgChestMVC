@@ -29,7 +29,7 @@ namespace RpgChestMVC.Domain.Model
 
 
         public virtual ICollection<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
-        // one to MANY - UNDONE
+        // one to MANY - DONE
 
 
     }

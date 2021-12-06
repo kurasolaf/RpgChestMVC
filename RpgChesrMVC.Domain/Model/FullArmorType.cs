@@ -21,12 +21,16 @@ namespace RpgChestMVC.Domain.Model
         public int MagicalReduction { get; set; }
         public int HpPerLvl { get; set; }
         public int DailyRegenerationFor4Turns { get; set; }
-        //connections below
-        public int TypeOfArmorId { get; set; }
-        public int ResistanceId { get; set; }
-        public virtual TypeOfArmor TypeOfArmor { get; set; }
-        public virtual Resistance Resistance { get; set; }
 
+
+
+        //connections below
+        // TO DO
+        public TypeOfArmor TypeOfArmor { get; set; }
+
+        // TO DO
+        public Resistance Resistance { get; set; }
+        // TO DO 
         public ICollection<Item> Items { get; set; }
 
 
