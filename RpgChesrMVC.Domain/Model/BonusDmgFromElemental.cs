@@ -9,10 +9,13 @@ namespace RpgChestMVC.Domain.Model
     public class BonusDmgFromElemental
     {
         public int Id { get; set; }
-        public BasicResistance BonusDmgFromElementals { get; set; }
 
-        public int FullWeaponTypeRef { get; set; }
-        public FullWeaponType FullWeaponTypes { get; set; }
+        public int ValueR;
+        public EnumResistance Resist;
+        
+        //connection below
+        public int FullWeaponTypeId{ get; set; }
+        public virtual FullWeaponType FullWeaponTypes { get; set; }
 
     }
 }

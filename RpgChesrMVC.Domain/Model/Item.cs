@@ -22,7 +22,7 @@ namespace RpgChestMVC.Domain.Model
         public virtual FullArmorType FullArmorType { get; set; }
         // one to one - UNDONE 
         public FullWeaponType FullWeaponType { get; set; }
-        // one to one - UNDONE (in progress)
+        // one to one - DONE
 
     }
 

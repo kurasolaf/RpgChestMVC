@@ -14,7 +14,6 @@ namespace RpgChestMVC.Infrastructure
     {
 
         public DbSet<BasicRarity> BasicRarities { get; set; }
-        public DbSet<BasicResistance> BasicResistances { get; set; }
         public DbSet<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
         public DbSet<FullArmorType> FullArmorTypes { get; set; }    
         public DbSet<FullWeaponType> FullWeaponTypes { get; set; }

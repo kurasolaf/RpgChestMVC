@@ -20,14 +20,15 @@ namespace RpgChestMVC.Domain.Model
         public int BonusSA { get; set; }
         public int BonusDmgVsSummons { get; set; }
         public int ExtraWeaponRange { get; set; }
-       
         public int ShieldPointDestroyer { get; set; }
         public int ExtraKpPenetrationForHammer { get; set; }
         // connections below
 
         public TypeOfWeapon TypeOfWeapon { get; set; }
         // one to one - DONE
-        public BonusDmgFromElemental BonusDmgFromElemental { get; set; }
+
+
+        public virtual ICollection<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
         // one to MANY - UNDONE
 
 
