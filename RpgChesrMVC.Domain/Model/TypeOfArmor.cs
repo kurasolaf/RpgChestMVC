@@ -10,8 +10,12 @@ namespace RpgChestMVC.Domain.Model
     {
         public int Id { get; set; }
         public EnumArmorType EnumArmorType { get; set; }
+        // connection below
+        
+        public int FullArmorTypeRef { get; set; }
+        public FullArmorType FullArmorType { get; set; }
+        // one to one - DONE
 
-        public virtual ICollection<FullArmorType> FullArmorTypes { get; set; }
 
 
     }

@@ -10,10 +10,8 @@ namespace RpgChestMVC.Domain.Model
     {
         //Unique for Armors//
         public int Id { get; set; }
-        
         public int Kp { get; set; }
         public int Hp { get; set; }
-        
         public int ResistanceForAll { get; set; }
         public int PhysicalAbsorption { get; set; }
         public int MagicalAbsorption { get; set; }
@@ -21,19 +19,18 @@ namespace RpgChestMVC.Domain.Model
         public int MagicalReduction { get; set; }
         public int HpPerLvl { get; set; }
         public int DailyRegenerationFor4Turns { get; set; }
-
-
-
         //connections below
-        // TO DO
+        public int ItemRef { get; set; }
+        public Item Item { get; set; }
+        //// One to One - DONE
+
+
+
         public TypeOfArmor TypeOfArmor { get; set; }
-
-        // TO DO
+        // One to One -DONE
+        public int ResistanceId { get; set; }
         public Resistance Resistance { get; set; }
-        // TO DO 
-        public ICollection<Item> Items { get; set; }
-
-
+        // One to Many - DONE
 
     }
 }

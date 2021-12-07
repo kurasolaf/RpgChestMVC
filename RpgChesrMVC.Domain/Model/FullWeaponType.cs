@@ -23,11 +23,13 @@ namespace RpgChestMVC.Domain.Model
         public int ShieldPointDestroyer { get; set; }
         public int ExtraKpPenetrationForHammer { get; set; }
         // connections below
-
-        public TypeOfWeapon TypeOfWeapon { get; set; }
+        public int ItemRef { get; set; }
+        public Item Item { get; set; }
         // one to one - DONE
 
 
+        public TypeOfWeapon TypeOfWeapon { get; set; }
+        // one to one - DONE
         public virtual ICollection<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
         // one to MANY - DONE
 
