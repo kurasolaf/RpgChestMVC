@@ -11,7 +11,7 @@ namespace RpgChestMVC.Domain.Model
         public int Id { get; set; }
 
         public int ValueR;
-        public EnumResistance Resist;
+        public EnumResistance DmgFromElement;
         
         //connection below
         public int FullWeaponTypeId{ get; set; }
