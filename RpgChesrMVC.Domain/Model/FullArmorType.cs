@@ -22,15 +22,15 @@ namespace RpgChestMVC.Domain.Model
         //connections below
         public int ItemRef { get; set; }
         public Item Item { get; set; }
-        //// One to One - DONE
+        //// One to One - UNDONE
 
 
 
         public TypeOfArmor TypeOfArmor { get; set; }
-        // One to One -DONE
+        // One to One -UNDONE
         public int ResistanceId { get; set; }
         public Resistance Resistance { get; set; }
-        // One to Many - DONE
+        // One to Many - UNDONE
 
     }
 }

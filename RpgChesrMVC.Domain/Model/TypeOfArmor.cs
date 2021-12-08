@@ -14,7 +14,7 @@ namespace RpgChestMVC.Domain.Model
         
         public int FullArmorTypeRef { get; set; }
         public FullArmorType FullArmorType { get; set; }
-        // one to one - DONE
+        // one to one - UNDONE
 
 
 
