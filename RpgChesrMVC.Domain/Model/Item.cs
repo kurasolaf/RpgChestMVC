@@ -23,9 +23,9 @@ namespace RpgChestMVC.Domain.Model
         
         // one to many - DONE
         public FullArmorType FullArmorType { get; set; }
-        // one to one - UNDONE 
+        // one to one - DONE 
         public FullWeaponType FullWeaponType { get; set; }
-        // one to one - UNDONE
+        // one to one - DONE
 
     }
 

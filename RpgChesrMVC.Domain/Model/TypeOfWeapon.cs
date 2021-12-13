@@ -14,6 +14,6 @@ namespace RpgChestMVC.Domain.Model
         // Connections below 
         public int FullWeaponTypesRef { get; set; }
         public FullWeaponType FullWeaponType { get; set; }
-        // connect - UNDONE
+        // connect - DONE
     }
 }
