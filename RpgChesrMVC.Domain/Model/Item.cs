@@ -9,7 +9,6 @@ namespace RpgChestMVC.Domain.Model
 {
    /**
    Add database connection between classes, Add context, Migration
-   !ADD CONNECTION FROM ARMOR & WEAPONS to ITEM
    **/
     public class Item
     {

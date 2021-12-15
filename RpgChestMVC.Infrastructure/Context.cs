@@ -35,7 +35,15 @@ namespace RpgChestMVC.Infrastructure
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            // connection one to one and many to many
+            // connection one to one 
+
+            builder.Entity<Item>()
+                .HasOne(a => a.FullArmorType).WithOne(b => b.Item)
+                .HasForeignKey<FullArmorType>(e => e.ItemRef);
+            builder.Entity<Item>()
+                .HasOne(a => a.FullWeaponType).WithOne(b => b.Item)
+                .HasForeignKey<FullWeaponType>(e => e.ItemRef);
+            // connection one to many
         }
 
     }
