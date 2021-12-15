@@ -17,14 +17,12 @@ namespace RpgChestMVC.Domain.Model
         public int Concentration { get; set; }
 
         // connections below
-        public int RarityId { get; set; }
-        public virtual Rarity Rarity { get; set; }
-        
-        // one to many - DONE
+        public  Rarity Rarity { get; set; }
+        // one to one - DONE / context - undone
         public FullArmorType FullArmorType { get; set; }
-        // one to one - DONE 
+        // one to one - DONE /context - undone
         public FullWeaponType FullWeaponType { get; set; }
-        // one to one - DONE
+        // one to one - DONE / context - undone
 
     }
 

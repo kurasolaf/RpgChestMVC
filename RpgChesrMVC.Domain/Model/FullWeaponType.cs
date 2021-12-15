@@ -25,13 +25,13 @@ namespace RpgChestMVC.Domain.Model
         // connections below
         public int ItemRef { get; set; }
         public Item Item { get; set; }
-        //// one to one - DONE
+        //// one to one - DONE / context - undone
 
 
         public TypeOfWeapon TypeOfWeapon { get; set; }
-        // one to one - DONE
+        // one to one - DONE / context - undone
         public virtual ICollection<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
-        // one to MANY - DONE
+        // one to MANY - DONE / context - undone
 
 
     }

@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RpgChestMVC.web.Data;
+using RpgChestMVC.web;
 using System;
 using System.Collections.Generic;
 using System.Linq;

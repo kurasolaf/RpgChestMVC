@@ -43,7 +43,11 @@ namespace RpgChestMVC.Infrastructure
             builder.Entity<Item>()
                 .HasOne(a => a.FullWeaponType).WithOne(b => b.Item)
                 .HasForeignKey<FullWeaponType>(e => e.ItemRef);
-            // connection one to many
+
+
+            /* connection one to many
+             ADD: one Item to many Rarity
+            */
         }
 
     }
