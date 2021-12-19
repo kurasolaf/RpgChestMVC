@@ -40,6 +40,7 @@ namespace RpgChestMVC.Infrastructure
             builder.Entity<Item>()
                 .HasOne(a => a.FullArmorType).WithOne(b => b.Item)
                 .HasForeignKey<FullArmorType>(e => e.ItemRef);
+
             builder.Entity<Item>()
                 .HasOne(a => a.FullWeaponType).WithOne(b => b.Item)
                 .HasForeignKey<FullWeaponType>(e => e.ItemRef);

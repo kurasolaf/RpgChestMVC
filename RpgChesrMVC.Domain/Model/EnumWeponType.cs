@@ -11,10 +11,10 @@ namespace RpgChestMVC.Domain.Model
         LongBow = 1,
         Bow = 2,
         ElvenBow = 3,
-        Crossbow = 4,
-        OneHSword = 5,
-        MagicalStaff = 6,
-        HeavyCrossbow = 7,
+        MagicalStaff = 4,
+        HeavyCrossbow = 5,
+        Crossbow = 6,
+        OneHSword = 7,
         TwoHandSword = 8,
         OneHandAxe = 9,
         TwoHandAxe = 10,
@@ -23,10 +23,11 @@ namespace RpgChestMVC.Domain.Model
         OneHandMace = 13,
         TwoHandMace = 14,
         Dagger = 15,
-        Spear = 16,
-        Halberd = 17,
-        Pike = 18,
-        Sling = 19
+        LongDagger = 16,
+        Spear = 17,
+        Halberd = 18,
+        Pike = 19,
+        Sling = 20
 
     }
 }
