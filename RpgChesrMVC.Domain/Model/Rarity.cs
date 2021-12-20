@@ -15,9 +15,8 @@ namespace RpgChestMVC.Domain.Model
         public EnumRarity ItemRarity;
 
         //connections below
-        public int ItemRef { get; set; }
-        public Item Item { get; set; }
-        // one to one - DONE
+        public virtual  ICollection<Item> Items { get; set; }
+        // many to one - DONE
 
         
     }

@@ -14,7 +14,7 @@ namespace RpgChestMVC.Domain.Model
         public EnumResistance DmgFromElement;
         
         //connection below
-        public int FullWeaponTypeId{ get; set; }
+        public int FullWeaponTypeId { get; set; }
         public virtual FullWeaponType FullWeaponTypes { get; set; }
         // Many to one (DONE) / context - undone
     }

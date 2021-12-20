@@ -26,8 +26,7 @@ namespace RpgChestMVC.Domain.Model
         public int ItemRef { get; set; }
         public Item Item { get; set; }
         //// one to one - DONE / context - undone
-
-
+        
         public TypeOfWeapon TypeOfWeapon { get; set; }
         // one to one - DONE / context - undone
         public virtual ICollection<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }

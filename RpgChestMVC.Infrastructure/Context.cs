@@ -47,6 +47,12 @@ namespace RpgChestMVC.Infrastructure
 
 
             /* connection one to many
+
+
+
+
+
+
              ADD: one Item to many Rarity
             */
         }
