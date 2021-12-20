@@ -47,14 +47,14 @@ namespace RpgChestMVC.Infrastructure
 
 
             /* connection one to many
-
-
-
-
-
-
-             ADD: one Item to many Rarity
+            ADD: one Item to many Rarity
             */
+
+           // builder.Entity<Item>()
+            //    .HasOne(a => a.Rarity ).WithMany(b => b.Items)
+
+
+
         }
 
     }
