@@ -50,8 +50,15 @@ namespace RpgChestMVC.Infrastructure
             ADD: one Item to many Rarity
             */
 
-           // builder.Entity<Item>()
-            //    .HasOne(a => a.Rarity ).WithMany(b => b.Items)
+            builder.Entity<Item>()
+                .HasOne<Rarity>(a => a.Rarity).WithMany(b => b.Items)
+                .HasForeignKey(c => c.RarityId);
+
+            // co oba są poprawne. górny zrobiony na wzór, dolny to proba zrozumiania, jak to działa.
+
+            builder.Entity<Rarity>()
+                .HasMany<Item>(a => a.Items).WithOne(b => b.Rarity)
+                .HasForeignKey(c => c.RarityId);
 
 
 
