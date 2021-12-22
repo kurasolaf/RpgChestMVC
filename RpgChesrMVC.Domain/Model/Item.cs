@@ -8,7 +8,12 @@ using System.Threading.Tasks;
 namespace RpgChestMVC.Domain.Model
 {
    /**
-   Add database connection between classes, Add context, Migration
+   GLOBAL TO DO: 
+    1- fix Migration
+    2- add models
+        2.1- Spells
+
+   TO DO LISTS to COMPLETE in: Item Repository, 
    **/
     public class Item
     {
