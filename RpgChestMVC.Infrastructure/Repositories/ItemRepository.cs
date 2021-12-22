@@ -15,10 +15,6 @@ namespace RpgChestMVC.Infrastructure.Repositories
         // TODO  // Add GetItemByTypeOfArmor method // Add GetItemByTypeOfWeapon method // Add GetItemBy some specific stat?
         
 
-
-
-
-
         private readonly Context _context;
 
         public ItemRepository(Context context)
@@ -37,8 +33,6 @@ namespace RpgChestMVC.Infrastructure.Repositories
                 _context.SaveChanges();
 
             }
-
-
 
         }
 
@@ -71,10 +65,10 @@ namespace RpgChestMVC.Infrastructure.Repositories
         }
 
 
-        public Item GetItemByLvl(int itemLvl)
+        public IQueryable<Item> GetItemByLvl(int itemLvl)
         {
-            var item = _context.Items.FirstOrDefault(i => i.ItemLvl == itemLvl);
-            return item;
+            var items = _context.Items.Where(i => i.ItemLvl == itemLvl);
+            return items;
         }
 
 

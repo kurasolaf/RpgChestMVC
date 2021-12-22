@@ -18,7 +18,7 @@ namespace RpgChestMVC.Domain.Interfaces
         
         Item GetItemById(int itemId);
         
-        Item GetItemByLvl(int itemLvl); 
+        IQueryable<Item> GetItemByLvl(int itemLvl);
 
 /*
  * Add GetItemByTypeOfArmor method
