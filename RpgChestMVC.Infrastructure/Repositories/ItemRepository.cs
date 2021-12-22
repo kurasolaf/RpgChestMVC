@@ -11,6 +11,12 @@ namespace RpgChestMVC.Infrastructure.Repositories
 {
     public class ItemRepository : IItemRepository
     {
+        // To do List:
+        // TODO  // Add GetItemByTypeOfArmor method // Add GetItemByTypeOfWeapon method // Add GetItemBy some specific stat?
+        
+
+
+
 
 
         private readonly Context _context;
@@ -71,12 +77,6 @@ namespace RpgChestMVC.Infrastructure.Repositories
             return item;
         }
 
-        /*
-         * Add GetItemByTypeOfArmor method
-         * Add GetItemByTypeOfWeapon method
-         *
-         *
-         *
-        */ 
+
     }
 }
