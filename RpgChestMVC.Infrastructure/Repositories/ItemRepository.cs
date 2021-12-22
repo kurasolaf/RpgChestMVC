@@ -50,6 +50,13 @@ namespace RpgChestMVC.Infrastructure.Repositories
 
         }
 
+        public IQueryable<Item> GetItemByConcentration(int concentration )
+        {
+            var items = _context.Items.Where(i => i.Concentration == concentration );
+            return items;
+
+        }
+
 
         public Item GetItemById(int itemId)
         {
