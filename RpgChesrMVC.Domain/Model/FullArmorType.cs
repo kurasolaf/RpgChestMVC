@@ -22,12 +22,12 @@ namespace RpgChestMVC.Domain.Model
         //connections below
         public int ItemRef { get; set; }
         public Item Item { get; set; }
-        //// One to One - DONE / context - undone
+        //// One to One - DONE / context - DONE
         public TypeOfArmor TypeOfArmor { get; set; }
-        // One to One - DONE / context - undone
+        // One to One - DONE / context - DONE
 
         public virtual ICollection<Resistance> Resistances { get; set; }
-        // One to Many - DONE / context - undone
+        // One to Many - DONE / context - DONE
 
     }
 }

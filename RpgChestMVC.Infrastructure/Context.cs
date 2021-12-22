@@ -45,6 +45,15 @@ namespace RpgChestMVC.Infrastructure
                 .HasOne(a => a.FullWeaponType).WithOne(b => b.Item)
                 .HasForeignKey<FullWeaponType>(e => e.ItemRef);
 
+            builder.Entity<FullArmorType>()
+                .HasOne(a => a.TypeOfArmor).WithOne(b => b.FullArmorType)
+                .HasForeignKey<TypeOfArmor>(e => e.FullArmorTypeRef);
+
+            builder.Entity<FullWeaponType>()
+                .HasOne(a => a.TypeOfWeapon).WithOne(b => b.FullWeaponType)
+                .HasForeignKey<TypeOfWeapon>(e => e.FullWeaponTypesRef);
+
+            
 
             /* connection one to many
             ADD: one Item to many Rarity
@@ -54,12 +63,9 @@ namespace RpgChestMVC.Infrastructure
                 .HasOne<Rarity>(a => a.Rarity).WithMany(b => b.Items)
                 .HasForeignKey(c => c.RarityId);
 
-            // co oba są poprawne. górny zrobiony na wzór, dolny to proba zrozumiania, jak to działa.
-
-            builder.Entity<Rarity>()
-                .HasMany<Item>(a => a.Items).WithOne(b => b.Rarity)
-                .HasForeignKey(c => c.RarityId);
-
+            builder.Entity<Resistance>()
+                .HasOne<FullArmorType>(a => a.FullArmorType).WithMany(b => b.Resistances)
+                .HasForeignKey(e => e.FullArmorTypeId);
 
 
         }

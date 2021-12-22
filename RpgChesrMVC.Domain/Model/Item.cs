@@ -19,13 +19,13 @@ namespace RpgChestMVC.Domain.Model
         // connections below
         public int RarityId { get; set; }
         public virtual Rarity Rarity { get; set; }
-        // one to many - DONE / context - undone
+        // one to many - DONE / context - DONE
 
 
         public FullArmorType FullArmorType { get; set; }
-        // one to one - DONE /context - undone
+        // one to one - DONE /context - DONE
         public FullWeaponType FullWeaponType { get; set; }
-        // one to one - DONE / context - undone
+        // one to one - DONE / context - DONE
 
     }
 
