@@ -30,7 +30,7 @@ namespace RpgChestMVC.Domain.Model
         public TypeOfWeapon TypeOfWeapon { get; set; }
         // one to one - DONE / context - DONE
         public virtual ICollection<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
-        // one to MANY - DONE / context - undone
+        // one to MANY - DONE / context - DONE
 
 
     }

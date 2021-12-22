@@ -67,6 +67,9 @@ namespace RpgChestMVC.Infrastructure
                 .HasOne<FullArmorType>(a => a.FullArmorType).WithMany(b => b.Resistances)
                 .HasForeignKey(e => e.FullArmorTypeId);
 
+            builder.Entity<BonusDmgFromElemental>()
+                .HasOne<FullWeaponType>(a => a.FullWeaponType).WithMany(b => b.BonusDmgFromElementals)
+                .HasForeignKey(e => e.FullWeaponTypeId);
 
         }
 

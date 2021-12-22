@@ -15,7 +15,7 @@ namespace RpgChestMVC.Domain.Model
         
         //connection below
         public int FullWeaponTypeId { get; set; }
-        public virtual FullWeaponType FullWeaponTypes { get; set; }
-        // Many to one (DONE) / context - undone
+        public virtual FullWeaponType FullWeaponType { get; set; }
+        // Many to one (DONE) / context - DONE
     }
 }
