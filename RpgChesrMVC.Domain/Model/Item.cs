@@ -12,8 +12,7 @@ namespace RpgChestMVC.Domain.Model
     1- fix Migration
     2- add models
         2.1- Spells
-
-   TO DO LISTS to COMPLETE in: Item Repository, 
+      TO DO LISTS to COMPLETE in: Item Repository, 
    **/
     public class Item
     {
