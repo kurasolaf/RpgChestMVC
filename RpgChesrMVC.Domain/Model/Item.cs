@@ -9,7 +9,7 @@ namespace RpgChestMVC.Domain.Model
 {
    /**
    GLOBAL TO DO: 
-    1- fix Migration
+    1- 
     2- add models
         2.1- Spells
       TO DO LISTS to COMPLETE in: Item Repository, 
