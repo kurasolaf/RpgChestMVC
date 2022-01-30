@@ -13,7 +13,18 @@ namespace RpgChestMVC.Application.ViewModels.Item
         
         public int Id { get; set; }
         public int ItemLvl { get; set; }
-        // typ itemu?
-        //rarity??
+
+        public RarityForItemVm Rarity { get; set; }
+
+
+
+        // jedno z poniższych w przypadku nulla ma się nie wyświetlać.
+        public FullArmorTypeForItemListVm ArmorType { get; set; }
+
+        public FullWeaponTypeForItemListVm WeaponType { get; set; }
+
+
+        
+     
     }
 }
