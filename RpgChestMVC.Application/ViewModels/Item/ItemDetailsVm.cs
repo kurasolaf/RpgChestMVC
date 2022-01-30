@@ -8,6 +8,9 @@ namespace RpgChestMVC.Application.ViewModels.Item
 {
     class ItemDetailsVm
     {
+
+        //oddzielne 'CreateMap' dla każdego dto
+
         public int Id { get; set; }
         public int ItemLvl { get; set; }
         public int Concentration { get; set; }
