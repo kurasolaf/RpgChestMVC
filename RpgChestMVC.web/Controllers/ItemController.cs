@@ -18,7 +18,7 @@ namespace RpgChestMVC.web.Controllers
             //// przekazanie filtrów do serwisu
             //// SERWIS: przygotowuje dane
             //// SERWIS: zwraca dane do controlera w odpowiednim formacie
-            ///
+            
 
             var model = itemService.GetAllItemsForList();
             return View(model);
