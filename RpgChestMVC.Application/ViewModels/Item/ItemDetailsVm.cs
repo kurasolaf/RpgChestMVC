@@ -15,15 +15,15 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public int ItemLvl { get; set; }
         public int Concentration { get; set; }
 
+        public RarityForItemVm Rarity { get; set; }
+
+        public FullArmorTypeForItemDetailsVm FullArmorType { get; set; }
 
 
-        /*
-        public Rarity rarity { get; set; }
-
-        public FullArmorType FullArmorType { get; set; }
+        public FullWeaponTypeForItemDetailsVm FullWeaponType { get; set; }
       
-        public FullWeaponType FullWeaponType { get; set; }
-        */
+        
+        
 
     }
 }

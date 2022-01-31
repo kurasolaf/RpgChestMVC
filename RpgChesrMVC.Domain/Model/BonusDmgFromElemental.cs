@@ -10,9 +10,9 @@ namespace RpgChestMVC.Domain.Model
     {
         public int Id { get; set; }
 
-        public int ValueR;
-        public EnumResistance DmgFromElement;
-        
+        public int ValueR { get; set; }
+        public EnumResistance DmgFromElement { get; set; }
+
         //connection below
         public int FullWeaponTypeId { get; set; }
         public virtual FullWeaponType FullWeaponType { get; set; }

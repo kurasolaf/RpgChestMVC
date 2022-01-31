@@ -11,8 +11,8 @@ namespace RpgChestMVC.Domain.Model
     {
         public int Id { get; set; }
 
-        public int BonusMultiplier;
-        public EnumRarity ItemRarity;
+        public int BonusMultiplier { get; set; }
+        public EnumRarity ItemRarity { get; set; }
 
         //connections below
         public virtual  ICollection<Item> Items { get; set; }

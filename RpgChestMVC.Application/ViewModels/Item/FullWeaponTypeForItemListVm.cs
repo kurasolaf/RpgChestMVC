@@ -10,7 +10,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
     {
         public int Id { get; set; }
 
-        public TypeOfWeaponForFullWeaponTypeForItemListVm TypeOfWeapon { get; set; }
+        public TypeOfWeaponForItemListVm TypeOfWeapon { get; set; }
 
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
-   public class TypeOfArmorForFullArmorTypeForItemListVm
+    public class ResistanceForItemDetails
     {
         public int Id { get; set; }
-        public string EnumArmorType { get; set; }
-
+        public int ValueR { get; set; }
+        public string BasicResistances { get; set; }
     }
 }

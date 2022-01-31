@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
-    public class TypeOfWeaponForFullWeaponTypeForItemListVm
+    public class TypeOfWeaponForItemListVm
     {
         public int Id { get; set; }
 
         public string EnumWeaponType { get; set; }
-
 
 
     }
