@@ -12,6 +12,9 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public int ItemLvl { get; set; }
         // typ itemu?
         // rarity??
+        /* co ma się wyświetlać pod tworzenie nowego przedmiotu? 
+         * dodać możliwość zmiany wartości recznie? 
+         losowanie pojedynczych własciwosci? */
 
     }
 }

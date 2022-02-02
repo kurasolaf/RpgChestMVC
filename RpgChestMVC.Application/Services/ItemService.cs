@@ -8,10 +8,11 @@ namespace RpgChestMVC.Application.Services
 {
     class ItemService
     {
-        //stworzenie Losowości
+        //stworzenie Losowości 1-8/1-10/1-21/1-500 / 
         //składanie przedmiotów pośrednich w cały ITEM
         //// skladanie Armorów
         //// skladanie Weaponów
+        //// składanie Itemu
         
 
 
