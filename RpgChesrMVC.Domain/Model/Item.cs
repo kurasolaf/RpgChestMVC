@@ -19,6 +19,7 @@ namespace RpgChestMVC.Domain.Model
         public int Id { get; set; }
         public int ItemLvl { get; set; }
         public int Concentration { get; set; }
+        public int NumberOfSockets { get; set; }
 
         // connections below
         public int RarityId { get; set; }

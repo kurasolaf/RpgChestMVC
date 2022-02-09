@@ -13,7 +13,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
         
         public int Id { get; set; }
         public int ItemLvl { get; set; }
-
+        public int NumberOfSockets { get; set; }
         public RarityForItemVm Rarity { get; set; }
 
 
