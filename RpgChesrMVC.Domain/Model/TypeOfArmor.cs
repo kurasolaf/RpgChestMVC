@@ -8,6 +8,8 @@ namespace RpgChestMVC.Domain.Model
 {
     public class TypeOfArmor
     {
+
+        
         public int Id { get; set; }
         public EnumArmorType EnumArmorType { get; set; }
         // connection below
@@ -16,7 +18,7 @@ namespace RpgChestMVC.Domain.Model
         public FullArmorType FullArmorType { get; set; }
         // one to one - DONE / context - DONE
 
-
+       
 
     }
 }

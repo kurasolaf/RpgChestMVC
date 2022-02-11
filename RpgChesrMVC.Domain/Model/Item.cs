@@ -16,6 +16,9 @@ namespace RpgChestMVC.Domain.Model
    **/
     public class Item
     {
+
+        //to do: add secondary stats, add connections
+        //to do: add basic stats, add connections
         public int Id { get; set; }
         public int ItemLvl { get; set; }
         public int Concentration { get; set; }
