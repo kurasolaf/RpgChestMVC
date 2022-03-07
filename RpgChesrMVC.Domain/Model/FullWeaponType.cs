@@ -11,7 +11,7 @@ namespace RpgChestMVC.Domain.Model
         public int Id { get; set; }
         //Unique for Weapons//
         
-        public int Dmg { get; set; }
+        
         public int CritChance { get; set; }
         public int CritMultiplier { get; set; }
         public int CritBonusDmg { get; set; }
@@ -22,7 +22,17 @@ namespace RpgChestMVC.Domain.Model
         public int ExtraWeaponRange { get; set; }
         public int ShieldPointDestroyer { get; set; }
         public int ExtraKpPenetrationForHammer { get; set; }
+        
+
+
         // connections below
+
+        public int BonusDmgRef { get; set; }
+        public BonusDmg BonusDmg { get; set; }
+        public int DmgRef { get; set; }
+        public Dmg Dmg { get; set; }
+        //// one to one - DONE / context 
+
         public int ItemRef { get; set; }
         public Item Item { get; set; }
         //// one to one - DONE / context - DONE
