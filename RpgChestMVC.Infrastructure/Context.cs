@@ -25,6 +25,10 @@ namespace RpgChestMVC.Infrastructure
        
         public DbSet<TypeOfWeapon> TypeOfWeapons { get; set; }
         public DbSet<TypeOfArmor> TypeOfArmors { get; set; }
+
+        public DbSet<Dmg> Dmgs { get; set; }
+
+        public DbSet<BonusDmg> BonusDmgs { get; set; }
         
 
         public Context(DbContextOptions options) : base(options)
@@ -53,6 +57,9 @@ namespace RpgChestMVC.Infrastructure
                 .HasOne(a => a.TypeOfWeapon).WithOne(b => b.FullWeaponType)
                 .HasForeignKey<TypeOfWeapon>(e => e.FullWeaponTypesRef);
 
+            builder.Entity<FullWeaponType>()
+                .HasOne(a => a.Dmg).WithOne(b => b.FullWeaponType)
+                .HasForeignKey<Dmg>(c => c.FullWeaponTypeRef);
             
 
             /* connection one to many
@@ -70,6 +77,12 @@ namespace RpgChestMVC.Infrastructure
             builder.Entity<BonusDmgFromElemental>()
                 .HasOne<FullWeaponType>(a => a.FullWeaponType).WithMany(b => b.BonusDmgFromElementals)
                 .HasForeignKey(e => e.FullWeaponTypeId);
+
+            builder.Entity<BonusDmg>()
+                .HasOne<FullWeaponType>(a => a.FullWeaponType).WithMany(b => b.BonusDmgs)
+                .HasForeignKey(e => e.FullWeaponTypeId);
+
+
 
         }
 

@@ -18,8 +18,9 @@ namespace RpgChestMVC.Domain.Model
         public int DmgDice { get; set; }
 
         //connections below
-        public virtual ICollection<FullWeaponType> FullWeaponTypes { get; set; }
-        // many to one - 
+        public int FullWeaponTypeRef { get; set; }
+        public FullWeaponType FullWeaponType { get; set; }
+        // one to one - DONE / context - DONE
 
 
 

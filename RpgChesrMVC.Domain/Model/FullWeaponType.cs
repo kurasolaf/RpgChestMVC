@@ -24,21 +24,24 @@ namespace RpgChestMVC.Domain.Model
         public int ExtraKpPenetrationForHammer { get; set; }
         
 
-
         // connections below
+        public virtual ICollection<BonusDmg> BonusDmgs { get; set; }
+       
+        //// one to many - DONE / context - DONE
+        
+        
 
-        public int BonusDmgRef { get; set; }
-        public BonusDmg BonusDmg { get; set; }
-        public int DmgRef { get; set; }
-        public Dmg Dmg { get; set; }
-        //// one to one - DONE / context 
 
         public int ItemRef { get; set; }
         public Item Item { get; set; }
         //// one to one - DONE / context - DONE
         
+        public Dmg Dmg { get; set; }
+        // one to one - DONE / context - DONE
         public TypeOfWeapon TypeOfWeapon { get; set; }
         // one to one - DONE / context - DONE
+
+
         public virtual ICollection<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
         // one to MANY - DONE / context - DONE
 
