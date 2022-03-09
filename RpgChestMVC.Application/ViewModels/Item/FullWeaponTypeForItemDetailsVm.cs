@@ -5,7 +5,8 @@ namespace RpgChestMVC.Application.ViewModels.Item
     public class FullWeaponTypeForItemDetailsVm
     {
         public int Id { get; set; }
-        public int Dmg { get; set; }
+        public DmgForFullWeaponTypeVm Dmg { get; set; }
+        public BonusDmgForFullWeaponTypeVm BonusDmg { get; set; }
         public int CritChance { get; set; }
         public int CritMultiplier { get; set; }
         public int CritBonusDmg { get; set; }
