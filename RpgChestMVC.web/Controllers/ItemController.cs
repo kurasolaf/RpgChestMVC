@@ -8,7 +8,7 @@ namespace RpgChestMVC.web.Controllers
 {
     public class ItemController : Controller
     {
-        /*
+        
          
         public IActionResult Index()
         {
@@ -48,7 +48,7 @@ namespace RpgChestMVC.web.Controllers
 
         }
 
-        */
+        
 
     }
 }
