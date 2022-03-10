@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
-    class ItemDetailsVm
+    public class ItemDetailsVm
     {
 
         //oddzielne 'CreateMap' dla każdego dto

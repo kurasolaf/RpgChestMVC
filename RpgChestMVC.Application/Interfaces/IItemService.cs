@@ -11,8 +11,9 @@ namespace RpgChestMVC.Application.Interfaces
     {
         ListItemForVm GetListItemForList();
 
-        
-        
+        int AddItem(NewItemVm item);
+
+        ItemDetailsVm GetItemDetails(int ItemId);
 
 
 

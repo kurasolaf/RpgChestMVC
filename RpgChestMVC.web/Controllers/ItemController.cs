@@ -42,7 +42,7 @@ namespace RpgChestMVC.web.Controllers
 
         public IActionResult ViewItem(int itemId)
         {
-            var itemModel = itemService.GetItemById(itemId);
+            var itemModel = itemService.GetItemDetails(itemId);
             return View(itemModel);
 
 
