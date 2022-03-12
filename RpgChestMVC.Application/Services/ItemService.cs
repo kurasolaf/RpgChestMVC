@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RpgChestMVC.Domain.Interfaces;
 
 namespace RpgChestMVC.Application.Services
 {
@@ -16,7 +17,7 @@ namespace RpgChestMVC.Application.Services
         //// skladanie Weaponów
         //// składanie Itemu
 
-
+        private readonly ISingleItemRepository _itemRepo;
 
         public int AddItem(NewItemVm item)
         {
@@ -30,7 +31,32 @@ namespace RpgChestMVC.Application.Services
 
         public ListItemForVm GetListItemForList()
         {
-            throw new NotImplementedException();
+            var items = _itemRepo.GetAllActiveItems();
+            ListItemForVm result = new ListItemForVm();
+            result.Items = new List<ItemForListVm>();
+            foreach (var item in items)
+            {
+
+                var itVm = new ItemForListVm()
+                {
+                    Id = item.Id,
+                    ItemLvl = item.ItemLvl,
+                    NumberOfSockets = item.NumberOfSockets,
+                    Rarity = item.Rarity,
+                    ArmorType = item.FullArmorType.TypeOfArmor.EnumArmorType,
+                    WeaponType = item.FullWeaponType.TypeOfWeapon.EnumWeaponType
+
+                };
+                result.Items.Add(itVm);
+
+            }
+            result.Count = result.Items.Count;
+            return result;
+
+
+
+
+
         }
     }
 }

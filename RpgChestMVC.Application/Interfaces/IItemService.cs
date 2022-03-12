@@ -13,7 +13,7 @@ namespace RpgChestMVC.Application.Interfaces
 
         int AddItem(NewItemVm item);
 
-        ItemDetailsVm GetItemDetails(int ItemId);
+        ItemDetailsVm GetItemDetails(int itemId);
 
 
 
