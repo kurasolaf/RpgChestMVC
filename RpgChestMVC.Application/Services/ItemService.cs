@@ -65,7 +65,13 @@ namespace RpgChestMVC.Application.Services
 
                     },
 
+                    WeaponType  = new FullWeaponTypeForItemListVm
+                    {
+                        Id = item.FullWeaponType.Id,
+                        EnumWeaponType = item.FullWeaponType.TypeOfWeapon.EnumWeaponType,
 
+
+                    },
 
                     
                     WeaponType = item.FullWeaponType.TypeOfWeapon.EnumWeaponType
