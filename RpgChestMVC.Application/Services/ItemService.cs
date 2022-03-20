@@ -29,6 +29,14 @@ namespace RpgChestMVC.Application.Services
             throw new NotImplementedException();
         }
 
+
+
+
+
+
+
+
+
         public ListItemForVm GetListItemForList()
         {
             var items = _itemRepo.GetAllActiveItems();
@@ -42,8 +50,24 @@ namespace RpgChestMVC.Application.Services
                     Id = item.Id,
                     ItemLvl = item.ItemLvl,
                     NumberOfSockets = item.NumberOfSockets,
-                    Rarity = item.Rarity,
-                    ArmorType = item.FullArmorType.TypeOfArmor.EnumArmorType,
+                    Rarity = new RarityForItemVm
+                    { Id = item.Rarity.Id,
+                        BonusMultiplier = item.Rarity.BonusMultiplier,
+                        ItemRarity = item.Rarity.ItemRarity
+
+                    },
+                    ArmorType = new FullArmorTypeForItemListVm
+                    {
+                        Id = item.FullArmorType.Id,
+                        EnumArmorType = item.FullArmorType.TypeOfArmor.EnumArmorType,
+                        TypeOfArmorId = item.FullArmorType.TypeOfArmor.Id
+
+
+                    },
+
+
+
+                    
                     WeaponType = item.FullWeaponType.TypeOfWeapon.EnumWeaponType
 
                 };
@@ -52,6 +76,27 @@ namespace RpgChestMVC.Application.Services
             }
             result.Count = result.Items.Count;
             return result;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
