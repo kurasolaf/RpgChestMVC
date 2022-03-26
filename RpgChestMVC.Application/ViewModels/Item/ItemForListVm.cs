@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AutoMapper;
+using RpgChestMVC.Application.Mapping;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
-    public class ItemForListVm
+    public class ItemForListVm : IMapFrom<RpgChestMVC.Domain.Model.Item>
     {
 
         // ID + to co chce wyświetlić w liście ogólnej
@@ -24,6 +26,13 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public FullWeaponTypeForItemListVm WeaponType { get; set; }
 
 
+        public void Mapping(Profile profile)
+        {
+
+            profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemForListVm>()
+                
+
+        }
         
      
     }
