@@ -29,7 +29,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public void Mapping(Profile profile)
         {
 
-            profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemForListVm>()
+            profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemForListVm>();
                 
 
         }
