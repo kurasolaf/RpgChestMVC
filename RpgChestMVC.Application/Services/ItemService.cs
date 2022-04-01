@@ -36,7 +36,7 @@ namespace RpgChestMVC.Application.Services
 
 
 
-
+        /*
         public ListItemForVm GetListItemForList()
         {
             var items = _itemRepo.GetAllActiveItems();
@@ -69,6 +69,7 @@ namespace RpgChestMVC.Application.Services
                     {
                         Id = item.FullWeaponType.Id,
                         EnumWeaponType = item.FullWeaponType.TypeOfWeapon.EnumWeaponType,
+                        TypeOfWeaponId = item.FullWeaponType.TypeOfWeapon.Id
 
 
                     },
@@ -84,30 +85,16 @@ namespace RpgChestMVC.Application.Services
             return result;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
+
+
+            */
+
+
+
+
+
+
+
     }
 }

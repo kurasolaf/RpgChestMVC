@@ -11,13 +11,11 @@ namespace RpgChestMVC.Application.ViewModels.Item
     public class ItemForListVm : IMapFrom<RpgChestMVC.Domain.Model.Item>
     {
 
-        // ID + to co chce wyświetlić w liście ogólnej
-        
+               
         public int Id { get; set; }
         public int ItemLvl { get; set; }
         public int NumberOfSockets { get; set; }
         public RarityForItemVm Rarity { get; set; }
-
 
 
         // jedno z poniższych w przypadku nulla ma się nie wyświetlać.
@@ -30,8 +28,9 @@ namespace RpgChestMVC.Application.ViewModels.Item
         {
 
             profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemForListVm>();
-                
 
+            profile.CreateMap<RpgChestMVC.Domain.Model.Rarity, RarityForItemVm>()
+                .ForMember(dest => dest.ItemRarity, opt => opt.MapFrom(src => src.ItemRarity));
         }
         
      

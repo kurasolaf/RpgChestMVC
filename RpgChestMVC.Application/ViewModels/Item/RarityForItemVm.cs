@@ -11,8 +11,6 @@ namespace RpgChestMVC.Application.ViewModels.Item
     {
         public int Id { get; set; }
         
-        public int BonusMultiplier { get; set; }
-
         public EnumRarity ItemRarity { get; set; }
 
 
