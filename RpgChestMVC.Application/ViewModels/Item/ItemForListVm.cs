@@ -29,8 +29,8 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
             profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemForListVm>();
 
-            profile.CreateMap<RpgChestMVC.Domain.Model.Rarity, RarityForItemVm>()
-                .ForMember(dest => dest.ItemRarity, opt => opt.MapFrom(src => src.ItemRarity));
+            profile.CreateMap<RpgChestMVC.Domain.Model.Rarity, RarityForItemVm>();
+                
         }
         
      
