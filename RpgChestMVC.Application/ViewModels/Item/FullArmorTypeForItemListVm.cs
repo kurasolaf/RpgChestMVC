@@ -13,8 +13,6 @@ namespace RpgChestMVC.Application.ViewModels.Item
     {
         public int Id { get; set; }
 
-        
-
         public int TypeOfArmorId { get; set; }
         public EnumArmorType EnumArmorType { get; set; }
 

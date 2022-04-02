@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RpgChestMVC.Domain.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
    public class TypeOfArmorForItemListVm
     {
         public int Id { get; set; }
-        public string EnumArmorType { get; set; }
+        public EnumArmorType EnumArmorType { get; set; }
 
     }
 }

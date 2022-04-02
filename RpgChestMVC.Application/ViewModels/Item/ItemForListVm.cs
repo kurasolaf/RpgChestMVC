@@ -17,6 +17,8 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public int NumberOfSockets { get; set; }
         public RarityForItemVm Rarity { get; set; }
 
+        public RpgChestMVC.Domain.Model.EnumWeaponType EnumWeaponType { get; set; }
+
 
         // jedno z poniższych w przypadku nulla ma się nie wyświetlać.
         public FullArmorTypeForItemListVm ArmorType { get; set; }
@@ -30,6 +32,9 @@ namespace RpgChestMVC.Application.ViewModels.Item
             profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemForListVm>();
 
             profile.CreateMap<RpgChestMVC.Domain.Model.Rarity, RarityForItemVm>();
+
+            profile.CreateMap<RpgChestMVC.Domain.Model.TypeOfWeapon, ItemForListVm>()
+                .ForMember(dest => dest.EnumWeaponType, opt = > opt )
                 
         }
         
