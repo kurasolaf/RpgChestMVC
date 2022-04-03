@@ -1,4 +1,7 @@
 ﻿using System;
+using AutoMapper;
+using RpgChestMVC.Application.Mapping;
+using RpgChestMVC.Domain.Model;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +9,8 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
-    public class ItemDetailsVm
+    public class ItemDetailsVm : IMapFrom<RpgChestMVC.Domain.Model.Item>
     {
-
-
 
         public int Id { get; set; }
         public int ItemLvl { get; set; }
@@ -24,7 +25,13 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public FullWeaponTypeForItemDetailsVm FullWeaponType { get; set; }
 
 
+        public void Mapping(Profile profile)
+        {
+            profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemDetailsVm>();
 
+
+
+        }
 
     }
 }

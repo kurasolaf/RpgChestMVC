@@ -7,25 +7,28 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-   /**
-   GLOBAL TO DO: 
-    1- 
-    2- add models
-        2.1- Spells
-      TO DO LISTS to COMPLETE in: Item Repository, 
-   **/
+
     public class Item
     {
 
-        //to do: add secondary stats, add connections
-        //to do: add basic stats, add connections
+        //to do: add secondary stats, add connections, update database, 
+        //to do: add basic stats, add connections, update database,
         public int Id { get; set; }
         public int ItemLvl { get; set; }
         public int Concentration { get; set; }
         public int NumberOfSockets { get; set; }
         public bool IsActive { get; set; }
 
+
         // connections below
+
+
+        // public BasicStat
+
+
+        // public SecondaryStat
+
+
         public int RarityId { get; set; }
         public virtual Rarity Rarity { get; set; }
         // one to many - DONE / context - DONE
