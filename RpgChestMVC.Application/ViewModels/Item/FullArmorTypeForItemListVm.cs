@@ -13,17 +13,12 @@ namespace RpgChestMVC.Application.ViewModels.Item
     {
         public int Id { get; set; }
 
-        public int TypeOfArmorId { get; set; }
-        public EnumArmorType EnumArmorType { get; set; }
+        public TypeOfArmorForItemListVm TypeOfArmor { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<RpgChestMVC.Domain.Model.FullArmorType, FullArmorTypeForItemListVm>()
-                .ForMember(d => d.Id, opt => opt.MapFrom(s => s.Id))
-                .ForMember(d => d.TypeOfArmorId, opt => opt.MapFrom(s => s.TypeOfArmor.Id))
-                .ForMember(d => d.EnumArmorType, opt => opt.MapFrom(s => s.TypeOfArmor.EnumArmorType));
-
-
+            profile.CreateMap<RpgChestMVC.Domain.Model.FullArmorType, FullArmorTypeForItemListVm>();
+ 
         }
 
 

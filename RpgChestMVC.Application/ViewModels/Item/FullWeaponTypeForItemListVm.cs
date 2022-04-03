@@ -12,8 +12,8 @@ namespace RpgChestMVC.Application.ViewModels.Item
     public class FullWeaponTypeForItemListVm : IMapFrom<RpgChestMVC.Domain.Model.FullWeaponType>
     {
         public int Id { get; set; }
-       
-        public EnumWeaponType EnumWeaponType { get; set; }
+
+        public TypeOfWeaponForItemListVm TypeOfWeapon { get; set; }
 
 
 
