@@ -10,7 +10,6 @@ namespace RpgChestMVC.Domain.Model
     {
         public int Id { get; set; }
 
-
         public EnumSecondaryStat SecondarysStat { get; set; }
 
         public int ValueSS { get; set; }
