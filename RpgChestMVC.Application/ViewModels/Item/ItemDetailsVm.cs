@@ -9,7 +9,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
     public class ItemDetailsVm
     {
 
-        
+
 
         public int Id { get; set; }
         public int ItemLvl { get; set; }
@@ -22,9 +22,9 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
 
         public FullWeaponTypeForItemDetailsVm FullWeaponType { get; set; }
-      
-        
-        
+
+
+
 
     }
 }

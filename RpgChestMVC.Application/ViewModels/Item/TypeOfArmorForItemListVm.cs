@@ -14,11 +14,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public int Id { get; set; }
         public EnumArmorType EnumArmorType { get; set; }
 
-        public void Mapping(Profile profile)
-        {
-            profile.CreateMap<RpgChestMVC.Domain.Model.TypeOfArmor, TypeOfArmorForItemListVm>();
 
-        }
 
     }
 }

@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
-    public class RarityForItemVm
+    public class RarityForItemVm 
     {
-        public int Id { get; set; }
         
         public EnumRarity ItemRarity { get; set; }
 

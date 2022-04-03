@@ -15,11 +15,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
         public TypeOfArmorForItemListVm TypeOfArmor { get; set; }
 
-        public void Mapping(Profile profile)
-        {
-            profile.CreateMap<RpgChestMVC.Domain.Model.FullArmorType, FullArmorTypeForItemListVm>();
- 
-        }
+
 
 
 

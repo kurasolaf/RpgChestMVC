@@ -22,5 +22,8 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public virtual ICollection<ResistanceForItemDetails> Resistances { get; set; } 
 
 
+
+
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using RpgChestMVC.Application.Mapping;
+using RpgChestMVC.Domain.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,32 +11,25 @@ namespace RpgChestMVC.Application.ViewModels.Item
 {
     public class ItemForListVm : IMapFrom<RpgChestMVC.Domain.Model.Item>
     {
-
-               
+ 
         public int Id { get; set; }
         public int ItemLvl { get; set; }
         public int NumberOfSockets { get; set; }
-        public RarityForItemVm Rarity { get; set; }
+        public EnumRarity Rarity { get; set; }
 
-   
-        // jedno z poniższych w przypadku nulla ma się nie wyświetlać.
-        public FullArmorTypeForItemListVm ArmorType { get; set; }
+        public EnumWeaponType EnumWeaponType { get; set; }
 
-        public FullWeaponTypeForItemListVm WeaponType { get; set; }
-
+        public EnumArmorType EnumArmorType { get; set; }
 
         public void Mapping(Profile profile)
         {
-
-            profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemForListVm>();
-
-            profile.CreateMap<RpgChestMVC.Domain.Model.Rarity, RarityForItemVm>();
-
+            profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemForListVm>()
+                .ForMember(dest => dest.Rarity, opt => opt.MapFrom(src => src.Rarity.ItemRarity))
+                .ForMember(dest => dest.EnumWeaponType, opt => opt.MapFrom(src => src.FullWeaponType.TypeOfWeapon.EnumWeaponType))
+                .ForMember(dest => dest.EnumArmorType, opt => opt.MapFrom(src => src.FullArmorType.TypeOfArmor.EnumArmorType));
             profile.CreateMap<RpgChestMVC.Domain.Model.FullWeaponType, FullWeaponTypeForItemListVm>();
-                
-                
+                 
         }
-        
      
     }
 }

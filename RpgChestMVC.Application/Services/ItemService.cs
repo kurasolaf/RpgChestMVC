@@ -31,12 +31,7 @@ namespace RpgChestMVC.Application.Services
 
 
 
-
-
-
-
-
-        /*
+       /*
         public ListItemForVm GetListItemForList()
         {
             var items = _itemRepo.GetAllActiveItems();
@@ -88,8 +83,8 @@ namespace RpgChestMVC.Application.Services
         }
 
 
-            */
-
+            
+        */
 
 
 
