@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    class Spell
+    public class Spell
     {
         //To DO:
         //-Make Spell creator and add "Spell" to prop. list of items in items
