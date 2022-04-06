@@ -63,7 +63,8 @@ namespace RpgChestMVC.Infrastructure
             
 
             /* connection one to many
-            ADD: one Item to many Rarity
+            ADD: Many BasicStats to one Item
+            ADD: Many SecondaryStats to one Item
             */
 
             builder.Entity<Item>()
@@ -82,6 +83,7 @@ namespace RpgChestMVC.Infrastructure
                 .HasOne<FullWeaponType>(a => a.FullWeaponType).WithMany(b => b.BonusDmgs)
                 .HasForeignKey(e => e.FullWeaponTypeId);
 
+           
 
 
         }
