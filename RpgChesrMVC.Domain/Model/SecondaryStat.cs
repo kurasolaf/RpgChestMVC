@@ -17,11 +17,8 @@ namespace RpgChestMVC.Domain.Model
 
         //Connection below
 
-
-
-
-
-
+            public int ItemId { get; set;}
+            public Item item { get; set; }
 
         // many to one -   / context -  
 

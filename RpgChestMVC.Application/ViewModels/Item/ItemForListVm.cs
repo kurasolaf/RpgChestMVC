@@ -27,8 +27,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
                 .ForMember(dest => dest.Rarity, opt => opt.MapFrom(src => src.Rarity.ItemRarity))
                 .ForMember(dest => dest.EnumWeaponType, opt => opt.MapFrom(src => src.FullWeaponType.TypeOfWeapon.EnumWeaponType))
                 .ForMember(dest => dest.EnumArmorType, opt => opt.MapFrom(src => src.FullArmorType.TypeOfArmor.EnumArmorType));
-            profile.CreateMap<RpgChestMVC.Domain.Model.FullWeaponType, FullWeaponTypeForItemListVm>();
-                 
+            profile.CreateMap<RpgChestMVC.Domain.Model.FullWeaponType, FullWeaponTypeForItemListVm>();     
         }
      
     }
