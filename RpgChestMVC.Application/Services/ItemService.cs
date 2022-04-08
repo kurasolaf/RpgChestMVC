@@ -31,7 +31,7 @@ namespace RpgChestMVC.Application.Services
 
 
 
-       /*
+       
         public ListItemForVm GetListItemForList()
         {
             var items = _itemRepo.GetAllActiveItems();
@@ -40,40 +40,7 @@ namespace RpgChestMVC.Application.Services
             foreach (var item in items)
             {
 
-                var itVm = new ItemForListVm()
-                {
-                    Id = item.Id,
-                    ItemLvl = item.ItemLvl,
-                    NumberOfSockets = item.NumberOfSockets,
-                    Rarity = new RarityForItemVm
-                    { Id = item.Rarity.Id,
-                        BonusMultiplier = item.Rarity.BonusMultiplier,
-                        ItemRarity = item.Rarity.ItemRarity
 
-                    },
-                    ArmorType = new FullArmorTypeForItemListVm
-                    {
-                        Id = item.FullArmorType.Id,
-                        EnumArmorType = item.FullArmorType.TypeOfArmor.EnumArmorType,
-                        TypeOfArmorId = item.FullArmorType.TypeOfArmor.Id
-
-
-                    },
-
-                    WeaponType  = new FullWeaponTypeForItemListVm
-                    {
-                        Id = item.FullWeaponType.Id,
-                        EnumWeaponType = item.FullWeaponType.TypeOfWeapon.EnumWeaponType,
-                        TypeOfWeaponId = item.FullWeaponType.TypeOfWeapon.Id
-
-
-                    },
-
-                    
-                    WeaponType = item.FullWeaponType.TypeOfWeapon.EnumWeaponType
-
-                };
-                result.Items.Add(itVm);
 
             }
             result.Count = result.Items.Count;
@@ -84,7 +51,7 @@ namespace RpgChestMVC.Application.Services
 
 
             
-        */
+        
 
 
 
