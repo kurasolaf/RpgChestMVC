@@ -19,7 +19,7 @@ namespace RpgChestMVC.Domain.Model
         public int ItemId {get; set;}
         public virtual Item Item { get; set;}
 
-        // many to one -   / context -  
+        // many to one - DONE  / context - DONE 
 
     }
 }
