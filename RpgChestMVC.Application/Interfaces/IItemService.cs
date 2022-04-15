@@ -15,6 +15,8 @@ namespace RpgChestMVC.Application.Interfaces
 
         ItemDetailsVm GetItemDetails(int itemId);
 
+        List<int> GetAllItems();
+
 
 
 

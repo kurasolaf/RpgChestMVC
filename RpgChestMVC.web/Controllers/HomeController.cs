@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RpgChestMVC.Application.Services;
 using RpgChestMVC.web.Models;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace RpgChestMVC.web.Controllers
 
         public IActionResult Index()
         {
+           
             return View();
         }
 
@@ -37,9 +39,9 @@ namespace RpgChestMVC.web.Controllers
             rarity2.ItemRarity = EnumRarity.Legendary;
 
             items.Add(new Item(1,2, rarity,2) { Id = 1, ItemLvl = 2, Rarity = rarity, Concetration = 2,});
-            items.Add(new Item(2,4,rarity2,4) { Id = 2, ItemLvl = 4, Rarity = new StructRarity(), Concetration = 4 });
+            items.Add(new Item(2,4, rarity2,4) { Id = 2, ItemLvl = 4, Rarity = new StructRarity(), Concetration = 4 });
             items.Add(new Item(3,6, rarity,6) { Id = 3, ItemLvl = 6, Rarity = rarity, Concetration = 6 });
-            items.Add(new Item(4, 8, rarity2, 8) { Id = 4, ItemLvl = 8, Rarity = rarity2, Concetration = 8 });
+            items.Add(new Item(4,8, rarity2,8) { Id = 4, ItemLvl = 8, Rarity = rarity2, Concetration = 8 });
 
             return View(items);
 

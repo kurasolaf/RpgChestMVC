@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace RpgChestMVC.web.Models
+﻿namespace RpgChestMVC.web.Models
 {
-
     // Pamiętać o przeniesieniu do DOMAIN do modeli oraz zrobić
     // klucze własne i obce w każdym dac ID
     public class Item : IItemBasicStats
@@ -22,9 +16,5 @@ namespace RpgChestMVC.web.Models
             this.Rarity = Rarity;
             this.Concetration = Concetration;
         }
-
     }
-
-
-
 }
