@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using RpgChestMVC.Application.Services;
+using RpgChestMVC.Application.Interfaces;
 using RpgChestMVC.web.Models;
 using System;
 using System.Collections.Generic;
@@ -14,14 +14,17 @@ namespace RpgChestMVC.web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IItemService _itemService;
+        
+        public HomeController(ILogger<HomeController> logger, IItemService itemService)
         {
             _logger = logger;
+            _itemService = itemService;
         }
 
         public IActionResult Index()
         {
-           
+            _itemService.GetAllItems();
             return View();
         }
 

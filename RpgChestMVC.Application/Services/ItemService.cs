@@ -23,7 +23,6 @@ namespace RpgChestMVC.Application.Services
         {
             throw new NotImplementedException();
         }
-
         public ItemDetailsVm GetItemDetails(int ItemId)
         {
             throw new NotImplementedException();
@@ -47,6 +46,13 @@ namespace RpgChestMVC.Application.Services
             return result;
 
 
+        }
+
+        public List<int> GetAllItems()
+        {
+
+
+            return new List<int>();
         }
 
 

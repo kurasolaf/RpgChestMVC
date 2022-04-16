@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using RpgChestMVC.Infrastructure;
+using RpgChestMVC.Application.Interfaces;
+using RpgChestMVC.Application.Services;
 
 namespace RpgChestMVC.web
 {
@@ -36,6 +38,11 @@ namespace RpgChestMVC.web
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<Context>();
             services.AddControllersWithViews();
+            services.AddRazorPages();
+
+            services.AddTransient<IItemService,ItemService>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

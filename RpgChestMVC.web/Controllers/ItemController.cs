@@ -12,7 +12,7 @@ namespace RpgChestMVC.web.Controllers
 
 
        
-
+        /*
       
 
          
@@ -54,7 +54,7 @@ namespace RpgChestMVC.web.Controllers
 
         }
 
-        
+        */
 
     }
 }
