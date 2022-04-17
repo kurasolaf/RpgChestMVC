@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RpgChestMVC.Domain.Interfaces;
+using AutoMapper.QueryableExtensions;
+using AutoMapper;
 
 namespace RpgChestMVC.Application.Services
 {
@@ -18,6 +20,18 @@ namespace RpgChestMVC.Application.Services
         //// składanie Itemu
 
         private readonly ISingleItemRepository _itemRepo;
+        private readonly IMapper _mapper;
+
+        public ItemService(IItemRepository itemRepo, IMapper mapper)
+        {
+            _itemRepo = itemRepo;
+            _mapper = mapper;
+
+
+
+        }
+
+
 
         public int AddItem(NewItemVm item)
         {

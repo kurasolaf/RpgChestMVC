@@ -23,10 +23,10 @@ namespace RpgChestMVC.Domain.Model
         // connections below
         
         public virtual ICollection<BasicStat> BasicStats { get; set; }
-        // one to many - DONE / context - 
+        // one to many - DONE / context - DONE
 
         public virtual ICollection<SecondaryStat> SecondaryStats { get; set; }
-        // one to many - DONE / context - 
+        // one to many - DONE / context - DONE
 
 
         public int RarityId { get; set; }

@@ -10,6 +10,7 @@ namespace RpgChestMVC.Domain.Interfaces
     public interface ISingleItemRepository
     {
         IQueryable<Item> GetAllActiveItems();
+        Item GetItem(int itemId);
 
     }
 }
