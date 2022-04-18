@@ -15,6 +15,8 @@ using System.Threading.Tasks;
 using RpgChestMVC.Infrastructure;
 using RpgChestMVC.Application.Interfaces;
 using RpgChestMVC.Application.Services;
+using RpgChestMVC.Domain.Interfaces;
+using RpgChestMVC.Infrastructure.Repositories;
 
 namespace RpgChestMVC.web
 {
@@ -37,6 +39,8 @@ namespace RpgChestMVC.web
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<Context>();
+
+            services.AddTransient<IItemRepository, ItemRepository>();
             services.AddControllersWithViews();
             services.AddRazorPages();
 
