@@ -21,6 +21,8 @@ namespace RpgChestMVC.Domain.Interfaces
         IQueryable<Item> GetItemByLvl(int itemLvl);
 
         IQueryable<Item> GetItemByConcentration(int concentration);
+
+        IQueryable<Item> GetAllActiveItems(bool isActive);
 /*
  * Add GetItemByTypeOfArmor method
  * Add GetItemByTypeOfWeapon method

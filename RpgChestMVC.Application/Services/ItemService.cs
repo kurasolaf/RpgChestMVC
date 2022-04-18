@@ -19,15 +19,13 @@ namespace RpgChestMVC.Application.Services
         //// skladanie Weaponów
         //// składanie Itemu
 
-        private readonly ISingleItemRepository _itemRepo;
+        private readonly IItemRepository _itemRepo;
         private readonly IMapper _mapper;
 
         public ItemService(IItemRepository itemRepo, IMapper mapper)
         {
             _itemRepo = itemRepo;
             _mapper = mapper;
-
-
 
         }
 
@@ -45,9 +43,11 @@ namespace RpgChestMVC.Application.Services
 
 
        
-        public ListItemForVm GetListItemForList()
+        public ListItemForVm GetListItemForList(bool isActive)
         {
+           
             var items = _itemRepo.GetAllActiveItems();
+
             ListItemForVm result = new ListItemForVm();
             result.Items = new List<ItemForListVm>();
             foreach (var item in items)

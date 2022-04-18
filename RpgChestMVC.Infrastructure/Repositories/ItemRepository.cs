@@ -71,7 +71,10 @@ namespace RpgChestMVC.Infrastructure.Repositories
             return items;
         }
 
-
-
+        public IQueryable<Item> GetAllActiveItems(bool isActive)
+        {
+            var items = _context.Items.Where(i => i.IsActive == isActive);
+            return items;
+        }
     }
 }

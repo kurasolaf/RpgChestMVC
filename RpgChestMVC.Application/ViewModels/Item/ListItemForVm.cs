@@ -13,5 +13,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public List<ItemForListVm> Items { get; set; }
         public int Count { get; set; }
 
+        public bool IsActive { get; set; }
+
     }
 }
