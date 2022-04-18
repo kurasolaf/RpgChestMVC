@@ -41,27 +41,6 @@ namespace RpgChestMVC.Application.Services
         }
 
 
-
-       
-        public ListItemForVm GetListItemForList(bool isActive)
-        {
-           
-            var items = _itemRepo.GetAllActiveItems();
-
-            ListItemForVm result = new ListItemForVm();
-            result.Items = new List<ItemForListVm>();
-            foreach (var item in items)
-            {
-
-
-
-            }
-            result.Count = result.Items.Count;
-            return result;
-
-
-        }
-
         public List<int> GetAllItems()
         {
 
@@ -69,14 +48,9 @@ namespace RpgChestMVC.Application.Services
             return new List<int>();
         }
 
-
-            
-        
-
-
-
-
-
-
+        public ListItemForVm GetListItemForList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
