@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RpgChestMVC.Application.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,16 @@ namespace RpgChestMVC.web.Controllers
     public class ItemController : Controller
     {
 
+        private readonly IItemService _itService;
+
+        public ItemController(IItemService itService)
+        {
+            _itService = itService;
 
 
+        }
        
-        /*
+        
       
 
          
@@ -28,11 +35,11 @@ namespace RpgChestMVC.web.Controllers
             //// SERWIS: zwraca dane do controlera w odpowiednim formacie
             
 
-            var model = itemService.GetAllItemsForList();
+            var model = _itService.GetListItemForList();
             return View(model);
 
         }
-
+        /*
         [HttpGet]
         public IActionResult AddItem()
         {
@@ -53,8 +60,8 @@ namespace RpgChestMVC.web.Controllers
 
 
         }
-
         */
+        
 
     }
 }

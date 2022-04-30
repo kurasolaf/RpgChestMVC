@@ -34,6 +34,7 @@ namespace RpgChestMVC.Application.Services
         public int AddItem(NewItemVm item)
         {
             throw new NotImplementedException();
+           
         }
         public ItemDetailsVm GetItemDetails(int ItemId)
         {
@@ -50,7 +51,16 @@ namespace RpgChestMVC.Application.Services
 
         public ListItemForVm GetListItemForList()
         {
-            throw new NotImplementedException();
+            var items = _itemRepo.GetAllActiveItems()
+                .ProjectTo<ItemForListVm>(_mapper.ConfigurationProvider).ToList();
+
+            var itemList = new ListItemForVm()
+            {
+                Items = items,
+                Count = items.Count
+            };
+            return itemList;
+
         }
     }
 }
