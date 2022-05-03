@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using RpgChestMVC.Domain.Interfaces;
 using AutoMapper.QueryableExtensions;
 using AutoMapper;
+using RpgChestMVC.Domain.Model;
 
 namespace RpgChestMVC.Application.Services
 {
@@ -30,6 +31,30 @@ namespace RpgChestMVC.Application.Services
         }
 
 
+        public ListItemForVm GetAllItemsForList()
+        {
+            var items = _itemRepo.GetAllActiveItems();
+            ListItemForVm result = new ListItemForVm();
+            result.Items = new List<ItemForListVm>();
+            foreach(var item in items)
+            {
+                var itmVm = new ItemForListVm()
+                {
+                    Id = item.Id,
+                    EnumArmorType = item.FullArmorType.TypeOfArmor.EnumArmorType,
+                    EnumWeaponType = item.FullWeaponType.TypeOfWeapon.EnumWeaponType,
+                    ItemLvl = item.ItemLvl,
+                    NumberOfSockets = item.NumberOfSockets,
+                    Rarity = item.Rarity.ItemRarity
+
+                };
+                result.Items.Add(itmVm);
+
+            }
+            result.Count = result.Items.Count;
+            return result;
+
+        }
 
         public int AddItem(NewItemVm item)
         {
@@ -38,29 +63,18 @@ namespace RpgChestMVC.Application.Services
         }
         public ItemDetailsVm GetItemDetails(int ItemId)
         {
-            throw new NotImplementedException();
+            var item = _itemRepo.GetItemById(ItemId);
+            var itemVm = new ItemDetailsVm();
+
+            itemVm.Id = item.Id;
+            itemVm.ItemLvl = item.ItemLvl;
+            itemVm.NumberOfSockets = item.NumberOfSockets;
+            itemVm.
+
+
         }
 
 
-        public List<int> GetAllItems()
-        {
 
-
-            return new List<int>();
-        }
-
-        public ListItemForVm GetListItemForList()
-        {
-            var items = _itemRepo.GetAllActiveItems()
-                .ProjectTo<ItemForListVm>(_mapper.ConfigurationProvider).ToList();
-
-            var itemList = new ListItemForVm()
-            {
-                Items = items,
-                Count = items.Count
-            };
-            return itemList;
-
-        }
     }
 }

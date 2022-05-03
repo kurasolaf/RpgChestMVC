@@ -22,7 +22,7 @@ namespace RpgChestMVC.Domain.Interfaces
 
         IQueryable<Item> GetItemByConcentration(int concentration);
 
-        IQueryable<Item> GetAllActiveItems(bool isActive);
+         IQueryable<Item> GetAllActiveItems(bool isActive);
         
         /*
 * Add GetItemByTypeOfArmor method

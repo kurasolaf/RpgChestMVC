@@ -4,18 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RpgChestMVC.Application.ViewModels.Item;
+using RpgChestMVC.Domain.Model;
 
 namespace RpgChestMVC.Application.Interfaces
 {
     public interface IItemService
     {
-        ListItemForVm GetListItemForList();
+        ListItemForVm GetAllItemsForList();
 
         int AddItem(NewItemVm item);
 
         ItemDetailsVm GetItemDetails(int itemId);
-
-        List<int> GetAllItems();
 
 
 

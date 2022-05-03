@@ -39,7 +39,7 @@ namespace RpgChestMVC.web.Controllers
             return View(model);
 
         }
-        /*
+       
         [HttpGet]
         public IActionResult AddItem()
         {
@@ -60,7 +60,7 @@ namespace RpgChestMVC.web.Controllers
 
 
         }
-        */
+       
         
 
     }
