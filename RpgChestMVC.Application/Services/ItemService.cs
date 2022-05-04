@@ -69,6 +69,8 @@ namespace RpgChestMVC.Application.Services
             itemVm.Id = item.Id;
             itemVm.ItemLvl = item.ItemLvl;
             itemVm.NumberOfSockets = item.NumberOfSockets;
+            itemVm.Concentration = item.Concentration;
+            itemVm.Rarity.ItemRarity = item.Rarity.ItemRarity;
             itemVm.
 
 
