@@ -7,7 +7,7 @@ using RpgChestMVC.Domain.Model;
 
 namespace RpgChestMVC.Domain.Interfaces
 {
-    public  interface IItemRepository
+    public interface IItemRepository
     {
         
         void DeleteItem(int itemId);
@@ -22,7 +22,7 @@ namespace RpgChestMVC.Domain.Interfaces
 
         IQueryable<Item> GetItemByConcentration(int concentration);
 
-         IQueryable<Item> GetAllActiveItems(bool isActive);
+        IQueryable<Item> GetAllActiveItems(bool isActive);
         
         /*
 * Add GetItemByTypeOfArmor method

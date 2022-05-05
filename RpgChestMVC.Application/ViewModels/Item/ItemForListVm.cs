@@ -15,10 +15,8 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public int Id { get; set; }
         public int ItemLvl { get; set; }
         public int NumberOfSockets { get; set; }
-        public EnumRarity Rarity { get; set; }
-
         public bool IsActive { get; set; }
-
+        public EnumRarity Rarity { get; set; }
         public EnumWeaponType EnumWeaponType { get; set; }
 
         public EnumArmorType EnumArmorType { get; set; }

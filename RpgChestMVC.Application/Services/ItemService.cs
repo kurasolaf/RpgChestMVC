@@ -31,9 +31,9 @@ namespace RpgChestMVC.Application.Services
         }
 
 
-        public ListItemForVm GetAllItemsForList()
+        public ListItemForVm GetAllItemsForList(bool isActive)
         {
-            var items = _itemRepo.GetAllActiveItems();
+            var items = _itemRepo.GetAllActiveItems(isActive);
             ListItemForVm result = new ListItemForVm();
             result.Items = new List<ItemForListVm>();
             foreach(var item in items)
@@ -71,7 +71,13 @@ namespace RpgChestMVC.Application.Services
             itemVm.NumberOfSockets = item.NumberOfSockets;
             itemVm.Concentration = item.Concentration;
             itemVm.Rarity.ItemRarity = item.Rarity.ItemRarity;
+
             itemVm.
+
+
+
+            return itemVm;
+            
 
 
         }
