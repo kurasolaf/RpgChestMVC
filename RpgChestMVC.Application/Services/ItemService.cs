@@ -72,8 +72,36 @@ namespace RpgChestMVC.Application.Services
             itemVm.Concentration = item.Concentration;
             itemVm.Rarity.ItemRarity = item.Rarity.ItemRarity;
 
-            itemVm.
 
+            var fullArmor = new FullArmorTypeForItemDetailsVm();
+            itemVm.FullArmorType.Id = fullArmor.Id;
+            itemVm.FullArmorType.Kp = fullArmor.Kp;
+            itemVm.FullArmorType.Hp = fullArmor.Hp;
+            itemVm.FullArmorType.ResistanceForAll = fullArmor.ResistanceForAll;
+            itemVm.FullArmorType.PhysicalAbsorption = fullArmor.PhysicalAbsorption;
+            itemVm.FullArmorType.MagicalAbsorption = fullArmor.MagicalAbsorption;
+            itemVm.FullArmorType.PhysicalReduction = fullArmor.PhysicalReduction;
+            itemVm.FullArmorType.MagicalReduction = fullArmor.MagicalReduction;
+            itemVm.FullArmorType.HpPerLvl = fullArmor.HpPerLvl;
+            itemVm.FullArmorType.DailyRegenerationFor4Turns = fullArmor.DailyRegenerationFor4Turns;
+            itemVm.FullArmorType.TypeOfArmor.EnumArmorType = fullArmor.TypeOfArmor.EnumArmorType;
+            itemVm.FullArmorType.Resistances = new List<ResistanceForItemDetails>();
+
+            foreach(var resistance in itemVm.FullArmorType.Resistances)
+            {
+                var add = new ResistanceForItemDetails()
+                {
+                    Id = resistance.Id,
+                    BasicResistances = resistance.BasicResistances,
+                    ValueR = resistance.ValueR
+                    
+                };
+                itemVm.FullArmorType.Resistances.Add(add);
+            }
+
+
+            var FullWeapon = new FullWeaponTypeForItemDetailsVm();
+            itemVm.FullWeaponType.
 
 
             return itemVm;
