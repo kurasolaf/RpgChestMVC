@@ -15,7 +15,7 @@ namespace RpgChestMVC.Domain.Model
         //to do: add basic stats, add connections, update database,
         public int Id { get; set; }
         public int ItemLvl { get; set; }
-        public int Concentration { get; set; }
+        public int Concentration { get; set; } 
         public int NumberOfSockets { get; set; }
         public bool IsActive { get; set; }
 

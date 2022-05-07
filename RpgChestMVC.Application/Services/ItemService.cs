@@ -72,7 +72,6 @@ namespace RpgChestMVC.Application.Services
             itemVm.Concentration = item.Concentration;
             itemVm.Rarity.ItemRarity = item.Rarity.ItemRarity;
 
-
             var fullArmor = new FullArmorTypeForItemDetailsVm();
             itemVm.FullArmorType.Id = fullArmor.Id;
             itemVm.FullArmorType.Kp = fullArmor.Kp;
@@ -122,7 +121,6 @@ namespace RpgChestMVC.Application.Services
             itemVm.FullWeaponType.BonusDmg.DmgMultiplier = BonusDmgWeapon.DmgMultiplier;
 
             itemVm.FullWeaponType.TypeOfWeapon.EnumWeaponType = FullWeapon.TypeOfWeapon.EnumWeaponType;
-
 
             return itemVm;
         }
