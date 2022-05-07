@@ -93,24 +93,38 @@ namespace RpgChestMVC.Application.Services
                 {
                     Id = resistance.Id,
                     BasicResistances = resistance.BasicResistances,
-                    ValueR = resistance.ValueR
-                    
+                    ValueR = resistance.ValueR            
                 };
                 itemVm.FullArmorType.Resistances.Add(add);
             }
 
-
             var FullWeapon = new FullWeaponTypeForItemDetailsVm();
-            itemVm.FullWeaponType.
+            itemVm.FullWeaponType.Id = FullWeapon.Id;
+            itemVm.FullWeaponType.CritChance = FullWeapon.CritChance;
+            itemVm.FullWeaponType.CritMultiplier = FullWeapon.CritMultiplier;
+            itemVm.FullWeaponType.CritBonusDmg = FullWeapon.CritBonusDmg;
+            itemVm.FullWeaponType.HpDrain = FullWeapon.HpDrain;
+            itemVm.FullWeaponType.Bonus10ForKpPenetration = FullWeapon.Bonus10ForKpPenetration;
+            itemVm.FullWeaponType.BonusSA = FullWeapon.BonusSA;
+            itemVm.FullWeaponType.BonusDmgVsSummons = FullWeapon.BonusDmgVsSummons;
+            itemVm.FullWeaponType.ExtraWeaponRange = FullWeapon.ExtraWeaponRange;
+            itemVm.FullWeaponType.ShieldPointDestroyer = FullWeapon.ShieldPointDestroyer;
+            itemVm.FullWeaponType.ExtraKpPenetrationForHammer = FullWeapon.ExtraKpPenetrationForHammer;
+
+            var DmgForWeapon = new DmgForFullWeaponTypeVm();
+            itemVm.FullWeaponType.Dmg.Id = DmgForWeapon.Id;
+            itemVm.FullWeaponType.Dmg.DmgDice = DmgForWeapon.DmgDice;
+            itemVm.FullWeaponType.Dmg.DmgMultiplier = DmgForWeapon.DmgMultiplier;
+
+            var BonusDmgWeapon = new BonusDmgForFullWeaponTypeVm();
+            itemVm.FullWeaponType.BonusDmg.Id = BonusDmgWeapon.Id;
+            itemVm.FullWeaponType.BonusDmg.DmgDice = BonusDmgWeapon.DmgDice;
+            itemVm.FullWeaponType.BonusDmg.DmgMultiplier = BonusDmgWeapon.DmgMultiplier;
+
+            itemVm.FullWeaponType.TypeOfWeapon.EnumWeaponType = FullWeapon.TypeOfWeapon.EnumWeaponType;
 
 
             return itemVm;
-            
-
-
         }
-
-
-
     }
 }
