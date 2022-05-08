@@ -19,6 +19,9 @@ namespace RpgChestMVC.Application.Services
         //// skladanie Armorów
         //// skladanie Weaponów
         //// składanie Itemu
+        //// wyświetlanie listy
+        //// wyświetlanie detali item
+        
 
         private readonly IItemRepository _itemRepo;
         private readonly IMapper _mapper;
