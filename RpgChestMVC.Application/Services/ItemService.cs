@@ -36,26 +36,16 @@ namespace RpgChestMVC.Application.Services
 
         public ListItemForVm GetAllItemsForList(bool isActive)
         {
-            var items = _itemRepo.GetAllActiveItems(isActive);
-            ListItemForVm result = new ListItemForVm();
-            result.Items = new List<ItemForListVm>();
-            foreach(var item in items)
+            var items = _itemRepo.GetAllActiveItems(isActive)
+                .ProjectTo<ItemForListVm>(_mapper.ConfigurationProvider).ToList();
+            var itemList = new ListItemForVm()
             {
-                var itmVm = new ItemForListVm()
-                {
-                    Id = item.Id,
-                    EnumArmorType = item.FullArmorType.TypeOfArmor.EnumArmorType,
-                    EnumWeaponType = item.FullWeaponType.TypeOfWeapon.EnumWeaponType,
-                    ItemLvl = item.ItemLvl,
-                    NumberOfSockets = item.NumberOfSockets,
-                    Rarity = item.Rarity.ItemRarity
+                Items = items,
+                Count = items.Count
 
-                };
-                result.Items.Add(itmVm);
-
-            }
-            result.Count = result.Items.Count;
-            return result;
+            };
+            return itemList;
+            
 
         }
 
@@ -67,65 +57,16 @@ namespace RpgChestMVC.Application.Services
         public ItemDetailsVm GetItemDetails(int ItemId)
         {
             var item = _itemRepo.GetItemById(ItemId);
-            var itemVm = new ItemDetailsVm();
+            var itemVm = _mapper.Map<ItemDetailsVm>(item);
 
-            itemVm.Id = item.Id;
-            itemVm.ItemLvl = item.ItemLvl;
-            itemVm.NumberOfSockets = item.NumberOfSockets;
-            itemVm.Concentration = item.Concentration;
-            itemVm.Rarity.ItemRarity = item.Rarity.ItemRarity;
 
-            var fullArmor = new FullArmorTypeForItemDetailsVm();
-            itemVm.FullArmorType.Id = fullArmor.Id;
-            itemVm.FullArmorType.Kp = fullArmor.Kp;
-            itemVm.FullArmorType.Hp = fullArmor.Hp;
-            itemVm.FullArmorType.ResistanceForAll = fullArmor.ResistanceForAll;
-            itemVm.FullArmorType.PhysicalAbsorption = fullArmor.PhysicalAbsorption;
-            itemVm.FullArmorType.MagicalAbsorption = fullArmor.MagicalAbsorption;
-            itemVm.FullArmorType.PhysicalReduction = fullArmor.PhysicalReduction;
-            itemVm.FullArmorType.MagicalReduction = fullArmor.MagicalReduction;
-            itemVm.FullArmorType.HpPerLvl = fullArmor.HpPerLvl;
-            itemVm.FullArmorType.DailyRegenerationFor4Turns = fullArmor.DailyRegenerationFor4Turns;
-            itemVm.FullArmorType.TypeOfArmor.EnumArmorType = fullArmor.TypeOfArmor.EnumArmorType;
-            itemVm.FullArmorType.Resistances = new List<ResistanceForItemDetails>();
-
-            foreach(var resistance in itemVm.FullArmorType.Resistances)
-            {
-                var add = new ResistanceForItemDetails()
-                {
-                    Id = resistance.Id,
-                    BasicResistances = resistance.BasicResistances,
-                    ValueR = resistance.ValueR            
-                };
-                itemVm.FullArmorType.Resistances.Add(add);
-            }
-
-            var FullWeapon = new FullWeaponTypeForItemDetailsVm();
-            itemVm.FullWeaponType.Id = FullWeapon.Id;
-            itemVm.FullWeaponType.CritChance = FullWeapon.CritChance;
-            itemVm.FullWeaponType.CritMultiplier = FullWeapon.CritMultiplier;
-            itemVm.FullWeaponType.CritBonusDmg = FullWeapon.CritBonusDmg;
-            itemVm.FullWeaponType.HpDrain = FullWeapon.HpDrain;
-            itemVm.FullWeaponType.Bonus10ForKpPenetration = FullWeapon.Bonus10ForKpPenetration;
-            itemVm.FullWeaponType.BonusSA = FullWeapon.BonusSA;
-            itemVm.FullWeaponType.BonusDmgVsSummons = FullWeapon.BonusDmgVsSummons;
-            itemVm.FullWeaponType.ExtraWeaponRange = FullWeapon.ExtraWeaponRange;
-            itemVm.FullWeaponType.ShieldPointDestroyer = FullWeapon.ShieldPointDestroyer;
-            itemVm.FullWeaponType.ExtraKpPenetrationForHammer = FullWeapon.ExtraKpPenetrationForHammer;
-
-            var DmgForWeapon = new DmgForFullWeaponTypeVm();
-            itemVm.FullWeaponType.Dmg.Id = DmgForWeapon.Id;
-            itemVm.FullWeaponType.Dmg.DmgDice = DmgForWeapon.DmgDice;
-            itemVm.FullWeaponType.Dmg.DmgMultiplier = DmgForWeapon.DmgMultiplier;
-
-            var BonusDmgWeapon = new BonusDmgForFullWeaponTypeVm();
-            itemVm.FullWeaponType.BonusDmg.Id = BonusDmgWeapon.Id;
-            itemVm.FullWeaponType.BonusDmg.DmgDice = BonusDmgWeapon.DmgDice;
-            itemVm.FullWeaponType.BonusDmg.DmgMultiplier = BonusDmgWeapon.DmgMultiplier;
-
-            itemVm.FullWeaponType.TypeOfWeapon.EnumWeaponType = FullWeapon.TypeOfWeapon.EnumWeaponType;
+            itemVm.Rarity = new RarityForItemVm();
+            itemVm.FullArmorType = new FullArmorTypeForItemDetailsVm();
+            itemVm.FullWeaponType = new FullWeaponTypeForItemDetailsVm();
+            
 
             return itemVm;
+            
         }
     }
 }
