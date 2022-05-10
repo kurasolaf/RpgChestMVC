@@ -35,7 +35,7 @@ namespace RpgChestMVC.web.Controllers
             //// SERWIS: zwraca dane do controlera w odpowiednim formacie
             
 
-            var model = _itService.GetListItemForList();
+            var model = _itService.GetAllItemsForList();
             return View(model);
 
         }

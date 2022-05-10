@@ -24,7 +24,7 @@ namespace RpgChestMVC.web.Controllers
 
         public IActionResult Index()
         {
-            _itemService.GetAllItems();
+            _itemService.GetAllItemsForList();
             return View();
         }
 
