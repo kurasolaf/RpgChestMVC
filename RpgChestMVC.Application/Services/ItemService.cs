@@ -34,11 +34,11 @@ namespace RpgChestMVC.Application.Services
         }
 
 
-        public ListItemForVm GetAllItemsForList(bool isActive)
+        public ListOfItemsVm GetAllItemsForList()
         {
-            var items = _itemRepo.GetAllActiveItems(isActive)
+            var items = _itemRepo.GetAllActiveItems()
                 .ProjectTo<ItemForListVm>(_mapper.ConfigurationProvider).ToList();
-            var itemList = new ListItemForVm()
+            var itemList = new ListOfItemsVm()
             {
                 Items = items,
                 Count = items.Count

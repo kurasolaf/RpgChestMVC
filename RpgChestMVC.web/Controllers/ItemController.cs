@@ -45,17 +45,18 @@ namespace RpgChestMVC.web.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult AddItem(ItemModel model)
-        {
-            var id = itemService.AddItem(model);
-            return View();
 
-        }
+        //[HttpPost]
+        //public IActionResult AddItem(ItemModel model)
+        //{
+        //    var id = _itService.AddItem(model);
+        //    return View();
+        //
+        //}
 
         public IActionResult ViewItem(int itemId)
         {
-            var itemModel = itemService.GetItemDetails(itemId);
+            var itemModel = _itService.GetItemDetails(itemId);
             return View(itemModel);
 
 

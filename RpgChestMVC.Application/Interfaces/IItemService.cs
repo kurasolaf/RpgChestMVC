@@ -10,7 +10,7 @@ namespace RpgChestMVC.Application.Interfaces
 {
     public interface IItemService
     {
-        ListItemForVm GetAllItemsForList(bool isActive);
+        ListOfItemsVm GetAllItemsForList(bool isActive);
 
         int AddItem(NewItemVm item);
 
