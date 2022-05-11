@@ -23,7 +23,7 @@ namespace RpgChestMVC.web.Controllers
       
 
          
-        public IActionResult Index()
+        public IActionResult Index(bool isActive)
         {
 
             // Utworzyć widok dla akcj
@@ -35,7 +35,7 @@ namespace RpgChestMVC.web.Controllers
             //// SERWIS: zwraca dane do controlera w odpowiednim formacie
             
 
-            var model = _itService.GetAllItemsForList();
+            var model = _itService.GetAllItemsForList(isActive);
             return View(model);
 
         }
