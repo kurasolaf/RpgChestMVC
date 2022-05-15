@@ -1,0 +1,71 @@
+﻿@model RpgChestMVC.Application.ViewModels.Item.ListOfItemsVm
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Item LVL
+            </th>
+            <th>
+                Concentration
+            </th>
+            <th>
+                Number of Sockets
+            </th>
+            <th>
+                Rarity
+            </th>
+            <th>
+                Weapon Type
+            </th>
+            <th>
+                Armor Type
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Items) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemLvl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Concentration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfSockets)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rarity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnumWeaponType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnumArmorType)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
