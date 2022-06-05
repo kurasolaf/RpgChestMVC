@@ -24,7 +24,7 @@ namespace RpgChestMVC.web.Controllers
 
         public IActionResult Index(bool isActive)
         {
-            _itemService.GetAllItemsForList(isActive);
+           // _itemService.GetAllItemsForList(isActive);
             return View();
         }
 

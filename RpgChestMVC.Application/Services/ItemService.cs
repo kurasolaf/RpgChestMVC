@@ -36,8 +36,6 @@ namespace RpgChestMVC.Application.Services
 
         public ListOfItemsVm GetAllItemsForList(bool isActive)
         {
-           
-
             var items = _itemRepo.GetAllActiveItems(isActive)
                 .ProjectTo<ItemForListVm>(_mapper.ConfigurationProvider).ToList();
             var itemList = new ListOfItemsVm()

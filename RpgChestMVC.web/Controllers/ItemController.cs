@@ -15,17 +15,10 @@ namespace RpgChestMVC.web.Controllers
         public ItemController(IItemService itService)
         {
             _itService = itService;
-
-
         }
-       
-        
-      
-
-         
-        public IActionResult Index(bool isActive)
+    
+        public IActionResult Index(bool isActive = true)
         {
-
             // Utworzyć widok dla akcj
             // Utworzyć Tabele z przedmiotami
             // Utworzyć panel do filtrowania
@@ -34,10 +27,8 @@ namespace RpgChestMVC.web.Controllers
             //// SERWIS: przygotowuje dane
             //// SERWIS: zwraca dane do controlera w odpowiednim formacie
             
-
             var model = _itService.GetAllItemsForList(isActive);
             return View(model);
-
         }
        
         [HttpGet]
@@ -58,11 +49,7 @@ namespace RpgChestMVC.web.Controllers
         {
             var itemModel = _itService.GetItemDetails(itemId);
             return View(itemModel);
-
-
         }
-       
-        
-
+  
     }
 }
