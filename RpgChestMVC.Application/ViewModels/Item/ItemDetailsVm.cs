@@ -17,12 +17,20 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public int Concentration { get; set; }
         public int NumberOfSockets { get; set; }
 
-        public RarityForItemVm Rarity { get; set; }
 
-        public FullArmorTypeForItemDetailsVm FullArmorType { get; set; }
+        // Show: basic stats, secondary stats, Rarity, Full ArmorType-and details, Full WeaponType and details//
+        public virtual ICollection<BasicStat> BasicStats { get; set; }
+        
+
+        public virtual ICollection<SecondaryStat> SecondaryStats { get; set; }
+       
+
+        public RarityForItemVm? Rarity { get; set; }
+
+        public FullArmorTypeForItemDetailsVm? FullArmorType { get; set; }
 
 
-        public FullWeaponTypeForItemDetailsVm FullWeaponType { get; set; }
+        public FullWeaponTypeForItemDetailsVm? FullWeaponType { get; set; }
 
 
         public void Mapping(Profile profile)
