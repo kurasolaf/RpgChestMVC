@@ -29,8 +29,6 @@ namespace RpgChestMVC.Application.ViewModels.Item
         {
             profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemDetailsVm>();
 
-
-
         }
 
     }
