@@ -19,7 +19,6 @@ namespace RpgChestMVC.Domain.Model
         public int NumberOfSockets { get; set; }
         public bool IsActive { get; set; }
 
-
         // connections below
         
         public virtual ICollection<BasicStat> BasicStats { get; set; }
@@ -28,11 +27,9 @@ namespace RpgChestMVC.Domain.Model
         public virtual ICollection<SecondaryStat> SecondaryStats { get; set; }
         // one to many - DONE / context - DONE
 
-
         public int RarityId { get; set; }
         public virtual Rarity Rarity { get; set; }
         // many to one - DONE / context - DONE
-
 
         public FullArmorType FullArmorType { get; set; }
         // one to one - DONE / context - DONE
