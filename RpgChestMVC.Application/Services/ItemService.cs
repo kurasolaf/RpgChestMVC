@@ -54,17 +54,18 @@ namespace RpgChestMVC.Application.Services
             throw new NotImplementedException();
            
         }
+        
         public ItemDetailsVm GetItemDetails(int ItemId)
         {
             var item = _itemRepo.GetItemById(ItemId);
             var itemVm = _mapper.Map<ItemDetailsVm>(item);
 
-
+/*
             itemVm.Rarity = new RarityForItemVm();
             itemVm.FullArmorType = new FullArmorTypeForItemDetailsVm();
             itemVm.FullWeaponType = new FullWeaponTypeForItemDetailsVm();
             
-
+*/
             return itemVm;
             
         }

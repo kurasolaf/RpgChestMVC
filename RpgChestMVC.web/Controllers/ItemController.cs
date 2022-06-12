@@ -45,12 +45,12 @@ namespace RpgChestMVC.web.Controllers
         //
         //}
 
+        [HttpGet("view/{itemId}")]
         public IActionResult ViewItem(int itemId)
         {
-           
-                var itemModel = _itService.GetItemDetails(itemId);
-                return View(itemModel);
-                  
+            var itemModel = _itService.GetItemDetails(itemId);
+                return Ok(itemModel);
+                //return view(itemModel);
         }
   
     }

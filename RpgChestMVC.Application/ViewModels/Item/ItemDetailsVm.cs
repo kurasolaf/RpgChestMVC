@@ -19,7 +19,6 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
         public virtual ICollection<BasicStat> BasicStats { get; set; }
         
-
         public virtual ICollection<SecondaryStat> SecondaryStats { get; set; }
 
         public EnumRarity Rarity { get; set; }
@@ -83,10 +82,18 @@ namespace RpgChestMVC.Application.ViewModels.Item
         {
             profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemDetailsVm>()
                 .ForMember(dest => dest.Rarity, opt => opt.MapFrom(src => src.Rarity.ItemRarity))
-                .ForMember(dest => dest.EnumWeaponType, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.TypeOfWeapon.EnumWeaponType : (EnumWeaponType?)null))
-                .ForMember(dest => dest.EnumArmorType, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.TypeOfArmor.EnumArmorType : (EnumArmorType?)null));
-                
-                
+                .ForMember(dest => dest.EnumWeaponType,
+                    opt => opt.MapFrom(src =>
+                        src.FullWeaponType != null
+                            ? src.FullWeaponType.TypeOfWeapon.EnumWeaponType
+                            : (EnumWeaponType?)null))
+                .ForMember(dest => dest.EnumArmorType,
+                    opt => opt.MapFrom(src =>
+                        src.FullArmorType != null
+                            ? src.FullArmorType.TypeOfArmor.EnumArmorType
+                            : (EnumArmorType?)null));
+
+
 
         }
     }
