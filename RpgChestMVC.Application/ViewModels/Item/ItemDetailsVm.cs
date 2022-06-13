@@ -19,6 +19,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
         public virtual ICollection<BasicStat> BasicStats { get; set; }
         
+
         public virtual ICollection<SecondaryStat> SecondaryStats { get; set; }
 
         public EnumRarity Rarity { get; set; }
@@ -27,6 +28,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
         //PROP from Weapon Type Item////////////////////////////////
 
+     
         /// From inner Dmg prop:
         public int DmgMultiplier { get; set; }
         public int DmgDice { get; set; }
@@ -81,19 +83,13 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public void Mapping(Profile profile)
         {
             profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemDetailsVm>()
-                .ForMember(dest => dest.Rarity, opt => opt.MapFrom(src => src.Rarity.ItemRarity))
-                .ForMember(dest => dest.EnumWeaponType,
-                    opt => opt.MapFrom(src =>
-                        src.FullWeaponType != null
-                            ? src.FullWeaponType.TypeOfWeapon.EnumWeaponType
-                            : (EnumWeaponType?)null))
-                .ForMember(dest => dest.EnumArmorType,
-                    opt => opt.MapFrom(src =>
-                        src.FullArmorType != null
-                            ? src.FullArmorType.TypeOfArmor.EnumArmorType
-                            : (EnumArmorType?)null));
-
-
+                   .ForMember(dest => dest.Rarity, opt => opt.MapFrom(src => src.Rarity.ItemRarity))
+                   .ForMember(dest => dest.EnumWeaponType, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.TypeOfWeapon.EnumWeaponType : (EnumWeaponType?)null))
+                   .ForMember(dest => dest.DmgMultiplier, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.Dmg.DmgMultiplier : (int?)0))
+                   .ForMember(dest => dest.DmgDice, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.Dmg.DmgDice : (int?)0))
+                   .ForMember(dest => dest.CritChance, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.CritChance : (int?)0))
+                   .ForMember(dest => dest.CritMultiplier, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.CritMultiplier : (int?)0))
+                   .ForMember(dest => dest.EnumArmorType, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.TypeOfArmor.EnumArmorType : (EnumArmorType?)null));
 
         }
     }
