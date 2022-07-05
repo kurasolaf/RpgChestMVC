@@ -5,11 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RpgChesrMVC.Domain\RpgChestMVC.Domain.csproj" />
+    <Compile Remove="ViewModels\Spell\**" />
+    <EmbeddedResource Remove="ViewModels\Spell\**" />
+    <None Remove="ViewModels\Spell\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\Spell\" />
+    <ProjectReference Include="..\RpgChesrMVC.Domain\RpgChestMVC.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
