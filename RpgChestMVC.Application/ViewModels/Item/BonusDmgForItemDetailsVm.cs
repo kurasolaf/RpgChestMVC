@@ -7,7 +7,7 @@ using RpgChestMVC.Domain.Model;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
-    public class BonusDmgVm
+    public class BonusDmgForItemDetailsVm
     {
         public int DmgMultiplier {get; set; }
         public int DmgDice { get; set; }

@@ -17,10 +17,10 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public int Concentration { get; set; }
         public int NumberOfSockets { get; set; }
 
-        public virtual ICollection<BasicStat> BasicStats { get; set; }
+        public virtual ICollection<BasicStatForItemDetailsVm> BasicStats { get; set; }
         
 
-        public virtual ICollection<SecondaryStat> SecondaryStats { get; set; }
+        public virtual ICollection<SecondaryStatForItemDetailsVm> SecondaryStats { get; set; }
 
         public EnumRarity Rarity { get; set; }
 
@@ -44,19 +44,15 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public int ShieldPointDestroyer { get; set; }
         public int ExtraKpPenetrationForHammer { get; set; }
 
-        public ICollection<BonusDmgVm> BonusDmgs { get; set; }
+        public virtual ICollection<BonusDmgForItemDetailsVm> BonusDmgs { get; set; }
 
-
-        
         /// From inner BonusDmgFromElemental prop:
-        public EnumResistance DmgFromElement { get; set; }
-        public int ValueR { get; set; }
+        public virtual ICollection<BonusDmgFromElementalForItemDetailsVm> BonusDmgFromElementals { get; set; }
 
         //////////////END FOR ABOVE /////////////////////////////////
 
         public EnumArmorType? EnumArmorType { get; set; }
         //PROP from Armor Type Item
-
         public int Kp { get; set; }
         public int Hp { get; set; }
         public int ResistanceForAll { get; set; }
@@ -67,16 +63,11 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public int HpPerLvl { get; set; }
         public int DailyRegenerationFor4Turns { get; set; }
 
-        ///From inner Resistance prop:
-        public int BasicResistanceValueR { get; set; }
-        public EnumResistance BasicResistances { get; set; }
+        public virtual ICollection<ResistanceForItemDetailsVm> Resistance { get; set; }
 
         //////////////END FOR ABOVE//////////////////////////////////
 
-
-
-
-        // TODO: MAPPING: BasicStats, SecondaryStat, DmgMultiplier - DmgDice, BonusDmgMultiplier - BonusDmgDice,  DmgFromElement - ValueR//
+        
         public void Mapping(Profile profile)
         {
             profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemDetailsVm>()
@@ -97,8 +88,22 @@ namespace RpgChestMVC.Application.ViewModels.Item
                    .ForMember(dest => dest.ShieldPointDestroyer, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.ShieldPointDestroyer : (int?)0))
                    .ForMember(dest => dest.ExtraKpPenetrationForHammer, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.ExtraKpPenetrationForHammer : (int?)0))
 
-                   .ForMember(dest => dest.EnumArmorType, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.TypeOfArmor.EnumArmorType : (EnumArmorType?)null));
-            profile.CreateMap<RpgChestMVC.Domain.Model.BonusDmg, BonusDmgVm>();
+                   .ForMember(dest => dest.EnumArmorType, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.TypeOfArmor.EnumArmorType : (EnumArmorType?)null))
+                   .ForMember(dest => dest.Kp, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.Kp : (int?)0))
+                   .ForMember(dest => dest.Hp, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.Hp : (int?)0))
+                   .ForMember(dest => dest.ResistanceForAll, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.ResistanceForAll : (int?)0))
+                   .ForMember(dest => dest.PhysicalAbsorption, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.PhysicalAbsorption : (int?)0))
+                   .ForMember(dest => dest.MagicalAbsorption, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.MagicalAbsorption : (int?)0))
+                   .ForMember(dest => dest.PhysicalReduction, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.PhysicalReduction : (int?)0))
+                   .ForMember(dest => dest.MagicalReduction, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.MagicalReduction : (int?)0))
+                   .ForMember(dest => dest.HpPerLvl, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.HpPerLvl : (int?)0))
+                   .ForMember(dest => dest.DailyRegenerationFor4Turns, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.DailyRegenerationFor4Turns : (int?)0));
+
+            profile.CreateMap<RpgChestMVC.Domain.Model.BasicStat, BasicStatForItemDetailsVm>();
+            profile.CreateMap<RpgChestMVC.Domain.Model.SecondaryStat, SecondaryStatForItemDetailsVm>();
+            profile.CreateMap<RpgChestMVC.Domain.Model.BonusDmg, BonusDmgForItemDetailsVm>();
+            profile.CreateMap<RpgChestMVC.Domain.Model.BonusDmgFromElemental, BonusDmgFromElementalForItemDetailsVm>();
+            profile.CreateMap<RpgChestMVC.Domain.Model.Resistance, ResistanceForItemDetailsVm>();
                 
 
         }

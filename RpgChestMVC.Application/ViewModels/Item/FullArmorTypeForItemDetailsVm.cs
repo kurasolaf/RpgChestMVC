@@ -19,7 +19,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public int HpPerLvl { get; set; }
         public int DailyRegenerationFor4Turns { get; set; }
         public TypeOfArmorForItemDetails TypeOfArmor { get; set; } 
-        public virtual ICollection<ResistanceForItemDetails> Resistances { get; set; } 
+        public virtual ICollection<ResistanceForItemDetailsVm> Resistances { get; set; } 
 
 
 
