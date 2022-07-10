@@ -16,7 +16,8 @@ namespace RpgChestMVC.web.Controllers
         {
             _itService = itService;
         }
-    
+
+        
         public IActionResult Index(bool isActive = true)
         {
             // Utworzyć widok dla akcj

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
-    public class ListOfItemsVm : IMapFrom<RpgChestMVC.Domain.Model.Item>
+    public class ListOfItemsVm 
     {
-        //to jest jak DTO
+        
         // pod paginacje (dzielenie na mniejsze strony)
         public List<ItemForListVm> Items { get; set; }
         public int Count { get; set; }
@@ -19,12 +19,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
 
 
-        public void Mapping(Profile profile)
-        {
-            profile.CreateMap<RpgChestMVC.Domain.Model.Item, ListOfItemsVm>();
 
-
-        }
 
     }
 }
