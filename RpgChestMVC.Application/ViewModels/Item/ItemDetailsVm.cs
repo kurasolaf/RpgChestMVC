@@ -11,20 +11,21 @@ namespace RpgChestMVC.Application.ViewModels.Item
 {
     public class ItemDetailsVm : IMapFrom<RpgChestMVC.Domain.Model.Item>
     {
+        // dodatkowo IsActive = true
+        // dodatkowo RarityId = 2
+        public int Id { get; set; } //=7
+        public int ItemLvl { get; set; }//=14
+        public int Concentration { get; set; }//=10
+        public int NumberOfSockets { get; set; }//=3
 
-        public int Id { get; set; }
-        public int ItemLvl { get; set; }
-        public int Concentration { get; set; }
-        public int NumberOfSockets { get; set; }
-
-        public virtual ICollection<BasicStatForItemDetailsVm> BasicStats { get; set; }
+        public virtual ICollection<BasicStatForItemDetailsVm> BasicStats { get; set; }//=null
         
 
-        public virtual ICollection<SecondaryStatForItemDetailsVm> SecondaryStats { get; set; }
+        public virtual ICollection<SecondaryStatForItemDetailsVm> SecondaryStats { get; set; }//=null
 
-        public EnumRarity Rarity { get; set; }
+        public EnumRarity Rarity { get; set; }//=null
 
-        public EnumWeaponType? EnumWeaponType { get; set; }
+        public EnumWeaponType? EnumWeaponType { get; set; } // zamiast tego jest fullweapontype= null
 
         //PROP from Weapon Type Item////////////////////////////////
 
@@ -51,7 +52,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
         //////////////END FOR ABOVE /////////////////////////////////
 
-        public EnumArmorType? EnumArmorType { get; set; }
+        public EnumArmorType? EnumArmorType { get; set; } // zamiast tego jest fullarmortype =null
         //PROP from Armor Type Item
         public int Kp { get; set; }
         public int Hp { get; set; }
@@ -70,6 +71,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
         
         public void Mapping(Profile profile)
         {
+            
             profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemDetailsVm>()
 
                    .ForMember(dest => dest.Rarity, opt => opt.MapFrom(src => src.Rarity.ItemRarity))
