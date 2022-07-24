@@ -9,11 +9,10 @@ namespace RpgChestMVC.Domain.Model
     public class TypeOfWeapon
     {
         public int Id { get; set; }
-        public EnumWeaponType EnumWeaponType { get; set; }
+        public string WeaponType { get; set; }
 
         // Connections below 
-        public int FullWeaponTypesRef { get; set; }
-        public FullWeaponType FullWeaponType { get; set; }
-        // connect - DONE  / context - undone
+
+
     }
 }

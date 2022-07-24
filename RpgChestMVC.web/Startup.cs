@@ -46,8 +46,14 @@ namespace RpgChestMVC.web
 
             services.AddControllersWithViews();
             services.AddRazorPages();
-
             
+            /*
+            // used only for debuggin purposes
+            services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AddPageRoute("/view/7", "");
+            });
+            */
 
 
         }

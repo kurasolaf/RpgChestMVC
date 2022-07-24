@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public class FullArmorType
+    public class FullArmorType : Item
     {
         //Unique for Armors//
         public int Id { get; set; }
@@ -19,15 +19,11 @@ namespace RpgChestMVC.Domain.Model
         public int MagicalReduction { get; set; }
         public int HpPerLvl { get; set; }
         public int DailyRegenerationFor4Turns { get; set; }
-        //connections below
-        public int ItemRef { get; set; }
-        public Item Item { get; set; }
-        //// One to One - DONE / context - DONE
-        public TypeOfArmor TypeOfArmor { get; set; }
-        // One to One - DONE / context - DONE
 
         public virtual ICollection<Resistance> Resistances { get; set; }
-        // One to Many - DONE / context - DONE
+        //connections below
+
+
 
     }
 }

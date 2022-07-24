@@ -13,9 +13,9 @@ namespace RpgChestMVC.Domain.Model
          */
 
         public int Id { get; set; }
-        public int DmgMultiplier { get; set; }
+        public int DmgMultiplier { get; set; }  //Range 1-100 Max ItemLvl
 
-        public int DmgDice { get; set; }
+        public int DmgDice { get; set; } //Range 4,6,8,10,12,20
 
         //connections below
         public int FullWeaponTypeRef { get; set; }

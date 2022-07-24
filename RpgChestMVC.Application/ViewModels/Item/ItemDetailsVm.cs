@@ -71,42 +71,14 @@ namespace RpgChestMVC.Application.ViewModels.Item
         
         public void Mapping(Profile profile)
         {
-            
+
             profile.CreateMap<RpgChestMVC.Domain.Model.Item, ItemDetailsVm>()
 
-                   .ForMember(dest => dest.Rarity, opt => opt.MapFrom(src => src.Rarity.ItemRarity))
-
-                   .ForMember(dest => dest.EnumWeaponType, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.TypeOfWeapon.EnumWeaponType : (EnumWeaponType?)null))
-                   .ForMember(dest => dest.DmgMultiplier, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.Dmg.DmgMultiplier : (int?)0))
-                   .ForMember(dest => dest.DmgDice, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.Dmg.DmgDice : (int?)0))
-                   .ForMember(dest => dest.CritChance, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.CritChance : (int?)0))
-                   .ForMember(dest => dest.CritMultiplier, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.CritMultiplier : (int?)0))
-                   .ForMember(dest => dest.CritBonusDmg, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.CritBonusDmg : (int?)0))
-                   .ForMember(dest => dest.HpDrain, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.HpDrain : (int?)0))
-                   .ForMember(dest => dest.Bonus10ForKpPenetration, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.Bonus10ForKpPenetration : (int?)0))
-                   .ForMember(dest => dest.BonusSA, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.BonusSA : (int?)0))
-                   .ForMember(dest => dest.BonusDmgVsSummons, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.BonusDmgVsSummons : (int?)0))
-                   .ForMember(dest => dest.ExtraWeaponRange, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.ExtraWeaponRange : (int?)0))
-                   .ForMember(dest => dest.ShieldPointDestroyer, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.ShieldPointDestroyer : (int?)0))
-                   .ForMember(dest => dest.ExtraKpPenetrationForHammer, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.ExtraKpPenetrationForHammer : (int?)0))
-
-                   .ForMember(dest => dest.EnumArmorType, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.TypeOfArmor.EnumArmorType : (EnumArmorType?)null))
-                   .ForMember(dest => dest.Kp, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.Kp : (int?)0))
-                   .ForMember(dest => dest.Hp, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.Hp : (int?)0))
-                   .ForMember(dest => dest.ResistanceForAll, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.ResistanceForAll : (int?)0))
-                   .ForMember(dest => dest.PhysicalAbsorption, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.PhysicalAbsorption : (int?)0))
-                   .ForMember(dest => dest.MagicalAbsorption, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.MagicalAbsorption : (int?)0))
-                   .ForMember(dest => dest.PhysicalReduction, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.PhysicalReduction : (int?)0))
-                   .ForMember(dest => dest.MagicalReduction, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.MagicalReduction : (int?)0))
-                   .ForMember(dest => dest.HpPerLvl, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.HpPerLvl : (int?)0))
-                   .ForMember(dest => dest.DailyRegenerationFor4Turns, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.DailyRegenerationFor4Turns : (int?)0));
-
-            profile.CreateMap<RpgChestMVC.Domain.Model.BasicStat, BasicStatForItemDetailsVm>();
-            profile.CreateMap<RpgChestMVC.Domain.Model.SecondaryStat, SecondaryStatForItemDetailsVm>();
-            profile.CreateMap<RpgChestMVC.Domain.Model.BonusDmg, BonusDmgForItemDetailsVm>();
-            profile.CreateMap<RpgChestMVC.Domain.Model.BonusDmgFromElemental, BonusDmgFromElementalForItemDetailsVm>();
-            profile.CreateMap<RpgChestMVC.Domain.Model.Resistance, ResistanceForItemDetailsVm>();
-                
+                .ForMember(dest => dest.Rarity, opt => opt.MapFrom(src => src.Rarity.ItemRarity))
+                .ForMember(dest => dest.EnumWeaponType, opt => opt.MapFrom(src => src.FullWeaponType != null ? src.FullWeaponType.TypeOfWeapon.EnumWeaponType : (EnumWeaponType?)null))
+                .ForMember(dest => dest.EnumArmorType, opt => opt.MapFrom(src => src.FullArmorType != null ? src.FullArmorType.TypeOfArmor.EnumArmorType : (EnumArmorType?)null));
+            profile.CreateMap<RpgChestMVC.Domain.Model.FullWeaponType, FullWeaponTypeForItemDetailsVm>();
+            profile.CreateMap<RpgChestMVC.Domain.Model.TypeOfWeapon, TypeOfWeaponForItemDetails>();
 
         }
     }
