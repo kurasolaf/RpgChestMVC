@@ -12,25 +12,20 @@ namespace RpgChestMVC.Domain.Model
     {
 
         public int Id { get; set; }
-        public int ItemLvl { get; set; }
-        public int Concentration { get; set; } 
-        public int NumberOfSockets { get; set; }
+        public int ItemLvl { get; set; } // Range 1-100
+        public int Concentration { get; set; } // Range 1-100
+        public int NumberOfSockets { get; set; } //Range 1-3
         public bool IsActive { get; set; }
-        public string Rarity{ get; set; }
-
-        public bool IsArmorType { get; set; }
-        public string ArmorType{ get; set; }
+        public string Rarity{ get; set; } 
 
         public bool IsWeaponType { get; set; }
-        public string WeaponType { get; set; }
+        public bool IsArmorType { get; set; }
+
+
 
         // connections below
 
-        public virtual ICollection<BasicStat> BasicStats { get; set; }
-        // one to many - DONE / context - DONE
 
-        public virtual ICollection<SecondaryStat> SecondaryStats { get; set; }
-        // one to many - DONE / context - DONE
 
 
 

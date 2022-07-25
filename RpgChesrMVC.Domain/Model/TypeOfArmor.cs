@@ -14,7 +14,7 @@ namespace RpgChestMVC.Domain.Model
         public string ArmorTypes { get; set; }
         // connection below
         
-
+        public virtual ICollection<FullArmorType> FullArmorTypes { get; set; }
 
        
 

@@ -20,19 +20,23 @@ namespace RpgChestMVC.Domain.Model
         public int ExtraWeaponRange { get; set; } // Range 5-100 - per 5m
         public int ShieldPointDestroyer { get; set; } // Range 1-10 - multiplier for weapon dmg
         public int ExtraKpPenetrationForHammer { get; set; } //Range 1-10
-        
+
+
+        public int TypeOfWeaponId  { get; set; }
+        public virtual TypeOfWeapon TypeOfWeapon { get; set; }
+
         // connections below
         public virtual ICollection<BonusDmg> BonusDmgs { get; set; }
        
-        //// one to many - DONE / context - DONE
+       
         
         
         public Dmg Dmg { get; set; } 
-        // one to one - DONE / context - DONE
+       
 
 
-        public virtual ICollection<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
-        // one to MANY - DONE / context - DONE
+        public virtual ICollection<BonusDmgFromElemental> BonusDmgFromElementals { get; set; } // Range 5-50 - per 5%
+
 
 
     }

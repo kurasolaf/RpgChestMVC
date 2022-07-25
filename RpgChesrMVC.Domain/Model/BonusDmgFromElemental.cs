@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RpgChestMVC.Domain.Model.EnumsModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

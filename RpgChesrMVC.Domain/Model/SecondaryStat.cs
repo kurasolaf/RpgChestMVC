@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RpgChestMVC.Domain.Model.EnumsModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace RpgChestMVC.Domain.Model
             public int ItemId { get; set;}
             public Item item { get; set; }
 
-        // many to one - DONE   / context - DONE 
+        
 
 
 

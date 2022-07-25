@@ -1,11 +1,11 @@
 ﻿using System;
 using AutoMapper;
 using RpgChestMVC.Application.Mapping;
-using RpgChestMVC.Domain.Model;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RpgChestMVC.Domain.Model.EnumsModels;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {

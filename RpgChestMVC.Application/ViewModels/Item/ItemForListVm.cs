@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using RpgChestMVC.Application.Mapping;
-using RpgChestMVC.Domain.Model;
+using RpgChestMVC.Domain.Model.EnumsModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RpgChestMVC.Domain.Model
+namespace RpgChestMVC.Domain.Model.EnumsModels
 {
     public enum EnumSecondaryStat
     {
-            Endurance = 1,
-            Reflex = 2,
-            Will = 3
+        Endurance = 1,
+        Reflex = 2,
+        Will = 3
     }
 }
