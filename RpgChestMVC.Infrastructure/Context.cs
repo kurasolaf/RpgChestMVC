@@ -41,39 +41,39 @@ namespace RpgChestMVC.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+
             base.OnModelCreating(builder);
-            // connection one to one 
 
-
-
-            builder.Entity<Item>()
-                .HasOne(a => a.FullWeaponType).WithOne(b => b.Item)
-                .HasForeignKey<FullWeapon>(e => e.ItemRef);
-
-
+            // below connection one to many
 
             builder.Entity<FullArmor>()
-                .HasOne(a => a.TypeOfArmor).WithOne(b => b.FullArmorType)
-                .HasForeignKey<TypeOfArmor>(e => e.FullArmorTypeRef);
+                .HasOne<PlayerBackpack>(c => c.PlayerBackpack)
+                .WithMany(o => o.FullArmors)
+                .HasForeignKey(c => c.PlayerBackpackId);
 
 
+            builder.Entity<Resistance>()
+                .HasOne<FullArmor>(c => c.FullArmor)
+                .WithMany(o => o.Resistances)
+                .HasForeignKey(c => c.FullArmorId);
+
+            builder.Entity<FullArmor>()
+                .HasOne<TypeOfArmor>(c => c.TypeOfArmor)
+                .WithMany(o => o.FullArmors)
+                .HasForeignKey(c => c.TypeOfArmorId);
 
 
-            /* connection one to many
-            ADD: Many BasicStats to one Item
-            ADD: Many SecondaryStats to one Item
-            */
+            // below connection one to many
 
-            //builder.Entity<Item>()
-            //    .HasOne<Rarity>(a => a.Rarity).WithMany(b => b.Items)
-            //    .HasForeignKey(c => c.RarityId);
 
             builder.Entity<Resistance>()
                 .HasOne<FullArmor>(a => a.FullArmor).WithMany(b => b.Resistances)
                 .HasForeignKey(e => e.FullArmorId);
 
 
-           
+            //builder.Entity<Item>()
+            //    .HasOne<Rarity>(a => a.Rarity).WithMany(b => b.Items)
+            //    .HasForeignKey(c => c.RarityId);
            
 
             //builder.Entity<BonusDmgFromElemental>()

@@ -23,12 +23,16 @@ namespace RpgChestMVC.Domain.Model
 
         public int PlayerBackpackId { get; set; } 
         public virtual PlayerBackpack PlayerBackpack { get; set; }
+        //connection many to one
 
 
+        public int TypeOfArmorId { get; set; }
         public virtual TypeOfArmor TypeOfArmor { get; set; }
+        //Connection many to one
 
 
         public virtual ICollection<Resistance> Resistances { get; set; } //// Range 5-50 - per 5%
+        //connection one to many
 
         public int ItemLvl { get; set; }  
         public int Concentration { get; set; } 
