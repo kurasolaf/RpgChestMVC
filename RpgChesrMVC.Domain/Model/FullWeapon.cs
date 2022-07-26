@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public class FullWeaponType : Item
+    public class FullWeapon : Item
     {
         public int Id { get; set; }
                 
@@ -36,8 +36,6 @@ namespace RpgChestMVC.Domain.Model
 
 
         public virtual ICollection<BonusDmgFromElemental> BonusDmgFromElementals { get; set; } // Range 5-50 - per 5%
-
-
 
     }
 }

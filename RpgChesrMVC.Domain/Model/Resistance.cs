@@ -12,8 +12,8 @@ namespace RpgChestMVC.Domain.Model
         public int ValueR { get; set; }
         public string Resistances { get; set; }
 
-        public int FullArmorTypeId { get; set; }
-        public virtual FullArmorType SingleArmor { get; set; }
+        public int FullArmorId { get; set; }
+        public virtual FullArmor FullArmor { get; set; }
 
     }
 }

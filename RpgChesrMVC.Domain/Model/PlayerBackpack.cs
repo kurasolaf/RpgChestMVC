@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public class TypeOfArmor
+    public class PlayerBackpack
     {
-
-        
         public int Id { get; set; }
-        public string ArmorTypes { get; set; }
-        // connection below
-        
+        public string Name { get; set; }
+
         public virtual ICollection<FullArmor> FullArmors { get; set; }
 
-       
+
+
+
+
+
+
+
 
     }
 }

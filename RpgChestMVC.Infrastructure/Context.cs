@@ -15,12 +15,12 @@ namespace RpgChestMVC.Infrastructure
 
         
         public DbSet<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
-        public DbSet<FullArmorType> FullArmorTypes { get; set; }    
-        public DbSet<FullWeaponType> FullWeaponTypes { get; set; }
+        public DbSet<FullArmor> FullArmors { get; set; }    
+        public DbSet<FullWeapon> FullWeapons { get; set; }
 
-        public DbSet<Item> Items { get; set; }
 
-        public DbSet<Rarity> Rarities { get; set; }
+        public DbSet<PlayerBackpack> PlayerBackpacks { get; set; }
+
         public DbSet<Resistance> Resistances { get; set; }
        
         public DbSet<TypeOfWeapon> TypeOfWeapons { get; set; }
@@ -34,8 +34,6 @@ namespace RpgChestMVC.Infrastructure
 
         public DbSet<SecondaryStat> SecondaryStats { get; set; }
 
-        
-
         public Context(DbContextOptions options) : base(options)
         {
 
@@ -46,58 +44,59 @@ namespace RpgChestMVC.Infrastructure
             base.OnModelCreating(builder);
             // connection one to one 
 
-            builder.Entity<Item>()
-                .HasOne(a => a.FullArmorType).WithOne(b => b.Item)
-                .HasForeignKey<FullArmorType>(e => e.ItemRef);
+
 
             builder.Entity<Item>()
                 .HasOne(a => a.FullWeaponType).WithOne(b => b.Item)
-                .HasForeignKey<FullWeaponType>(e => e.ItemRef);
-           
-            builder.Entity<FullArmorType>()
+                .HasForeignKey<FullWeapon>(e => e.ItemRef);
+
+
+
+            builder.Entity<FullArmor>()
                 .HasOne(a => a.TypeOfArmor).WithOne(b => b.FullArmorType)
                 .HasForeignKey<TypeOfArmor>(e => e.FullArmorTypeRef);
 
-            builder.Entity<FullWeaponType>()
-                .HasOne(a => a.TypeOfWeapon).WithOne(b => b.FullWeaponType)
-                .HasForeignKey<TypeOfWeapon>(e => e.FullWeaponTypesRef);
 
-            builder.Entity<FullWeaponType>()
-                .HasOne(a => a.Dmg).WithOne(b => b.FullWeaponType)
-                .HasForeignKey<Dmg>(c => c.FullWeaponTypeRef);
-            
+
 
             /* connection one to many
             ADD: Many BasicStats to one Item
             ADD: Many SecondaryStats to one Item
             */
 
-            builder.Entity<Item>()
-                .HasOne<Rarity>(a => a.Rarity).WithMany(b => b.Items)
-                .HasForeignKey(c => c.RarityId);
+            //builder.Entity<Item>()
+            //    .HasOne<Rarity>(a => a.Rarity).WithMany(b => b.Items)
+            //    .HasForeignKey(c => c.RarityId);
 
             builder.Entity<Resistance>()
-                .HasOne<FullArmorType>(a => a.FullArmorType).WithMany(b => b.Resistances)
-                .HasForeignKey(e => e.FullArmorTypeId);
+                .HasOne<FullArmor>(a => a.FullArmor).WithMany(b => b.Resistances)
+                .HasForeignKey(e => e.FullArmorId);
 
-            builder.Entity<BonusDmgFromElemental>()
-                .HasOne<FullWeaponType>(a => a.FullWeaponType).WithMany(b => b.BonusDmgFromElementals)
-                .HasForeignKey(e => e.FullWeaponTypeId);
 
-            builder.Entity<BonusDmg>()
-                .HasOne<FullWeaponType>(a => a.FullWeaponType).WithMany(b => b.BonusDmgs)
-                .HasForeignKey(e => e.FullWeaponTypeId);
+           
+           
+
+            //builder.Entity<BonusDmgFromElemental>()
+            //    .HasOne<FullWeapon>(a => a.FullWeapon).WithMany(b => b.BonusDmgFromElementals)
+            //    .HasForeignKey(e => e.FullWeaponId);
+
+            //builder.Entity<BonusDmg>()
+            //    .HasOne<FullWeapon>(a => a.FullWeapon).WithMany(b => b.BonusDmgs)
+            //    .HasForeignKey(e => e.FullWeaponId);
+
+
 
             // connection many to one
-            builder.Entity<BasicStat>()
-                .HasOne<Item>(c => c.Item)
-                .WithMany(o => o.BasicStats)
-                .HasForeignKey(c => c.ItemId);
 
-            builder.Entity<SecondaryStat>()
-                .HasOne<Item>(c => c.item)
-                .WithMany(o => o.SecondaryStats)
-                .HasForeignKey(c => c.ItemId);
+            //builder.Entity<BasicStat>()
+            //    .HasOne<Item>(c => c.Item)
+            //    .WithMany(o => o.BasicStats)
+            //    .HasForeignKey(c => c.ItemId);
+
+            //builder.Entity<SecondaryStat>()
+            //    .HasOne<Item>(c => c.item)
+            //    .WithMany(o => o.SecondaryStats)
+            //    .HasForeignKey(c => c.ItemId);
 
 
         }

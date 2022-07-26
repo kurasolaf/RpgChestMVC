@@ -18,8 +18,8 @@ namespace RpgChestMVC.Domain.Model
         public int DmgDice { get; set; } //Range 4,6,8,10,12,20
 
         //connections below
-        public int FullWeaponTypeRef { get; set; }
-        public FullWeaponType FullWeaponType { get; set; }
+        public int FullWeaponRef { get; set; }
+        public FullWeapon FullWeapon { get; set; }
         // one to one - DONE / context - DONE
 
 

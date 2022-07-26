@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public class FullArmorType : Item
+
+    public class FullArmor : IItem
     {
         //Unique for Armors//
         public int Id { get; set; }
@@ -20,14 +21,20 @@ namespace RpgChestMVC.Domain.Model
         public int HpPerLvl { get; set; } // Range 1-10
         public int DailyRegenerationFor4Turns { get; set; } // Range 1-50
 
+        public int PlayerBackpackId { get; set; } 
+        public virtual PlayerBackpack PlayerBackpack { get; set; }
 
-        public int TypeOfArmorId { get; set; }
+
         public virtual TypeOfArmor TypeOfArmor { get; set; }
 
+
         public virtual ICollection<Resistance> Resistances { get; set; } //// Range 5-50 - per 5%
-        //connections below
 
-
-
+        public int ItemLvl { get; set; }  
+        public int Concentration { get; set; } 
+        public int NumberOfSockets { get; set; } 
+        public bool IsActive { get; set; }
+        public string Rarity { get; set; }
+       
     }
 }
