@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public class SecondaryStat
-    {
-        public int Id { get; set; }
+    //public class SecondaryStat
+    //{
+    //    public int Id { get; set; }
 
-        public EnumSecondaryStat SecondarysStat { get; set; }
+    //    public EnumSecondaryStat SecondarysStat { get; set; }
 
-        public int ValueSS { get; set; }
+    //    public int ValueSS { get; set; }
 
 
-        //Connection below
+    //    //Connection below
 
-            public int ItemId { get; set;}
-            public Item item { get; set; }
+    //        //public int ItemId { get; set;}
+    //        //public Item item { get; set; }
 
         
 
 
 
-    }
+    //}
 }

@@ -13,7 +13,7 @@ namespace RpgChestMVC.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
-            services.AddTransient<IItemRepository, ItemRepository>();
+            services.AddTransient<IFullArmorRepository, FullArmorRepository>();
             return services;
         }
 

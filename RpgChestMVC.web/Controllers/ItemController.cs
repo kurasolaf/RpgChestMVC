@@ -10,9 +10,9 @@ namespace RpgChestMVC.web.Controllers
     public class ItemController : Controller
     {
 
-        private readonly IItemService _itService;
+        private readonly IFullArmorService _itService;
 
-        public ItemController(IItemService itService)
+        public ItemController(IFullArmorService itService)
         {
             _itService = itService;
         }

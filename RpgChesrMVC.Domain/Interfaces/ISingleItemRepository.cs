@@ -9,8 +9,8 @@ namespace RpgChestMVC.Domain.Interfaces
 {
     public interface ISingleItemRepository
     {
-        IQueryable<Item> GetAllActiveItems();
-        Item GetItem(int itemId);
+        IQueryable<FullArmor> GetAllActiveItems();
+        FullArmor GetItem(int FullArmorId);
 
     }
 }

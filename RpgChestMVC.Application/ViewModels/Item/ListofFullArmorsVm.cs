@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
-    public class ListOfItemsVm 
+    public class ListofFullArmorsVm 
     {
         
         // pod paginacje (dzielenie na mniejsze strony)
-        public List<ItemForListVm> Items { get; set; }
+        public List<SingleFullArmorForListVm> Items { get; set; }
         public int Count { get; set; }
 
         public bool IsActive { get; set; }

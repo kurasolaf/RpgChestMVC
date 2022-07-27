@@ -5,24 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using RpgChestMVC.Domain.Model;
 
+
 namespace RpgChestMVC.Domain.Interfaces
 {
-    public interface IItemRepository
+    public interface IFullArmorRepository
     {
         
         void DeleteItem(int itemId);
 
-        int AddItem(Item item);
+        int AddItem(FullArmor fullArmor);
         
-        IQueryable<Item> GetItemByRarityId(int rarityId);
+       
+        FullArmor GetItemById(int itemId);
         
-        Item GetItemById(int itemId);
-        
-        IQueryable<Item> GetItemByLvl(int itemLvl);
+        IQueryable<FullArmor> GetItemByLvl(int itemLvl);
 
-        IQueryable<Item> GetItemByConcentration(int concentration);
+        IQueryable<FullArmor> GetItemByConcentration(int concentration);
 
-        IQueryable<Item> GetAllActiveItems(bool isActive = true);
+        IQueryable<FullArmor> GetAllActiveItems(bool isActive = true);
         
         /*
 * Add GetItemByTypeOfArmor method

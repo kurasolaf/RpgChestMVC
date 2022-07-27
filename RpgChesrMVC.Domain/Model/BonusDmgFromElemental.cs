@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public class BonusDmgFromElemental
-    {
-        public int Id { get; set; }
+    //public class BonusDmgFromElemental
+    //{
+    //    public int Id { get; set; }
 
-        public int ValueR { get; set; }
-        public EnumResistance DmgFromElement { get; set; }
+    //    public int ValueR { get; set; }
+    //    public EnumResistance DmgFromElement { get; set; }
 
-        //connection below
-        public int FullWeaponId { get; set; }
-        public virtual FullWeapon FullWeapon { get; set; }
-        // Many to one (DONE) / context - DONE
-    }
+    //    //connection below
+    //    public int FullWeaponId { get; set; }
+    //    public virtual FullWeapon FullWeapon { get; set; }
+    //    // Many to one (DONE) / context - DONE
+    //}
 }

@@ -14,7 +14,7 @@ namespace RpgChestMVC.Application
     {
         public static IServiceCollection AddApplication (this IServiceCollection services)
         {
-            services.AddTransient<IItemService, ItemService>();
+            services.AddTransient<IFullArmorService, ItemService>();
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             return services;
 

@@ -1,4 +1,4 @@
-﻿@model RpgChestMVC.Application.ViewModels.Item.ListOfItemsVm
+﻿@model RpgChestMVC.Application.ViewModels.Item.ListofFullArmorsVm
 
 @{
     ViewData["Title"] = "Index";
@@ -37,33 +37,27 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Items) {
+@foreach (var FullArmor in Model.Items) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
+                @Html.DisplayFor(modelItem => FullArmor.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ItemLvl)
+                @Html.DisplayFor(modelItem => FullArmor.ItemLvl)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Concentration)
+                @Html.DisplayFor(modelItem => FullArmor.Concentration)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NumberOfSockets)
+                @Html.DisplayFor(modelItem => FullArmor.NumberOfSockets)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Rarity)
+                @Html.DisplayFor(modelItem => FullArmor.Rarity)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EnumWeaponType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnumArmorType)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.ActionLink("Edit", "Edit", new { id = FullArmor.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = FullArmor.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = FullArmor.Id })
             </td>
         </tr>
 }

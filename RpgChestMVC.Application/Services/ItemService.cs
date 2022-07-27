@@ -12,7 +12,7 @@ using RpgChestMVC.Domain.Model;
 
 namespace RpgChestMVC.Application.Services
 {
-    public class ItemService : IItemService
+    public class ItemService : IFullArmorService
     {
         //DONE stworzenie Losowości 1-8/1-10/1-21/1-500 / RollService  DONE
         //składanie przedmiotów pośrednich w cały ITEM
@@ -23,10 +23,10 @@ namespace RpgChestMVC.Application.Services
         //// wyświetlanie detali item
         
 
-        private readonly IItemRepository _itemRepo;
+        private readonly IFullArmorRepository _itemRepo;
         private readonly IMapper _mapper;
 
-        public ItemService(IItemRepository itemRepo, IMapper mapper)
+        public ItemService(IFullArmorRepository itemRepo, IMapper mapper)
         {
             _itemRepo = itemRepo;
             _mapper = mapper;
@@ -34,11 +34,11 @@ namespace RpgChestMVC.Application.Services
         }
 
 
-        public ListOfItemsVm GetAllItemsForList(bool isActive)
+        public ListofFullArmorsVm GetAllItemsForList(bool isActive)
         {
             var items = _itemRepo.GetAllActiveItems(isActive)
-                .ProjectTo<ItemForListVm>(_mapper.ConfigurationProvider).ToList();
-            var itemList = new ListOfItemsVm()
+                .ProjectTo<SingleFullArmorForListVm>(_mapper.ConfigurationProvider).ToList();
+            var itemList = new ListofFullArmorsVm()
             {
                 Items = items,
                 Count = items.Count
@@ -49,16 +49,16 @@ namespace RpgChestMVC.Application.Services
 
         }
 
-        public int AddItem(NewItemVm item)
-        {
-            throw new NotImplementedException();
+        //public int AddItem(NewItemVm item)
+        //{
+        //    throw new NotImplementedException();
            
-        }
+        //}
         
-        public ItemDetailsVm GetItemDetails(int ItemId)
+        public SingleFullArmorForDetailsVm GetItemDetails(int ItemId)
         {
             var item = _itemRepo.GetItemById(ItemId);
-            var itemVm = _mapper.Map<ItemDetailsVm>(item);
+            var itemVm = _mapper.Map<SingleFullArmorForDetailsVm>(item);
 
 /*
             itemVm.Rarity = new RarityForItemVm();

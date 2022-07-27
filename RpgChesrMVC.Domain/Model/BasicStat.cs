@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Domain.Model
 {
-    public class BasicStat
-    {
-        public int Id { get; set; }
+    //public class BasicStat
+    //{
+    //    public int Id { get; set; }
 
-        public EnumBasicStat BasicsStat { get; set; }
+    //    public EnumBasicStat BasicsStat { get; set; }
 
-        public int ValueBS;
+    //    public int ValueBS;
 
-        //Connection below
+    //    //Connection below
 
-        public int ItemId {get; set;}
-        public virtual Item Item { get; set;}
+    //    //public int ItemId {get; set;}
+    //    //public virtual Item Item { get; set;}
 
-        // many to one - DONE  / context - DONE 
+    //    // many to one - DONE  / context - DONE 
 
-    }
+    //}
 }

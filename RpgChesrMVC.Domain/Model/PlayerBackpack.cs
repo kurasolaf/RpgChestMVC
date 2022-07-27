@@ -12,7 +12,7 @@ namespace RpgChestMVC.Domain.Model
         public string Name { get; set; }
 
         public virtual ICollection<FullArmor> FullArmors { get; set; }
-       //connection one to many
+        //connection one to many/context -done
 
 
 

@@ -8,13 +8,13 @@ using RpgChestMVC.Domain.Model;
 
 namespace RpgChestMVC.Application.Interfaces
 {
-    public interface IItemService
+    public interface IFullArmorService
     {
-        ListOfItemsVm GetAllItemsForList(bool isActive);
+        ListofFullArmorsVm GetAllItemsForList(bool isActive);
 
-        int AddItem(NewItemVm item);
+        //int AddItem(NewItemVm item);
 
-        ItemDetailsVm GetItemDetails(int itemId);
+        SingleFullArmorForDetailsVm GetItemDetails(int itemId);
 
 
 
