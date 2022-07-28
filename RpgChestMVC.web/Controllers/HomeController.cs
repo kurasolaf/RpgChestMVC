@@ -1,6 +1,8 @@
-﻿using Abp.Web.Mvc.Models;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RpgChestMVC.Application.Interfaces;
+using RpgChestMVC.web.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,14 +14,17 @@ namespace RpgChestMVC.web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IFullArmorService _fullArmorService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IFullArmorService fullArmorService)
         {
             _logger = logger;
+            _fullArmorService = fullArmorService;
         }
 
         public IActionResult Index()
         {
+            _fullArmorService.GetAllFullArmors();
             return View();
         }
 
@@ -29,14 +34,12 @@ namespace RpgChestMVC.web.Controllers
         }
 
 
-         
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
 
-        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        //public IActionResult Error()
-        //{
 
-            
-        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        //}
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
 }

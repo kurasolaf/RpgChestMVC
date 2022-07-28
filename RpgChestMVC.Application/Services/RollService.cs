@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Application.Services
 {
-    class RollService
+    public class RollService
     {
         //TO DO:
         /* Make methods 

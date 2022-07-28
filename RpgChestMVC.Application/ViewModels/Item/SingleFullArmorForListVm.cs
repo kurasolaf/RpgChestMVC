@@ -18,6 +18,8 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public bool IsActive { get; set; }
         public string Rarity { get; set; }
 
+        public string TypeOfArmor { get; set; }
+
 
         public void Mapping(Profile profile)
         {

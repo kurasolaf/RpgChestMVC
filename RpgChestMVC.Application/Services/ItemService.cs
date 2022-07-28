@@ -12,6 +12,7 @@ using RpgChestMVC.Domain.Model;
 
 namespace RpgChestMVC.Application.Services
 {
+    /*
     public class ItemService : IFullArmorService
     {
         //DONE stworzenie Losowości 1-8/1-10/1-21/1-500 / RollService  DONE
@@ -49,25 +50,27 @@ namespace RpgChestMVC.Application.Services
 
         }
 
-        //public int AddItem(NewItemVm item)
-        //{
-        //    throw new NotImplementedException();
+       // //public int AddItem(NewItemVm item)
+      //  //{
+       // //    throw new NotImplementedException();
            
-        //}
+       // //}
         
         public SingleFullArmorForDetailsVm GetItemDetails(int ItemId)
         {
             var item = _itemRepo.GetItemById(ItemId);
             var itemVm = _mapper.Map<SingleFullArmorForDetailsVm>(item);
 
-/*
-            itemVm.Rarity = new RarityForItemVm();
-            itemVm.FullArmorType = new FullArmorTypeForItemDetailsVm();
-            itemVm.FullWeaponType = new FullWeaponTypeForItemDetailsVm();
+
+          ////   // itemVm.Rarity = new RarityForItemVm();
+           //// // itemVm.FullArmorType = new FullArmorTypeForItemDetailsVm();
+           //// // itemVm.FullWeaponType = new FullWeaponTypeForItemDetailsVm();
             
-*/
+
             return itemVm;
             
         }
+       
     }
+     */
 }

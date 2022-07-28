@@ -8,17 +8,23 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
-    public class ListofFullArmorsVm 
+    public class ListofFullArmorsVm : IMapFrom<RpgChestMVC.Domain.Model.FullArmor>
     {
         
         // pod paginacje (dzielenie na mniejsze strony)
-        public List<SingleFullArmorForListVm> Items { get; set; }
+        public List<SingleFullArmorForListVm> FullArmors { get; set; }
         public int Count { get; set; }
 
         public bool IsActive { get; set; }
 
 
+        public void Mapping(Profile profile)
+        {
 
+            profile.CreateMap<RpgChestMVC.Domain.Model.FullArmor, SingleFullArmorForListVm>();
+
+
+        }
 
 
     }

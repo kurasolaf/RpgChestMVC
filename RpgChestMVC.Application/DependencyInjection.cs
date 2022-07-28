@@ -18,10 +18,7 @@ namespace RpgChestMVC.Application
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             return services;
 
-
         }
-
-
 
     }
 }

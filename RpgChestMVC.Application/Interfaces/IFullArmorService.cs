@@ -10,11 +10,15 @@ namespace RpgChestMVC.Application.Interfaces
 {
     public interface IFullArmorService
     {
-        ListofFullArmorsVm GetAllItemsForList(bool isActive);
 
-        //int AddItem(NewItemVm item);
+        List<int> GetAllFullArmors();
+        
+        
+        //ListofFullArmorsVm GetAllItemsForList(bool isActive);
 
-        SingleFullArmorForDetailsVm GetItemDetails(int itemId);
+        ////int AddItem(NewItemVm item);
+
+        //SingleFullArmorForDetailsVm GetItemDetails(int itemId);
 
 
 

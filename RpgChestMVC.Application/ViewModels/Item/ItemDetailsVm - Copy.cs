@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
-    /**public class ItemDetailsVm : IMapFrom<RpgChestMVC.Domain.Model.Item>
+    /*
+    public class ItemDetailsVm : IMapFrom<RpgChestMVC.Domain.Model.Item>
     {
-        // dodatkowo IsActive = true
-        // dodatkowo RarityId = 2
+         dodatkowo IsActive = true
+         dodatkowo RarityId = 2
         public int Id { get; set; } //=7
         public int ItemLvl { get; set; }//=14
         public int Concentration { get; set; }//=10
@@ -27,10 +28,10 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
         public EnumWeaponType? EnumWeaponType { get; set; } // zamiast tego jest fullweapontype= null
 
-        //PROP from Weapon Type Item////////////////////////////////
+        PROP from Weapon Type Item////////////////////////////////
 
      
-        /// From inner Dmg prop:
+        / From inner Dmg prop:
         public int DmgMultiplier { get; set; }
         public int DmgDice { get; set; }
 
@@ -47,13 +48,13 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
         public virtual ICollection<BonusDmgForItemDetailsVm> BonusDmgs { get; set; }
 
-        /// From inner BonusDmgFromElemental prop:
+        / From inner BonusDmgFromElemental prop:
         public virtual ICollection<BonusDmgFromElementalForItemDetailsVm> BonusDmgFromElementals { get; set; }
 
-        //////////////END FOR ABOVE /////////////////////////////////
+        ////////////END FOR ABOVE /////////////////////////////////
 
         public EnumArmorType? EnumArmorType { get; set; } // zamiast tego jest fullarmortype =null
-        //PROP from Armor Type Item
+        PROP from Armor Type Item
         public int Kp { get; set; }
         public int Hp { get; set; }
         public int ResistanceForAll { get; set; }
@@ -66,7 +67,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
         public virtual ICollection<ResistanceForItemDetailsVm> Resistance { get; set; }
 
-        //////////////END FOR ABOVE//////////////////////////////////
+        ////////////END FOR ABOVE//////////////////////////////////
 
         
         public void Mapping(Profile profile)
@@ -108,6 +109,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
             profile.CreateMap<RpgChestMVC.Domain.Model.Resistance, ResistanceForItemDetailsVm>();
                 
 
-        }
-    }*/
+        } 
+    }
+    */
 }

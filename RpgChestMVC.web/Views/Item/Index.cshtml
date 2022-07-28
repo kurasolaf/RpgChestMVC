@@ -27,17 +27,11 @@
             <th>
                 Rarity
             </th>
-            <th>
-                Weapon Type
-            </th>
-            <th>
-                Armor Type
-            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var FullArmor in Model.Items) {
+@foreach (var FullArmor in Model.FullArmors) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => FullArmor.Id)
