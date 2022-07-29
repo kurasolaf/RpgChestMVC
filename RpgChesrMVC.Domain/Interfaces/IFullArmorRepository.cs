@@ -11,18 +11,17 @@ namespace RpgChestMVC.Domain.Interfaces
     public interface IFullArmorRepository
     {
         
-        void DeleteItem(int itemId);
+        void DeleteFullArmor(int itemId);
 
-        int AddItem(FullArmor fullArmor);
+        int AddFullArmor(FullArmor fullArmor);
         
        
-        FullArmor GetItemById(int itemId);
+        FullArmor GetFullArmorById(int itemId);
         
-        IQueryable<FullArmor> GetItemByLvl(int itemLvl);
+        IQueryable<FullArmor> GetFullArmorByLvl(int itemLvl);
 
-        IQueryable<FullArmor> GetItemByConcentration(int concentration);
 
-        IQueryable<FullArmor> GetAllActiveItems(bool isActive = true);
+        IQueryable<FullArmor> GetAllActiveFullArmors(bool isActive = true);
         
         /*
 * Add GetItemByTypeOfArmor method

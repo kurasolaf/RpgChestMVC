@@ -24,7 +24,8 @@ namespace RpgChestMVC.Infrastructure.Repositories
 
         }
 
-        public void DeleteItem(int fullArmorId)
+
+        public void DeleteFullArmor(int fullArmorId)
         {
             var item = _context.FullArmors.Find(fullArmorId);
             if (item != null)
@@ -36,39 +37,34 @@ namespace RpgChestMVC.Infrastructure.Repositories
 
         }
 
-        public int AddItem(FullArmor fullArmor)
+        public int AddFullArmor(FullArmor fullArmor)
         {
             _context.FullArmors.Add(fullArmor);
             _context.SaveChanges();
             return fullArmor.Id;
         }
 
-        public IQueryable<FullArmor> GetItemByConcentration(int concentration)
-        {
-            var items = _context.FullArmors.Where(i => i.Concentration == concentration);
-            return items;
 
+
+
+        public FullArmor GetFullArmorById(int fullArmorId)
+        {
+            var fullArmor = _context.FullArmors.FirstOrDefault(i => i.Id == fullArmorId);
+            return fullArmor;
         }
 
 
-        public FullArmor GetItemById(int itemId)
+        public IQueryable<FullArmor> GetFullArmorByLvl(int fullArmorLvl)
         {
-            var item = _context.FullArmors.FirstOrDefault(i => i.Id == itemId);
-            return item;
-        }
-
-
-        public IQueryable<FullArmor> GetItemByLvl(int itemLvl)
-        {
-            var items = _context.FullArmors.Where(i => i.ItemLvl == itemLvl);
-            return items;
+            var fullArmors = _context.FullArmors.Where(i => i.ItemLvl == fullArmorLvl);
+            return fullArmors;
         }
       
 
-        public IQueryable<FullArmor> GetAllActiveItems(bool isActive)
+        public IQueryable<FullArmor> GetAllActiveFullArmors(bool isActive)
         {
-            var items = _context.FullArmors.Where(i => i.IsActive == isActive);
-            return items;
+            var fullArmors = _context.FullArmors.Where(i => i.IsActive == isActive);
+            return fullArmors;
         }
 
 

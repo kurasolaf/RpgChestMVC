@@ -14,18 +14,18 @@ namespace RpgChestMVC.Infrastructure
     {
 
         
-        //public DbSet<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
+      
         public DbSet<FullArmor> FullArmors { get; set; }    
-        //public DbSet<FullWeapon> FullWeapons { get; set; }
-
+       
+public DbSet<TypeOfArmor> TypeOfArmors { get; set; }
 
         public DbSet<PlayerBackpack> PlayerBackpacks { get; set; }
 
         public DbSet<Resistance> Resistances { get; set; }
-       
+         //public DbSet<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
         //public DbSet<TypeOfWeapon> TypeOfWeapons { get; set; }
-        public DbSet<TypeOfArmor> TypeOfArmors { get; set; }
-
+        
+ //public DbSet<FullWeapon> FullWeapons { get; set; }
         //public DbSet<Dmg> Dmgs { get; set; }
 
         //public DbSet<BonusDmg> BonusDmgs { get; set; }
