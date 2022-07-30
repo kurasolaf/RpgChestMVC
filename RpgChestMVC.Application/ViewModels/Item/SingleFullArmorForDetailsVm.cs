@@ -39,7 +39,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
         public string Resistance { get; set; }
 
-
+        // to do: Backpack,TypeofArmor and Resistance  to mapping
         public void Mapping(Profile profile)
         {
 
@@ -53,5 +53,5 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
 
 
-    }
+    
 }

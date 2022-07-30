@@ -17,7 +17,6 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
         public bool IsActive { get; set; }
 
-
         public void Mapping(Profile profile)
         {
 

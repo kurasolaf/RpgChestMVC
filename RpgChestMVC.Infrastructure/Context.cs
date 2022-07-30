@@ -17,7 +17,7 @@ namespace RpgChestMVC.Infrastructure
       
         public DbSet<FullArmor> FullArmors { get; set; }    
        
-public DbSet<TypeOfArmor> TypeOfArmors { get; set; }
+        public DbSet<TypeOfArmor> TypeOfArmors { get; set; }
 
         public DbSet<PlayerBackpack> PlayerBackpacks { get; set; }
 
