@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Controllers
 {
-    public class ItemController : Controller
+    public class FullArmorController : Controller
     {
 
         private readonly IFullArmorService _itService;
 
-        public ItemController(IFullArmorService itService)
+        public FullArmorController(IFullArmorService itService)
         {
             _itService = itService;
         }
@@ -28,21 +28,21 @@ namespace RpgChestMVC.web.Controllers
             //// SERWIS: przygotowuje dane
             //// SERWIS: zwraca dane do controlera w odpowiednim formacie
             
-            var model = _itService.GetAllItemsForList(isActive);
+            var model = _itService.GetAllFullArmorsForList(isActive);
             return View(model);
         }
-       
-
-
-
-
+  
 
         [HttpGet]
-        public IActionResult AddItem()
+        public IActionResult AddFullArmor()
         {
             return View();
         }
 
+
+
+
+        //tutaj zaimplementować losowanie
         //[HttpPost]
         //public IActionResult AddItem(ItemModel model)
         //{
@@ -51,10 +51,10 @@ namespace RpgChestMVC.web.Controllers
         //
         //}
 
-        [HttpGet("view/{itemId}")]
-        public IActionResult ViewItem(int itemId)
+        [HttpGet("viewArmor/{fullArmorId}")]
+        public IActionResult ViewFullArmor(int fullArmorId)
         {
-            var itemModel = _itService.GetItemDetails(itemId);
+            var itemModel = _itService.GetFullArmorDetails(fullArmorId);
                 return View(itemModel);
                 //return view(itemModel);
         }

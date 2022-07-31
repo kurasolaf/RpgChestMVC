@@ -14,11 +14,12 @@ namespace RpgChestMVC.Application.Interfaces
         List<int> GetAllFullArmors();
         
         
-        //ListofFullArmorsVm GetAllItemsForList(bool isActive);
+       ListofFullArmorsVm GetAllFullArmorsForList(bool isActive);
 
-        ////int AddItem(NewItemVm item);
+        // odpowiada za losowanie
+        ////int AddFullArmor(NewItemVm fullArmor);
 
-        //SingleFullArmorForDetailsVm GetItemDetails(int itemId);
+        SingleFullArmorForDetailsVm GetFullArmorDetails(int FullArmorId);
 
 
 
