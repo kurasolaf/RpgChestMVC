@@ -37,7 +37,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
 
 
-        public string Resistance { get; set; }
+        public List<ResistanceForListVm> Resistances { get; set; }
 
         // to do: Backpack,TypeofArmor and Resistance  to mapping
         public void Mapping(Profile profile)
