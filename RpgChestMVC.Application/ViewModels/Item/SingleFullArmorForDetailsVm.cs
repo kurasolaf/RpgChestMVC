@@ -31,11 +31,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
  // // // // // // BELOW more complex properties // // // // // //
         public string PlayerBackpack { get; set; }
 
-
-
         public string TypeOfArmor { get; set; }
-
-
 
         public List<ResistanceForListVm> Resistances { get; set; }
 
