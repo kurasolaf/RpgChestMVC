@@ -15,6 +15,14 @@ namespace RpgChestMVC.Application.Services
             return new List<int>();
         }
 
+        public ListofFullArmorsVm GetAllFullArmorsForList(bool isActive)
+        {
+            throw new NotImplementedException();
+        }
 
+        public SingleFullArmorForDetailsVm GetFullArmorDetails(int FullArmorId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
