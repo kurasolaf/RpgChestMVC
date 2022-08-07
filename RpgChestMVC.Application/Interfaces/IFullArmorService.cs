@@ -21,7 +21,7 @@ namespace RpgChestMVC.Application.Interfaces
 
         SingleFullArmorForDetailsVm GetFullArmorDetails(int FullArmorId);
 
-
+        int AddNewFullArmor(NewSingleFullArmorWm fullArmor);
 
 
 
