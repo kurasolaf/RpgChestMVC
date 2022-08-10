@@ -25,4 +25,8 @@
     <ProjectReference Include="..\RpgChestMVC.Infrastructure\RpgChestMVC.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Item\" />
+  </ItemGroup>
+
 </Project>

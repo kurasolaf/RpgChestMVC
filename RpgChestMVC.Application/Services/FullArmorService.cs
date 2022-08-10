@@ -38,12 +38,14 @@ namespace RpgChestMVC.Application.Services
             {
                 var fAmor = new SingleFullArmorForListVm();
                 {
+                    
                     Id = fullArmor.Id;
                     ItemLvl = fullArmor.ItemLvl;
                     Concentration = fullArmor.Concentration;
                     NumberOfSockets = fullArmor.NumberOfSockets;
                     Rarity = fullArmor.Rarity;
                     TypeOfArmor = fullArmor.TypeOfArmor;
+                    
 
                 }
                 result.FullArmors.Add(fAmor);
@@ -58,6 +60,7 @@ namespace RpgChestMVC.Application.Services
         {
             var fullArmor = _fullArmorRepository.GetFullArmorById(fullArmorId);
             var singleFullArmorVm = new SingleFullArmorForDetailsVm();
+
             singleFullArmorVm.Id = fullArmor.Id;
             singleFullArmorVm.Kp = fullArmor.Kp;
             singleFullArmorVm.ItemLvl = fullArmor.ItemLvl;
@@ -65,6 +68,8 @@ namespace RpgChestMVC.Application.Services
             singleFullArmorVm.NumberOfSockets = fullArmor.NumberOfSockets;
             singleFullArmorVm.Rarity = fullArmor.Rarity;
             singleFullArmorVm.PlayerBackpack = fullArmor.PlayerBackpack.Name;
+
+            return singleFullArmorVm;
             
         }
     }
