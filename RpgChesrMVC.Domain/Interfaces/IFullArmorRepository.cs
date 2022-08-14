@@ -22,7 +22,9 @@ namespace RpgChestMVC.Domain.Interfaces
 
 
         IQueryable<FullArmor> GetAllActiveFullArmors(bool isActive = true);
-        
+
+      
+
         /*
 * Add GetItemByTypeOfArmor method
 * Add GetItemByTypeOfWeapon method
