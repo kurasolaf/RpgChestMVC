@@ -23,8 +23,8 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<RpgChestMVC.Domain.Model.FullArmor, SingleFullArmorForListVm>();
-
+            profile.CreateMap<RpgChestMVC.Domain.Model.FullArmor, SingleFullArmorForListVm>()
+            .ForMember(d => d.TypeOfArmor, opt => opt.MapFrom(s => s.TypeOfArmor.ArmorTypes));
 
         }
      
