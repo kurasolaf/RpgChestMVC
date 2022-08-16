@@ -18,7 +18,7 @@ namespace RpgChestMVC.Domain.Interfaces
        
         FullArmor GetFullArmorById(int fullArmorId);
         
-        IQueryable<FullArmor> GetFullArmorByLvl(int fullArmorLvl);
+        //IQueryable<FullArmor> GetFullArmorByLvl(int fullArmorLvl);
 
 
         IQueryable<FullArmor> GetAllActiveFullArmors(bool isActive = true);

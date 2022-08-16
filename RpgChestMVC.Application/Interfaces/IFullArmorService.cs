@@ -16,8 +16,7 @@ namespace RpgChestMVC.Application.Interfaces
         
        ListofFullArmorsVm GetAllFullArmorsForList(bool isActive);
 
-        // odpowiada za losowanie
-        ////int AddFullArmor(NewItemVm fullArmor);
+
 
         SingleFullArmorForDetailsVm GetFullArmorDetails(int fullArmorId);
 
