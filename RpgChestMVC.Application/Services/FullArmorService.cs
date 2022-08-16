@@ -46,23 +46,29 @@ namespace RpgChestMVC.Application.Services
 
 
 
-
-
-
-
-
-
         public SingleFullArmorForDetailsVm GetFullArmorDetails(int fullArmorId)
         {
             var fullArmor = _fullArmorRepository.GetFullArmorById(fullArmorId);
 
             var fullArmorVm = _mapper.Map<SingleFullArmorForDetailsVm>(fullArmor);
 
+            fullArmorVm.Resistances = new List<ResistanceForListVm>();
+
+            foreach (var resistance in fullArmorVm.Resistances)
+            {
+
+                var add = new ResistanceForListVm()
+                {
+                    Id = resistance.Id,
+                    Resistances = resistance.Resistances,
+                    ValueR = resistance.ValueR
+
+
+                };
+                fullArmorVm.Resistances.Add(add);
+            }
             return fullArmorVm;
-
-
-            
-            
+      
         }
     }
 }
