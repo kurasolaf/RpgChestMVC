@@ -18,6 +18,17 @@ namespace RpgChestMVC.Application.Services
 
         private readonly IMapper _mapper;
 
+
+        public FullArmorService(IFullArmorRepository fullArmorRepository, IMapper mapper)
+        {
+            _fullArmorRepository = fullArmorRepository;
+            _mapper = mapper;
+
+
+        }
+
+
+
         public int AddNewFullArmor(NewSingleFullArmorWm fullArmor)
         {
             throw new NotImplementedException();

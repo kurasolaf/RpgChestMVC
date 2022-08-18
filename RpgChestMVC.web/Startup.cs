@@ -47,7 +47,7 @@ namespace RpgChestMVC.web
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            services.AddTransient<IFullArmorService, FullArmorService>();
+            
             
             /*
             // used only for debuggin purposes
