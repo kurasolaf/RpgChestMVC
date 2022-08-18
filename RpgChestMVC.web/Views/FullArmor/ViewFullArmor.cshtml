@@ -1,0 +1,120 @@
+﻿@model RpgChestMVC.Application.ViewModels.Item.SingleFullArmorForDetailsVm
+
+@{
+    ViewData["Title"] = "ViewFullArmor";
+}
+
+<h1>ViewFullArmor</h1>
+
+<div>
+    <h4>Szczegóły wybraneg przedmiotu</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            ID
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            KP
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kp)
+        </dd>
+        <dt class = "col-sm-2">
+            HP
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Hp)
+        </dd>
+        <dt class = "col-sm-2">
+            Resistance For All
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ResistanceForAll)
+        </dd>
+        <dt class = "col-sm-2">
+            Physical Absorption
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhysicalAbsorption)
+        </dd>
+        <dt class = "col-sm-2">
+            Magical Absorption
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MagicalAbsorption)
+        </dd>
+        <dt class = "col-sm-2">
+            Physical Reduction
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhysicalReduction)
+        </dd>
+        <dt class = "col-sm-2">
+            Magical Reduction
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MagicalReduction)
+        </dd>
+        <dt class = "col-sm-2">
+            HpPerLvl
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HpPerLvl)
+        </dd>
+        <dt class = "col-sm-2">
+            Daily Regen For 4 Turns
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DailyRegenerationFor4Turns)
+        </dd>
+        <dt class = "col-sm-2">
+            ItemLvl
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ItemLvl)
+        </dd>
+        <dt class = "col-sm-2">
+            Concentration
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Concentration)
+        </dd>
+        <dt class = "col-sm-2">
+            NumberOfSockets
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumberOfSockets)
+        </dd>
+        <dt class = "col-sm-2">
+            IsActive
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+        <dt class = "col-sm-2">
+            Rarity
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rarity)
+        </dd>
+        <dt class = "col-sm-2">
+            PlayerBackpack
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PlayerBackpack)
+        </dd>
+        <dt class = "col-sm-2">
+            TypeOfArmor
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TypeOfArmor)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.Id }) |
+    <a asp-action="Index">Back to List</a>
+</div>
