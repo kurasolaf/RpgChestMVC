@@ -51,12 +51,6 @@ namespace RpgChestMVC.Infrastructure
                 .WithMany(o => o.FullArmors)
                 .HasForeignKey(c => c.PlayerBackpackId);
 
-
-            builder.Entity<Resistance>()
-                .HasOne<FullArmor>(c => c.FullArmor)
-                .WithMany(o => o.Resistances)
-                .HasForeignKey(c => c.FullArmorId);
-
             builder.Entity<FullArmor>()
                 .HasOne<TypeOfArmor>(c => c.TypeOfArmor)
                 .WithMany(o => o.FullArmors)
