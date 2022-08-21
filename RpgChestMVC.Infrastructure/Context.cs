@@ -46,23 +46,24 @@ namespace RpgChestMVC.Infrastructure
 
             // below connection one to many
 
-            builder.Entity<FullArmor>()
-                .HasOne<PlayerBackpack>(c => c.PlayerBackpack)
-                .WithMany(o => o.FullArmors)
+            var fullArmors = builder.Entity<FullArmor>();
+                fullArmors.HasKey(k => k.Id);
+                fullArmors.HasOne<PlayerBackpack>(m => m.PlayerBackpack).WithMany(m => m.FullArmors)
                 .HasForeignKey(c => c.PlayerBackpackId);
 
-            builder.Entity<FullArmor>()
-                .HasOne<TypeOfArmor>(c => c.TypeOfArmor)
-                .WithMany(o => o.FullArmors)
-                .HasForeignKey(c => c.TypeOfArmorId);
-
+            var fulArmors = builder.Entity<FullArmor>();    
+                fulArmors.HasKey(k => k.Id);
+                fullArmors.HasOne<TypeOfArmor>(m => m.TypeOfArmor).WithMany(m => m.FullArmors)
+                .HasForeignKey(c =>c.TypeOfArmorId);
 
             // below connection one to many
 
+            var resistances = builder.Entity<Resistance>();
+                resistances.HasKey(k => k.Id);
+                resistances.HasOne<FullArmor>(m => m.FullArmor).WithMany(m => m.Resistances)
+                .HasForeignKey(c => c.FullArmorId);
 
-            builder.Entity<Resistance>()
-                .HasOne<FullArmor>(a => a.FullArmor).WithMany(b => b.Resistances)
-                .HasForeignKey(e => e.FullArmorId);
+
 
 
             //builder.Entity<Item>()
