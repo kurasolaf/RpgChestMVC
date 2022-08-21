@@ -15,19 +15,19 @@ namespace RpgChestMVC.Application.Services
     {
 
         private readonly IFullArmorRepository _fullArmorRepository;
+        private readonly ISingleItemRepository _singleItemRepository;
 
         private readonly IMapper _mapper;
+        
 
-
-        public FullArmorService(IFullArmorRepository fullArmorRepository, IMapper mapper)
+        public FullArmorService(IFullArmorRepository fullArmorRepository, ISingleItemRepository singleItemRepository, IMapper mapper)
         {
             _fullArmorRepository = fullArmorRepository;
+            _singleItemRepository = singleItemRepository;
             _mapper = mapper;
-
+            
 
         }
-
-
 
         public int AddNewFullArmor(NewSingleFullArmorWm fullArmor)
         {
@@ -38,8 +38,6 @@ namespace RpgChestMVC.Application.Services
         {
             return new List<int>();
         }
-
-
 
         public ListofFullArmorsVm GetAllFullArmorsForList(bool isActive)
         {
@@ -52,10 +50,7 @@ namespace RpgChestMVC.Application.Services
                 Count = fullArmors.Count
             };
             return fullArmorList;
-      
         }
-
-
 
         public SingleFullArmorForDetailsVm GetFullArmorDetails(int fullArmorId)
         {
@@ -73,8 +68,6 @@ namespace RpgChestMVC.Application.Services
                     Id = resistance.Id,
                     Resistances = resistance.Resistances,
                     ValueR = resistance.ValueR
-
-
                 };
                 fullArmorVm.Resistances.Add(add);
             }
