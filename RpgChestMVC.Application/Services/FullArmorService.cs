@@ -39,14 +39,18 @@ namespace RpgChestMVC.Application.Services
             return new List<int>();
         }
 
-        public ListofFullArmorsVm GetAllFullArmorsForList(bool isActive)
+        public ListofFullArmorsVm GetAllFullArmorsForList(int pageSize, int pageNumber, string searchString,bool isActive)
         {
-            var fullArmors = _fullArmorRepository.GetAllActiveFullArmors()
-                .ProjectTo<SingleFullArmorForListVm>(_mapper.ConfigurationProvider)
-                .ToList();
+            var fullArmors = _fullArmorRepository.GetAllActiveFullArmors().Where(p => p.TypeOfArmor.ArmorTypes.StartsWith(searchString))
+                .ProjectTo<SingleFullArmorForListVm>(_mapper.ConfigurationProvider).ToList();
+
+            var fullArmosToShow = fullArmors.Skip(pageSize * (pageNumber - 1)).Take(pageSize).ToList();
             var fullArmorList = new ListofFullArmorsVm()
             {
-                FullArmors = fullArmors,
+                PageSize = pageSize,
+                CurrentPage = pageNumber,
+                SearchString = searchString,
+                FullArmors = fullArmosToShow,
                 Count = fullArmors.Count
             };
             return fullArmorList;

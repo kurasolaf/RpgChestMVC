@@ -18,9 +18,9 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(bool isActive = true)
         {
-            bool isActive = true;
+            
             // Utworzyć widok dla akcj
             // Utworzyć Tabele z przedmiotami
             // Utworzyć panel do filtrowania
@@ -29,14 +29,14 @@ namespace RpgChestMVC.web.Controllers
             //// SERWIS: przygotowuje dane
             //// SERWIS: zwraca dane do controlera w odpowiednim formacie
 
-            var model = _itService.GetAllFullArmorsForList(isActive);
+            var model = _itService.GetAllFullArmorsForList(2,1,"",isActive);
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult Index(int pageSize, int pageNumber,string searchString )
+        public IActionResult Index(int pageSize, int pageNumber,string searchString, bool isActive = true )
         {
-            bool isActive = true;
+            
             // Utworzyć widok dla akcj
             // Utworzyć Tabele z przedmiotami
             // Utworzyć panel do filtrowania
@@ -45,7 +45,7 @@ namespace RpgChestMVC.web.Controllers
             //// SERWIS: przygotowuje dane
             //// SERWIS: zwraca dane do controlera w odpowiednim formacie
 
-            var model = _itService.GetAllFullArmorsForList(isActive);
+            var model = _itService.GetAllFullArmorsForList(pageSize,pageNumber,searchString,isActive);
             return View(model);
         }
 

@@ -14,7 +14,7 @@ namespace RpgChestMVC.Application.Interfaces
         List<int> GetAllFullArmors();
         
         
-       ListofFullArmorsVm GetAllFullArmorsForList(bool isActive);
+       ListofFullArmorsVm GetAllFullArmorsForList(int pageSize, int pageNumber, string searchString,bool isActive);
 
 
 

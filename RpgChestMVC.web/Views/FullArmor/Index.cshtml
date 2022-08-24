@@ -9,27 +9,34 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
+<form asp-action="Index" asp-controller="FullArmor method="post"></form>
+
+    <div class="row">
+        <input type="text" asp-for="SearchString" name="searchString"
+    </div>
+
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+              <th>
                 ID
-            </th>
-             <th>
+             </th>
+                 <th>
                 Typ of Armor
-            </th>
-             <th>
+             </th>
+                 <th>
                 LVL
-            </th>
-             <th>
+             </th>
+                 <th>
                 Rarity
-            </th>
-             <th>
+             </th>
+                 <th>
                 Number Of Sockets
-            </th>
-             <th>
+             </th>
+                 <th>
                 Concentration
-            </th>
+             </th>
 
             <th></th>
         </tr>
@@ -62,6 +69,19 @@
                 @Html.ActionLink("Delete", "Delete", new {  id=armor.Id  })
             </td>
         </tr>
+        
 }
-    </tbody>
+</div>
+<div class="row">
+        <table>
+            <tr>
+            @for (int i = 1; i < Math.Ceiling(Model.Count / (double)Model.PageSize); i++) ;
+            </tr>
+
+        </table>
+
+
+
+</div>
+</tbody>
 </table>
