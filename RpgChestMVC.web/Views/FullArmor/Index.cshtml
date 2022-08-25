@@ -12,7 +12,8 @@
 <form asp-action="Index" asp-controller="FullArmor method="post"></form>
 
     <div class="row">
-        <input type="text" asp-for="SearchString" name="searchString"
+        <input type="text" asp-for="SearchString" name="searchString"/>
+        <input type="submit" value="Wyszukaj" />
     </div>
 
 <div class="row">
@@ -92,7 +93,8 @@
             </tr>
 
         </table>
-
+        <input type="hidden" name="pageNo" id="pageNo" />
+        <input type="hidden" name="pageSize" value="2"/>
 
 </div>
 </tbody>
@@ -102,7 +104,8 @@
     <script type="text/javascript">
             function PagerClick(index)
             {
-
+                document.getElementById("pageNo").value = index;
+                document.forms[0].submit();
 
             }
     

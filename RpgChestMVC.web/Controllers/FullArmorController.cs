@@ -34,9 +34,9 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(int pageSize, int pageNumber,string searchString, bool isActive = true )
+        public IActionResult Index(int pageSize, int? pageNo,string searchString, bool isActive = true )
         {
-            
+
             // Utworzyć widok dla akcj
             // Utworzyć Tabele z przedmiotami
             // Utworzyć panel do filtrowania
@@ -44,8 +44,16 @@ namespace RpgChestMVC.web.Controllers
             //// przekazanie filtrów do serwisu
             //// SERWIS: przygotowuje dane
             //// SERWIS: zwraca dane do controlera w odpowiednim formacie
+            if (!pageNo.HasValue)
+            {
+                pageNo = 1;
+            }
+            if (searchString is null)
+            {
+                searchString = String.Empty;
+            }
 
-            var model = _itService.GetAllFullArmorsForList(pageSize,pageNumber,searchString,isActive);
+            var model = _itService.GetAllFullArmorsForList(pageSize, (int)pageNo,searchString,isActive);
             return View(model);
         }
 
