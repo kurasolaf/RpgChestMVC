@@ -75,13 +75,36 @@
 <div class="row">
         <table>
             <tr>
-            @for (int i = 1; i < Math.Ceiling(Model.Count / (double)Model.PageSize); i++) ;
+            @for (int i = 1; i < Math.Ceiling(Model.Count / (double)Model.PageSize); i++)
+            {
+                <td>
+                    @if (i !=Model.CurrentPage)
+                   {
+                        <a href="javascript:PagerClick(@i)">@i</a>
+
+                    }
+                    else
+                    {
+                       <span>@i</span> 
+                    }
+                </td>
+            }
             </tr>
 
         </table>
 
 
-
 </div>
 </tbody>
 </table>
+@section Scripts
+{
+    <script type="text/javascript">
+            function PagerClick(index)
+            {
+
+
+            }
+    
+    </script>
+}
