@@ -41,39 +41,45 @@
 
             <th></th>
         </tr>
-    </thead>
-    <tbody>
-@foreach (var armor in Model.FullArmors) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => armor.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => armor.TypeOfArmor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => armor.ItemLvl)
-            </td>
-             <td>
-                @Html.DisplayFor(modelItem => armor.Rarity)
-            </td>
-             <td>
-                @Html.DisplayFor(modelItem => armor.NumberOfSockets)
-            </td>
-             <td>
-                @Html.DisplayFor(modelItem => armor.Concentration)
-            </td>
+        </thead>
+    
 
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=armor.Id  }) |
-                @Html.ActionLink("Details", "Details", new {  id=armor.Id  }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=armor.Id  })
-            </td>
-        </tr>
-        
-}
-</div>
-<div class="row">
+        <tbody>
+             @foreach (var armor in Model.FullArmors) 
+             {
+                 <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => armor.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => armor.TypeOfArmor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => armor.ItemLvl)
+                    </td>
+                    <td>
+                     @Html.DisplayFor(modelItem => armor.Rarity)
+                    </td>
+                     <td>
+                        @Html.DisplayFor(modelItem => armor.NumberOfSockets)
+                    </td>
+                    <td>
+                     @Html.DisplayFor(modelItem => armor.Concentration)
+                    </td>
+
+                    <td>
+                    @Html.ActionLink("Edit", "Edit", new {  id=armor.Id  }) |
+                    @Html.ActionLink("Details", "Details", new {  id=armor.Id  }) |
+                    @Html.ActionLink("Delete", "Delete", new {  id=armor.Id  })
+                    </td>
+                 </tr>
+     
+             }
+        </table>
+    
+
+    </div>
+    <div class="row">
         <table>
             <tr>
             @for (int i = 1; i < Math.Ceiling(Model.Count / (double)Model.PageSize); i++)
@@ -96,9 +102,12 @@
         <input type="hidden" name="pageNo" id="pageNo" />
         <input type="hidden" name="pageSize" value="2"/>
 
-</div>
-</tbody>
-</table>
+
+
+    </div>
+ 
+
+
 @section Scripts
 {
     <script type="text/javascript">
