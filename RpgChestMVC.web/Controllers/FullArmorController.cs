@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RpgChestMVC.Application.Interfaces;
+using RpgChestMVC.Application.ViewModels.Item;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,6 +62,8 @@ namespace RpgChestMVC.web.Controllers
         [HttpGet]
         public IActionResult AddNewFullArmor()
         {
+
+
             return View(new NewSingleFullArmorWm());
         }
 
