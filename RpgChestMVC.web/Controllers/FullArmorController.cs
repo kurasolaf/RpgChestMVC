@@ -59,22 +59,22 @@ namespace RpgChestMVC.web.Controllers
 
 
         [HttpGet]
-        public IActionResult AddFullArmor()
+        public IActionResult AddNewFullArmor()
         {
-            return View();
+            return View(new NewSingleFullArmorWm());
         }
 
 
-
-
         //tutaj zaimplementować losowanie
-        //[HttpPost]
-        //public IActionResult AddItem(ItemModel model)
-        //{
-        //    var id = _itService.AddItem(model);
-        //    return View();
-        //
-        //}
+        [HttpPost]
+
+
+        public IActionResult AddNewFullArmor(NewSingleFullArmorWm model)
+        {
+            var id = _itService.AddNewFullArmor(model);
+            return View();
+
+        }
 
         [HttpGet("viewArmor/{fullArmorId}")]
         public IActionResult ViewFullArmor(int fullArmorId)
