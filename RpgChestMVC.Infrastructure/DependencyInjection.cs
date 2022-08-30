@@ -14,6 +14,7 @@ namespace RpgChestMVC.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
             services.AddTransient<IFullArmorRepository, FullArmorRepository>();
+            services.AddTransient<ISingleItemRepository, SingleItemRepository>();
             return services;
         }
 
