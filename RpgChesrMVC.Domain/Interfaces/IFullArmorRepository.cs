@@ -23,6 +23,9 @@ namespace RpgChestMVC.Domain.Interfaces
 
         IQueryable<FullArmor> GetAllActiveFullArmors(bool isActive = true);
 
+
+        int AddNewFullArmor(FullArmor fullArmor);
+
       
 
         /*

@@ -29,19 +29,17 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
 
         // // // // // // BELOW more complex properties // // // // // //
-        public string PlayerBackpack { get; set; }
+        public  PlayerBackpackVm PlayerBackpack { get; set; }
 
-        public string TypeOfArmor { get; set; }
+        public  TypeOfArmorVm TypeOfArmor { get; set; }
 
         public List<ResistanceForListVm> Resistances { get; set; }
 
         public void Mapping(Profile profile)
         {
 
-            profile.CreateMap<RpgChestMVC.Domain.Model.FullArmor, NewSingleFullArmorWm>()
-                .ForMember(s => s.TypeOfArmor, opt => opt.MapFrom(d => d.TypeOfArmor.ArmorTypes))
-                .ForMember(s => s.PlayerBackpack, opt => opt.MapFrom(d => d.PlayerBackpack.Name))
-                .ForMember(s => s.Resistances, opt => opt.Ignore());
+            profile.CreateMap<NewSingleFullArmorWm, RpgChestMVC.Domain.Model.FullArmor>()
+                .ForMember(d => d.Resistances, opt => opt.Ignore());
 
 
         }

@@ -3,6 +3,7 @@ using AutoMapper.QueryableExtensions;
 using RpgChestMVC.Application.Interfaces;
 using RpgChestMVC.Application.ViewModels.Item;
 using RpgChestMVC.Domain.Interfaces;
+using RpgChestMVC.Domain.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,9 @@ namespace RpgChestMVC.Application.Services
 
         public int AddNewFullArmor(NewSingleFullArmorWm fullArmor)
         {
-            throw new NotImplementedException();
+            var fllArm = _mapper.Map<FullArmor>(fullArmor);
+            var id = _fullArmorRepository.AddFullArmor(fllArm);
+            return id;
         }
 
         public List<int> GetAllFullArmors()

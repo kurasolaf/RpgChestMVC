@@ -56,6 +56,11 @@ namespace RpgChestMVC.Infrastructure.Repositories
             return fullArmors;
         }
 
-
+        public int AddNewFullArmor(FullArmor fullArmor)
+        {
+            _context.FullArmors.Add(fullArmor);
+            _context.SaveChanges();
+            return fullArmor.Id;
+        }
     }
 }
