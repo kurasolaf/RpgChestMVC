@@ -44,11 +44,7 @@ namespace RpgChestMVC.Infrastructure.Repositories
             var fullArmor = _context.FullArmors.FirstOrDefault(i => i.Id == fullArmorId);
             return fullArmor;
         }
-        //public IQueryable<FullArmor> GetFullArmorByLvl(int fullArmorLvl)
-        //{
-        //    var fullArmors = _context.FullArmors.Where(i => i.ItemLvl == fullArmorLvl);
-        //    return fullArmors;
-        //}
+
 
         public IQueryable<FullArmor> GetAllActiveFullArmors(bool isActive)
         {
