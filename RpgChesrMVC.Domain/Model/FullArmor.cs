@@ -22,7 +22,7 @@ namespace RpgChestMVC.Domain.Model
         public int DailyRegenerationFor4Turns { get; set; } // Range 1-50
 
         public int PlayerBackpackId { get; set; } 
-        public virtual PlayerBackpack PlayerBackpack { get; set; }
+        public virtual PlayerBackpack? PlayerBackpack { get; set; }
         //connection many to one/ context -done
 
 
