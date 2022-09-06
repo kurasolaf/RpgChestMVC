@@ -26,10 +26,11 @@ namespace RpgChestMVC.Domain.Model
         //connection many to one/ context -done
 
 
-        public int TypeOfArmorId { get; set; }
-        public virtual TypeOfArmor TypeOfArmor { get; set; }
-        //Connection many to one/context -done
+        //public int TypeOfArmorId { get; set; }
+        //public virtual TypeOfArmor TypeOfArmor { get; set; }
+        ////Connection many to one/context -done
 
+        public string ArmorType { get; set; }
 
         public virtual ICollection<Resistance> Resistances { get; set; } //// Range 5-50 - per 5%
         //connection one to many/context -done
