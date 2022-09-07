@@ -14,8 +14,8 @@ namespace RpgChestMVC.Domain.Model
         public string ArmorTypes { get; set; }
 
         
-        public virtual ICollection<FullArmor> FullArmors { get; set; }
-        //connection one to many/context -done
+        //public virtual ICollection<FullArmor> FullArmors { get; set; }
+        ////connection one to many/context -done
 
 
     }
