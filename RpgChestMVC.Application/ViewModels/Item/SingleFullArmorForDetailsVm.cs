@@ -40,7 +40,6 @@ namespace RpgChestMVC.Application.ViewModels.Item
         {
 
             profile.CreateMap<RpgChestMVC.Domain.Model.FullArmor, SingleFullArmorForDetailsVm>()
-                .ForMember(d => d.TypeOfArmor, opt => opt.MapFrom(s => s.TypeOfArmor.ArmorTypes))
                 .ForMember(d => d.PlayerBackpack, opt => opt.MapFrom(s => s.PlayerBackpack.Name))
                 .ForMember(d => d.Resistances, opt => opt.Ignore());
 
