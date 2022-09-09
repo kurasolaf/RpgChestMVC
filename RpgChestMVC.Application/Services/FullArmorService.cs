@@ -37,6 +37,12 @@ namespace RpgChestMVC.Application.Services
             return id;
         }
 
+        public void DeleteFullArmor(int fullArmorId)
+        {
+            var obj = _fullArmorRepository.
+            
+        }
+
         public List<int> GetAllFullArmors()
         {
             return new List<int>();

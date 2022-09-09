@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace RpgChestMVC.web.Controllers
 {
+    [Route("FullArmor")]
     public class FullArmorController : Controller
     {
 
@@ -47,7 +48,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("add")]
         public IActionResult AddNewFullArmor()
         {
 
@@ -70,6 +71,12 @@ namespace RpgChestMVC.web.Controllers
             var itemModel = _itService.GetFullArmorDetails(fullArmorId);
                 return View(itemModel);
                 //return view(itemModel);
+        }
+
+        [HttpGet]
+        public IActionResult DeleteFullArmor(int fullArmorId)
+        {
+            var mod = _itService
         }
   
     }

@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Add">Create New</a>
 </p>
 <form asp-action="Index" asp-controller="FullArmor method="post"></form>
 
@@ -69,7 +69,7 @@
 
                     <td>
                     @Html.ActionLink("Edit", "Edit", new {  id=armor.Id  }) |
-                    @Html.ActionLink("Details", "Details", new {  id=armor.Id  }) |
+                    @Html.ActionLink("Details", "viewArmor", new {  id=armor.Id  }) |
                     @Html.ActionLink("Delete", "Delete", new {  id=armor.Id  })
                     </td>
                  </tr>

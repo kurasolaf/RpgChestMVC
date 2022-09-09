@@ -23,7 +23,7 @@ namespace RpgChestMVC.Application.Interfaces
         int AddNewFullArmor(NewSingleFullArmorWm fullArmor);
 
 
-
+        void DeleteFullArmor(int fullArmorId);
 
 
 
