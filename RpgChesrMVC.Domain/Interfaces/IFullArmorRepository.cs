@@ -13,6 +13,8 @@ namespace RpgChestMVC.Domain.Interfaces
         
         void DeleteFullArmor(int fullArmorId);
 
+        int EditFullArmor(FullArmor fullArmor);
+
         int AddFullArmor(FullArmor fullArmor);
         
        

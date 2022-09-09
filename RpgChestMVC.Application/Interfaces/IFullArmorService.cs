@@ -14,7 +14,7 @@ namespace RpgChestMVC.Application.Interfaces
         List<int> GetAllFullArmors();
         
         
-       ListofFullArmorsVm GetAllFullArmorsForList(int pageSize, int pageNo, string searchString,bool isActive);
+        ListofFullArmorsVm GetAllFullArmorsForList(int pageSize, int pageNo, string searchString,bool isActive);
 
 
 
@@ -25,6 +25,8 @@ namespace RpgChestMVC.Application.Interfaces
 
         void DeleteFullArmor(int fullArmorId);
 
+
+        SingleFullArmorForDetailsVm EditFullArmor(int fullArmorId);
 
 
 

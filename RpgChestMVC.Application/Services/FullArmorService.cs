@@ -39,8 +39,14 @@ namespace RpgChestMVC.Application.Services
 
         public void DeleteFullArmor(int fullArmorId)
         {
-            var obj = _fullArmorRepository.
+            _fullArmorRepository.DeleteFullArmor(fullArmorId);
             
+        }
+
+        public SingleFullArmorForDetailsVm EditFullArmor(int fullArmorId)
+        {
+
+
         }
 
         public List<int> GetAllFullArmors()

@@ -48,7 +48,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
 
-        [HttpGet("add")]
+        [HttpGet("Add")]
         public IActionResult AddNewFullArmor()
         {
 
@@ -73,11 +73,29 @@ namespace RpgChestMVC.web.Controllers
                 //return view(itemModel);
         }
 
-        [HttpGet]
+        [HttpGet("Delete/{fullArmorid}")]
         public IActionResult DeleteFullArmor(int fullArmorId)
         {
-            var mod = _itService
+            _itService.DeleteFullArmor(fullArmorId);
+            return RedirectToAction("Index");
         }
-  
+
+        [HttpGet]
+        public IActionResult EditFullArmor(int fullArmorId)
+        {
+
+
+        }
+
+        [HttpPut]
+        public IActionResult EditFullArmor(int fullArmorId)
+        {
+
+
+        }
+
+
+
+
     }
 }
