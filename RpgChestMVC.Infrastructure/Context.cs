@@ -52,6 +52,7 @@ namespace RpgChestMVC.Infrastructure
                 fullArmors.HasKey(k => k.Id);
                 fullArmors.HasOne<PlayerBackpack>(m => m.PlayerBackpack).WithMany(m => m.FullArmors)
                 .HasForeignKey(c => c.PlayerBackpackId);
+                
 
             //var fulArmors = builder.Entity<FullArmor>();    
             //    fulArmors.HasKey(k => k.Id);
@@ -64,6 +65,7 @@ namespace RpgChestMVC.Infrastructure
                 resistances.HasKey(k => k.Id);
                 resistances.HasOne<FullArmor>(m => m.FullArmor).WithMany(m => m.Resistances)
                 .HasForeignKey(c => c.FullArmorId);
+                
 
 
 
