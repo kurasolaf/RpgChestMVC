@@ -44,7 +44,7 @@ namespace RpgChestMVC.Application.Services
 
         public ListofFullArmorsVm GetAllFullArmorsForList(int pageSize, int pageNo, string searchString,bool isActive)
         {
-            var fullArmors = _fullArmorRepository.GetAllActiveFullArmors().Where(p => p.TypeOfArmor.ArmorTypes.StartsWith(searchString))
+            var fullArmors = _fullArmorRepository.GetAllActiveFullArmors().Where(p => p.ArmorType.StartsWith(searchString))
                 .ProjectTo<SingleFullArmorForListVm>(_mapper.ConfigurationProvider).ToList();
 
             var fullArmosToShow = fullArmors.Skip(pageSize * (pageNo - 1)).Take(pageSize).ToList();

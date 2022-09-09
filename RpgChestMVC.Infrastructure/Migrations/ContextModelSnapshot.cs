@@ -226,6 +226,9 @@ namespace RpgChestMVC.Infrastructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("ArmorType")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Concentration")
                         .HasColumnType("int");
 
@@ -271,14 +274,9 @@ namespace RpgChestMVC.Infrastructure.Migrations
                     b.Property<int>("ResistanceForAll")
                         .HasColumnType("int");
 
-                    b.Property<int>("TypeOfArmorId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("PlayerBackpackId");
-
-                    b.HasIndex("TypeOfArmorId");
 
                     b.ToTable("FullArmors");
                 });
@@ -318,22 +316,7 @@ namespace RpgChestMVC.Infrastructure.Migrations
 
                     b.HasIndex("FullArmorId");
 
-                    b.ToTable("Resistances");
-                });
-
-            modelBuilder.Entity("RpgChestMVC.Domain.Model.TypeOfArmor", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ArmorTypes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TypeOfArmors");
+                    b.ToTable("Resistance");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -395,15 +378,7 @@ namespace RpgChestMVC.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("RpgChestMVC.Domain.Model.TypeOfArmor", "TypeOfArmor")
-                        .WithMany("FullArmors")
-                        .HasForeignKey("TypeOfArmorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("PlayerBackpack");
-
-                    b.Navigation("TypeOfArmor");
                 });
 
             modelBuilder.Entity("RpgChestMVC.Domain.Model.Resistance", b =>
@@ -423,11 +398,6 @@ namespace RpgChestMVC.Infrastructure.Migrations
                 });
 
             modelBuilder.Entity("RpgChestMVC.Domain.Model.PlayerBackpack", b =>
-                {
-                    b.Navigation("FullArmors");
-                });
-
-            modelBuilder.Entity("RpgChestMVC.Domain.Model.TypeOfArmor", b =>
                 {
                     b.Navigation("FullArmors");
                 });

@@ -31,7 +31,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
  // // // // // // BELOW more complex properties // // // // // //
         public string PlayerBackpack { get; set; }
 
-        public string TypeOfArmor { get; set; }
+        public string ArmorType { get; set; }
 
         public List<ResistanceForListVm> Resistances { get; set; }
 
@@ -42,6 +42,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
             profile.CreateMap<RpgChestMVC.Domain.Model.FullArmor, SingleFullArmorForDetailsVm>()
                 .ForMember(d => d.PlayerBackpack, opt => opt.MapFrom(s => s.PlayerBackpack.Name))
                 .ForMember(d => d.Resistances, opt => opt.Ignore());
+
 
         }
     }

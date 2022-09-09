@@ -18,13 +18,14 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public bool IsActive { get; set; }
         public string Rarity { get; set; }
 
-        public string TypeOfArmor { get; set; }
+        public string ArmorType { get; set; }
 
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<RpgChestMVC.Domain.Model.FullArmor, SingleFullArmorForListVm>()
-            
+            profile.CreateMap<RpgChestMVC.Domain.Model.FullArmor, SingleFullArmorForListVm>();
+
+
 
         }
      
