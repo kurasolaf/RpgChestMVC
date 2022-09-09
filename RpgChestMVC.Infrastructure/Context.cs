@@ -24,9 +24,6 @@ namespace RpgChestMVC.Infrastructure
         //public DbSet<Resistance> Resistances { get; set; }
 
 
-
-
-
          //public DbSet<BonusDmgFromElemental> BonusDmgFromElementals { get; set; }
         //public DbSet<TypeOfWeapon> TypeOfWeapons { get; set; }
         
@@ -56,10 +53,10 @@ namespace RpgChestMVC.Infrastructure
                 fullArmors.HasOne<PlayerBackpack>(m => m.PlayerBackpack).WithMany(m => m.FullArmors)
                 .HasForeignKey(c => c.PlayerBackpackId);
 
-            var fulArmors = builder.Entity<FullArmor>();    
-                fulArmors.HasKey(k => k.Id);
-                fullArmors.HasOne<TypeOfArmor>(m => m.TypeOfArmor).WithMany(m => m.FullArmors)
-                .HasForeignKey(c =>c.TypeOfArmorId);
+            //var fulArmors = builder.Entity<FullArmor>();    
+            //    fulArmors.HasKey(k => k.Id);
+            //    fullArmors.HasOne<TypeOfArmor>(m => m.TypeOfArmor).WithMany(m => m.FullArmors)
+            //    .HasForeignKey(c =>c.TypeOfArmorId);
 
             // below connection one to many
 
