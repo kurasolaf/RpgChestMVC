@@ -45,7 +45,7 @@ namespace RpgChestMVC.Application.Services
 
         public SingleFullArmorForDetailsVm EditFullArmor(int fullArmorId)
         {
-
+            throw new NotImplementedException();
 
         }
 
