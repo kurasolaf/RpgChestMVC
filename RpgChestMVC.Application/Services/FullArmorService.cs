@@ -45,7 +45,9 @@ namespace RpgChestMVC.Application.Services
 
         public SingleFullArmorForDetailsVm EditFullArmor(int fullArmorId)
         {
-            throw new NotImplementedException();
+            var fllArm = _fullArmorRepository.GetFullArmorById(fullArmorId);
+            var fullArmorvm = _mapper.Map<SingleFullArmorForDetailsVm>(fllArm);
+            return fullArmorvm;
 
         }
 

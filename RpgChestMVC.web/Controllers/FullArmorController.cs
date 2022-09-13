@@ -89,14 +89,17 @@ namespace RpgChestMVC.web.Controllers
 
         }
 
-        [HttpPost("Edit/{fullArmorId}")]
-        public IActionResult SaveEditFullArmor(int fullArmorId)
-        {
-            var itemModel = _itService.GetFullArmorDetails(fullArmorId);
+        //[HttpPost("Edit/{fullArmorId}")]
+        //public IActionResult EditFullArmor(int fullArmorId)
+        //{
+        //    var itemModel = _itService.GetFullArmorDetails(fullArmorId);
             
-            //add saving editionreturn RedirectToAction("Index");
 
-        }
+        //    //
+        //    //
+        //    //add saving editionreturn RedirectToAction("Index");
+        //    //
+        //}
 
     }
 }
