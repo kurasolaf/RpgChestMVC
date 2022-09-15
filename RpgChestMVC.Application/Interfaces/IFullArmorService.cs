@@ -27,8 +27,6 @@ namespace RpgChestMVC.Application.Interfaces
 
 
         SingleFullArmorForDetailsVm EditFullArmor(int fullArmorId);
-
-
-
+        void UpdateFullArmor(EditSingleFullArmorVm model);
     }
 }

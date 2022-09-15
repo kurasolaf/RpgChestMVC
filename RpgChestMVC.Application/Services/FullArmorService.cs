@@ -95,5 +95,13 @@ namespace RpgChestMVC.Application.Services
             return fullArmorVm;
       
         }
+
+        public void UpdateFullArmor(EditSingleFullArmorVm model)
+        {
+            var fullArmor = _mapper.Map<SingleFullArmorForDetailsVm>(model);
+            _fullArmorRepository.UpdateFullArmor(fullArmor);
+
+            
+        }
     }
 }

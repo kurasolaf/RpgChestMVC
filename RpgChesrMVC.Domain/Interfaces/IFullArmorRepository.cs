@@ -28,8 +28,9 @@ namespace RpgChestMVC.Domain.Interfaces
 
 
         int AddNewFullArmor(FullArmor fullArmor);
+        void UpdateFullArmor();
 
-      
+
 
         /*
 * Add GetItemByTypeOfArmor method
