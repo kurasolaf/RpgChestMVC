@@ -28,7 +28,7 @@ namespace RpgChestMVC.Domain.Interfaces
 
 
         int AddNewFullArmor(FullArmor fullArmor);
-        void UpdateFullArmor();
+        void UpdateFullArmor(FullArmor fullArmor);
 
 
 

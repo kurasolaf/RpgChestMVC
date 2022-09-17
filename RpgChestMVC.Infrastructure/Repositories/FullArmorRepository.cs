@@ -65,7 +65,7 @@ namespace RpgChestMVC.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public void UpdateFullArmor()
+        public void UpdateFullArmor(FullArmor fullArmor)
         {
             throw new NotImplementedException();
         }
