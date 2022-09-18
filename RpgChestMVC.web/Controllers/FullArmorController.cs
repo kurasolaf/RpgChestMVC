@@ -99,8 +99,6 @@ namespace RpgChestMVC.web.Controllers
             }
             return View(model);
 
-
-            //
             //
             //add saving editionreturn RedirectToAction("Index");
             //
