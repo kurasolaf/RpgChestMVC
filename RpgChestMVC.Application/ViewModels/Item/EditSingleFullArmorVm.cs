@@ -41,7 +41,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
         {
 
             profile.CreateMap<EditSingleFullArmorVm, RpgChestMVC.Domain.Model.FullArmor>()
-                .ForMember(d => d.Resistances, opt => opt.Ignore());
+                .ForMember(d => d.Resistances, opt => opt.Ignore()).ReverseMap;
 
 
         }
