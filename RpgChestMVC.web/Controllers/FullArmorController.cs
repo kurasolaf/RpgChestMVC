@@ -47,14 +47,12 @@ namespace RpgChestMVC.web.Controllers
             return View(model);
         }
 
-
         [HttpGet("Add")]
         public IActionResult AddNewFullArmor()
         {
 
             return View(new NewSingleFullArmorWm());
         }
-
 
         //tutaj zaimplementować losowanie
         [HttpPost]
@@ -86,7 +84,6 @@ namespace RpgChestMVC.web.Controllers
             var itemModel = _itService.GetFullArmorDetails(fullArmorId);
 
             return View(itemModel);
-
         }
 
         [HttpPost("Edit/{fullArmorId}")]
