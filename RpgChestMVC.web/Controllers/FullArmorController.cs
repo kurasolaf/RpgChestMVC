@@ -87,11 +87,11 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpPost("Edit/{fullArmorId}")]
-        public IActionResult EditFullArmor(EditSingleFullArmorVm model)
+        public IActionResult EditFullArmor(EditSingleFullArmorVm model, int fullArmorId)
         {
             if (ModelState.IsValid)
             {
-                _itService.UpdateFullArmor(model);
+                _itService.UpdateFullArmor(model, fullArmorId);
                 return RedirectToAction("Index");
             }
             return View(model);

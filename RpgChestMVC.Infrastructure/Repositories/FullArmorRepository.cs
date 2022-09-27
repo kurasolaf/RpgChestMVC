@@ -60,31 +60,11 @@ namespace RpgChestMVC.Infrastructure.Repositories
         }
 
 
-        int IFullArmorRepository.EditFullArmor(FullArmor fullArmor)
+ 
+        public void UpdateFullArmor(FullArmor fullArmor, int fullArmorId)
         {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateFullArmor(FullArmor fullArmor)
-        {
-            _context.Attach(fullArmor);
-            _context.Entry(fullArmor).Property("Kp").IsModified = true;
-            _context.Entry(fullArmor).Property("Hp").IsModified = true;
-            _context.Entry(fullArmor).Property("ResistanceForAll").IsModified = true;
-            _context.Entry(fullArmor).Property("PhysicalAbsorption").IsModified = true;
-            _context.Entry(fullArmor).Property("MagicalAbsorption").IsModified = true;
-            _context.Entry(fullArmor).Property("PhysicalReduction").IsModified = true;
-            _context.Entry(fullArmor).Property("MagicalReduction").IsModified = true;
-            _context.Entry(fullArmor).Property("HpPerLvl").IsModified = true;
-            _context.Entry(fullArmor).Property("DailyRegenerationFor4Turns").IsModified = true;
-            _context.Entry(fullArmor).Property("PlayerBackpack").IsModified = true;
-            _context.Entry(fullArmor).Property("ArmorType").IsModified = true;
-            _context.Entry(fullArmor).Property("Resistances").IsModified = true;
-            _context.Entry(fullArmor).Property("ItemLvl").IsModified = true;
-            _context.Entry(fullArmor).Property("Concentration").IsModified = true;
-            _context.Entry(fullArmor).Property("NumberOfSockets").IsModified = true;
-            _context.Entry(fullArmor).Property("IsActive").IsModified = true;
-            _context.Entry(fullArmor).Property("Rarity").IsModified = true;
+            var forEditfullArmor = _context.FullArmors.FirstOrDefault(i => i.Id == fullArmorId);
+            _context.Entry(forEditfullArmor).CurrentValues.SetValues(fullArmor);
             _context.SaveChanges();
         }
     }

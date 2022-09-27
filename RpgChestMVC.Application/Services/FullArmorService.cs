@@ -96,10 +96,10 @@ namespace RpgChestMVC.Application.Services
       
         }
 
-        public void UpdateFullArmor(EditSingleFullArmorVm model)
+        public void UpdateFullArmor(EditSingleFullArmorVm model, int fullArmorId)
         {
-            var fullArmor = _mapper.Map<SingleFullArmorForDetailsVm>(model);
-            _fullArmorRepository.UpdateFullArmor(model);
+            var fullArmor = _mapper.Map<FullArmor>(model);
+            _fullArmorRepository.UpdateFullArmor(fullArmor, fullArmorId);
   
         }
     }
