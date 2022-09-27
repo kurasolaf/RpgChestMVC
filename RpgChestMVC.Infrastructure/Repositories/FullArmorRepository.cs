@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Sources;
+using Microsoft.EntityFrameworkCore;
 using RpgChestMVC.Domain.Interfaces;
 using RpgChestMVC.Domain.Model;
 
@@ -41,7 +42,7 @@ namespace RpgChestMVC.Infrastructure.Repositories
         }
         public FullArmor GetFullArmorById(int fullArmorId)
         {
-            var fullArmor = _context.FullArmors.FirstOrDefault(i => i.Id == fullArmorId);
+            var fullArmor = _context.FullArmors.Include(x => x.PlayerBackpack).FirstOrDefault(i => i.Id == fullArmorId);
             return fullArmor;
         }
 
