@@ -68,5 +68,7 @@ namespace RpgChestMVC.Infrastructure.Repositories
             _context.Entry(forEditfullArmor).CurrentValues.SetValues(fullArmor);
             _context.SaveChanges();
         }
+
+
     }
 }

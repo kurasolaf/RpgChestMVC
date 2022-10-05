@@ -82,7 +82,8 @@ namespace RpgChestMVC.web.Controllers
         public IActionResult EditFullArmor(int fullArmorId)
         {
             var itemModel = _itService.GetFullArmorDetails(fullArmorId);
-
+            //var listOfBackpacks = _itService.GetPlayerBackpacks(playerBackpacks);
+                
             return View(itemModel);
         }
 

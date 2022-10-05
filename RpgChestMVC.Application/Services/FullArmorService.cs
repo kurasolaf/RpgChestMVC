@@ -96,6 +96,8 @@ namespace RpgChestMVC.Application.Services
       
         }
 
+
+
         public void UpdateFullArmor(EditSingleFullArmorVm model, int fullArmorId)
         {
             var fullArmor = _mapper.Map<FullArmor>(model);
