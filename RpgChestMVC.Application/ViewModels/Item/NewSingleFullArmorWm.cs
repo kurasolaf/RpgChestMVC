@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using RpgChestMVC.Application.Mapping;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
         // // // // // // BELOW more complex properties // // // // // //
 
 
-        public  string ArmorType { get; set; }
+        public string ArmorType { get; set; }
 
         public List<ResistanceForListVm> Resistances { get; set; }
 
@@ -43,6 +44,8 @@ namespace RpgChestMVC.Application.ViewModels.Item
 
 
         }
+
+
 
     }
 }

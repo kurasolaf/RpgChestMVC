@@ -18,6 +18,10 @@ using RpgChestMVC.Application.Services;
 using RpgChestMVC.Domain.Interfaces;
 using RpgChestMVC.Infrastructure.Repositories;
 using RpgChestMVC.Application;
+using FluentValidation.AspNetCore;
+using FluentValidation;
+using RpgChestMVC.Application.ViewModels.Item;
+using static RpgChestMVC.Application.ViewModels.Item.NewSingleFullArmorWm;
 
 namespace RpgChestMVC.web
 {
@@ -44,7 +48,7 @@ namespace RpgChestMVC.web
             services.AddApplication();
             services.AddInfrastructure();
 
-            services.AddControllersWithViews();
+            
             services.AddRazorPages();
 
             
