@@ -54,12 +54,17 @@ namespace RpgChestMVC.web.Controllers
             return View(new NewSingleFullArmorWm());
         }
 
-        //tutaj zaimplementować losowanie
+        //tutaj zaimplementować odesłanie do losowania
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult AddNewFullArmor(NewSingleFullArmorWm model)
         {
-            var id = _itService.AddNewFullArmor(model);
-            return View();
+            if (ModelState.IsValid)
+            {
+                var id = _itService.AddNewFullArmor(model);
+                return RedirectToAction("index");
+            }
+            return View(model);
 
         }
 

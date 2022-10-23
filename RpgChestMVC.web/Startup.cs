@@ -48,7 +48,7 @@ namespace RpgChestMVC.web
             services.AddApplication();
             services.AddInfrastructure();
 
-            
+            services.AddControllersWithViews();
             services.AddRazorPages();
 
             
