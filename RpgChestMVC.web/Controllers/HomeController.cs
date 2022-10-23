@@ -24,6 +24,7 @@ namespace RpgChestMVC.web.Controllers
 
         public IActionResult Index()
         {
+            
             _fullArmorService.GetAllFullArmors();
             return View();
         }

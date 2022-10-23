@@ -35,5 +35,9 @@ namespace RpgChestMVC.web
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+       
+
+
     }
 }

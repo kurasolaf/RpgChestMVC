@@ -22,6 +22,8 @@ using FluentValidation.AspNetCore;
 using FluentValidation;
 using RpgChestMVC.Application.ViewModels.Item;
 using static RpgChestMVC.Application.ViewModels.Item.NewSingleFullArmorWm;
+using Castle.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 namespace RpgChestMVC.web
 {
@@ -66,7 +68,10 @@ namespace RpgChestMVC.web
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+
         {
+            
+         
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
