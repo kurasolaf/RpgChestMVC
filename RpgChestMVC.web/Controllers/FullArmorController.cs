@@ -55,7 +55,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
         //tutaj zaimplementować odesłanie do losowania
-        [HttpPost]
+        [HttpPost("Add")]
         [ValidateAntiForgeryToken]
         public IActionResult AddNewFullArmor(NewSingleFullArmorWm model)
         {
@@ -68,7 +68,7 @@ namespace RpgChestMVC.web.Controllers
 
         }
 
-        [HttpGet("viewArmor/{fullArmorId}")]
+        [HttpGet("ViewArmor/{fullArmorId}")]
         public IActionResult ViewFullArmor(int fullArmorId)
         {
             var itemModel = _itService.GetFullArmorDetails(fullArmorId);

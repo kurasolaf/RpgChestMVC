@@ -4,9 +4,7 @@ using RpgChestMVC.Application.Mapping;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RpgChestMVC.Application.ViewModels.Item
 {
@@ -29,7 +27,7 @@ namespace RpgChestMVC.Application.ViewModels.Item
         public int MagicalReduction { get; set; }
         [Range(0, 25)]
         public int HpPerLvl { get; set; }
-        [Range(0, 4)]
+        [Range(0, 50)]
         public int DailyRegenerationFor4Turns { get; set; }
         [Range(0, 100)]
         public int ItemLvl { get; set; }

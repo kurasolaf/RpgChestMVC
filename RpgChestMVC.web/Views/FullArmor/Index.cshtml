@@ -9,7 +9,7 @@
 <p>
     <a asp-action="Add">Create New</a>
 </p>
-<form asp-action="Index" asp-controller="FullArmor method="post"></form>
+<form asp-action="Index" asp-controller="FullArmor" method="post">
 
     <div class="row">
         <input type="text" asp-for="SearchString" name="searchString"/>
@@ -66,7 +66,6 @@
                     <td>
                      @Html.DisplayFor(modelItem => armor.Concentration)
                     </td>
-
                     <td>
                     @Html.ActionLink("Edit", "Edit", new {  id=armor.Id  }) |
                     @Html.ActionLink("Details", "viewArmor", new {  id=armor.Id  }) |
@@ -75,14 +74,19 @@
                  </tr>
      
              }
-        </table>
+    </table>
     
+
+
+
+
+
 
     </div>
     <div class="row">
         <table>
             <tr>
-            @for (int i = 1; i < Math.Ceiling(Model.Count / (double)Model.PageSize); i++)
+            @for (int i = 1; i <= Math.Ceiling(Model.Count / (double)Model.PageSize); i++)
             {
                 <td>
                     @if (i !=Model.CurrentPage)
@@ -99,13 +103,15 @@
             </tr>
 
         </table>
-        <input type="hidden" name="pageNo" id="pageNo" />
+
+        <input type="hidden" name="pageNo" id="pageNo"/>
         <input type="hidden" name="pageSize" value="2"/>
 
 
 
     </div>
- 
+
+</form>
 
 
 @section Scripts
