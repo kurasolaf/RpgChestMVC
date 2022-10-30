@@ -24,13 +24,14 @@ namespace RpgChestMVC.web.Controllers
 
         public IActionResult Index()
         {
-            
+            _logger.LogInformation("Im in Home/Index");
             _fullArmorService.GetAllFullArmors();
             return View();
         }
 
         public IActionResult Privacy()
         {
+            _logger.LogInformation("Im in Home/Privacy");
             return View();
         }
 

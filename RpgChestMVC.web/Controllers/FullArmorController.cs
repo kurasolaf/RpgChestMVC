@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using RpgChestMVC.Application.Interfaces;
 using RpgChestMVC.Application.ViewModels.Item;
 using System;
@@ -11,20 +12,21 @@ namespace RpgChestMVC.web.Controllers
     [Route("FullArmor")]
     public class FullArmorController : Controller
     {
-
+        private readonly ILogger _logger;
         private readonly IFullArmorService _itService;
 
-        public FullArmorController(IFullArmorService itService)
+        public FullArmorController(IFullArmorService itService, ILogger<FullArmorController> logger)
         {
+            _logger = logger;
             _itService = itService;
         }
 
         [HttpGet]
         public IActionResult Index(bool isActive = true)
         {
-            
 
 
+            _logger.LogInformation("Im in FullArmorController/Index - Get");
             var model = _itService.GetAllFullArmorsForList(2,1,"",isActive);
             return View(model);
         }
@@ -33,7 +35,7 @@ namespace RpgChestMVC.web.Controllers
         public IActionResult Index(int pageSize, int? pageNo, string searchString, bool isActive = true )
         {
 
-
+            _logger.LogInformation("Im in FullArmorController/Index - Post");
             if (!pageNo.HasValue)
             {
                 pageNo = 1;
@@ -50,7 +52,7 @@ namespace RpgChestMVC.web.Controllers
         [HttpGet("Add")]
         public IActionResult AddNewFullArmor()
         {
-
+            _logger.LogInformation("Im in FullArmorController/AddNewFullArmor - Get");
             return View(new NewSingleFullArmorWm());
         }
 
@@ -59,8 +61,10 @@ namespace RpgChestMVC.web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddNewFullArmor(NewSingleFullArmorWm model)
         {
+            _logger.LogInformation("Im in FullArmorController/AddNewFullArmor - Post");
             if (ModelState.IsValid)
             {
+            _logger.LogInformation("Im in FullArmorController/AddNewFullArmor - Post - ModelState.IsValid");
                 var id = _itService.AddNewFullArmor(model);
                 return RedirectToAction("index");
             }
@@ -71,6 +75,7 @@ namespace RpgChestMVC.web.Controllers
         [HttpGet("ViewArmor/{fullArmorId}")]
         public IActionResult ViewFullArmor(int fullArmorId)
         {
+            _logger.LogInformation("Im in FullArmorController/ViewFullArmor - Get");
             var itemModel = _itService.GetFullArmorDetails(fullArmorId);
                 return View(itemModel);
                 //return view(itemModel);
@@ -79,6 +84,7 @@ namespace RpgChestMVC.web.Controllers
         [HttpGet("Delete/{fullArmorid}")]
         public IActionResult DeleteFullArmor(int fullArmorId)
         {
+            _logger.LogInformation("Im in FullArmorController/FeleteFullArmor - Get");
             _itService.DeleteFullArmor(fullArmorId);
             return RedirectToAction("Index");
         }
@@ -86,6 +92,7 @@ namespace RpgChestMVC.web.Controllers
         [HttpGet("Edit/{fullArmorId}")]
         public IActionResult EditFullArmor(int fullArmorId)
         {
+            _logger.LogInformation("Im in FullArmorController/EditFullArmor - Get");
             var itemModel = _itService.GetFullArmorDetails(fullArmorId);
             //var listOfBackpacks = _itService.GetPlayerBackpacks(playerBackpacks);
                 
@@ -97,6 +104,7 @@ namespace RpgChestMVC.web.Controllers
         {
             if (ModelState.IsValid)
             {
+                _logger.LogInformation("Im in FullArmorController/EditFullArmor - Post");
                 _itService.UpdateFullArmor(model, fullArmorId);
                 return RedirectToAction("Index");
             }
