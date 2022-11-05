@@ -53,7 +53,18 @@ namespace RpgChestMVC.web
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 8;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireLowercase = true;   
+                options.Password.RequiredUniqueChars = 1;
+                
+                options.SignIn.RequireConfirmedPhoneNumber = false;
+                options.SignIn.RequireConfirmedEmail = false;
+                options.SignIn.RequireConfirmedAccount = false;
+            }); 
             
             /*
             // used only for debuggin purposes
