@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RpgChestMVC.Application.Interfaces;
 using RpgChestMVC.Application.ViewModels.Item;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 namespace RpgChestMVC.web.Controllers
 {
     [Route("FullArmor")]
+    
     public class FullArmorController : Controller
     {
         private readonly ILogger _logger;
@@ -50,6 +52,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpGet("Add")]
+        [Authorize]
         public IActionResult AddNewFullArmor()
         {
             _logger.LogInformation("Im in FullArmorController/AddNewFullArmor - Get");
@@ -59,6 +62,7 @@ namespace RpgChestMVC.web.Controllers
         //tutaj zaimplementować odesłanie do losowania
         [HttpPost("Add")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public IActionResult AddNewFullArmor(NewSingleFullArmorWm model)
         {
             _logger.LogInformation("Im in FullArmorController/AddNewFullArmor - Post");
@@ -82,6 +86,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpGet("Delete/{fullArmorid}")]
+        [Authorize]
         public IActionResult DeleteFullArmor(int fullArmorId)
         {
             _logger.LogInformation("Im in FullArmorController/FeleteFullArmor - Get");
@@ -90,6 +95,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpGet("Edit/{fullArmorId}")]
+        [Authorize]
         public IActionResult EditFullArmor(int fullArmorId)
         {
             _logger.LogInformation("Im in FullArmorController/EditFullArmor - Get");
@@ -100,6 +106,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpPost("Edit/{fullArmorId}")]
+        [Authorize]
         public IActionResult EditFullArmor(EditSingleFullArmorVm model, int fullArmorId)
         {
             if (ModelState.IsValid)
