@@ -82,8 +82,6 @@ namespace RpgChestMVC.web
                     policy.RequireRole("Admin");
                 });
 
-
-
             });
 
         }
