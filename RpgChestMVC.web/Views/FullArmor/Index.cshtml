@@ -70,9 +70,9 @@
                     </td>
                     <td>
 
-                            @if (User.IsInRole("Admin"))    {@Html.ActionLink("Edit", "Edit", new {  id=armor.Id  })}
+                            @if (User.IsInRole("Admin"))    {@Html.ActionLink("Edit", "Edit", new {  id=armor.Id  })} |
 
-                             @Html.ActionLink("Details", "viewArmor", new {  id=armor.Id  }) 
+                             @Html.ActionLink("Details", "viewArmor", new {  id=armor.Id  }) |
 
                             @if (User.IsInRole("Admin"))    { @Html.ActionLink("Delete", "Delete", new { id = armor.Id })}
                         </td>
@@ -110,7 +110,7 @@
         </table>
 
         <input type="hidden" name="pageNo" id="pageNo"/>
-        <input type="hidden" name="pageSize" value="2"/>
+        <input type="hidden" name="pageSize" value="8"/>
 
 
 
