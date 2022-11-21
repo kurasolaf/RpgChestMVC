@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RpgChestMVC.Application.Interfaces;
@@ -52,7 +53,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpGet("Add")]
-        [Authorize]
+        [Authorize(Roles ="Admin")]
         public IActionResult AddNewFullArmor()
         {
             _logger.LogInformation("Im in FullArmorController/AddNewFullArmor - Get");
@@ -62,7 +63,7 @@ namespace RpgChestMVC.web.Controllers
         //tutaj zaimplementować odesłanie do losowania
         [HttpPost("Add")]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        [Authorize (Roles = "Admin")]
         public IActionResult AddNewFullArmor(NewSingleFullArmorWm model)
         {
             _logger.LogInformation("Im in FullArmorController/AddNewFullArmor - Post");
@@ -77,6 +78,8 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpGet("ViewArmor/{fullArmorId}")]
+        [Authorize(Roles = "User")]
+        [Authorize(Roles = "Admin")]
         public IActionResult ViewFullArmor(int fullArmorId)
         {
             _logger.LogInformation("Im in FullArmorController/ViewFullArmor - Get");
@@ -86,7 +89,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpGet("Delete/{fullArmorid}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteFullArmor(int fullArmorId)
         {
             _logger.LogInformation("Im in FullArmorController/FeleteFullArmor - Get");
@@ -95,7 +98,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpGet("Edit/{fullArmorId}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult EditFullArmor(int fullArmorId)
         {
             _logger.LogInformation("Im in FullArmorController/EditFullArmor - Get");
@@ -106,7 +109,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpPost("Edit/{fullArmorId}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult EditFullArmor(EditSingleFullArmorVm model, int fullArmorId)
         {
             if (ModelState.IsValid)

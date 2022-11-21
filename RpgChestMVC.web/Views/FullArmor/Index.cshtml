@@ -5,10 +5,12 @@
 }
 
 <h1>Index</h1>
-
-<p>
-    <a asp-action="Add">Create New</a>
-</p>
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Add">Create New</a>
+    </p>
+}
 <form asp-action="Index" asp-controller="FullArmor" method="post">
 
     <div class="row">
@@ -67,10 +69,13 @@
                      @Html.DisplayFor(modelItem => armor.Concentration)
                     </td>
                     <td>
-                    @Html.ActionLink("Edit", "Edit", new {  id=armor.Id  }) |
-                    @Html.ActionLink("Details", "viewArmor", new {  id=armor.Id  }) |
-                    @Html.ActionLink("Delete", "Delete", new {  id=armor.Id  })
-                    </td>
+
+                            @if (User.IsInRole("Admin"))    {@Html.ActionLink("Edit", "Edit", new {  id=armor.Id  })}
+
+                             @Html.ActionLink("Details", "viewArmor", new {  id=armor.Id  }) 
+
+                            @if (User.IsInRole("Admin"))    { @Html.ActionLink("Delete", "Delete", new { id = armor.Id })}
+                        </td>
                  </tr>
      
              }

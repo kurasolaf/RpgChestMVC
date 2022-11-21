@@ -73,16 +73,7 @@ namespace RpgChestMVC.web
                 options.Conventions.AddPageRoute("/view/7", "");
             });
             */
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("CanEditPlayer", policy =>
-                {
-                    policy.RequireClaim("EditPlayer");
-                    policy.RequireClaim("ShowPlayer");
-                    policy.RequireRole("Admin");
-                });
 
-            });
 
         }
 
