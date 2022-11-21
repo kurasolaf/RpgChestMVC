@@ -30,7 +30,7 @@ namespace RpgChestMVC.web.Controllers
 
 
             _logger.LogInformation("Im in FullArmorController/Index - Get");
-            var model = _itService.GetAllFullArmorsForList(2,1,"",isActive);
+            var model = _itService.GetAllFullArmorsForList(8,1,"",isActive);
             return View(model);
         }
 
