@@ -14,7 +14,7 @@ namespace RpgChestMVC.Domain.Model
         public int NumberOfSockets { get; set; } //Range 1-3
         public bool IsActive { get; set; }
         public string Rarity { get; set; }
-
+        //asdadadawd
 
     }
 }
