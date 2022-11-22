@@ -1,27 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RpgChestMVC.web;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using RpgChestMVC.Infrastructure;
-using RpgChestMVC.Application.Interfaces;
-using RpgChestMVC.Application.Services;
-using RpgChestMVC.Domain.Interfaces;
-using RpgChestMVC.Infrastructure.Repositories;
 using RpgChestMVC.Application;
-using FluentValidation.AspNetCore;
-using FluentValidation;
-using RpgChestMVC.Application.ViewModels.Item;
-using static RpgChestMVC.Application.ViewModels.Item.NewSingleFullArmorWm;
 using Microsoft.Extensions.Logging;
 
 
