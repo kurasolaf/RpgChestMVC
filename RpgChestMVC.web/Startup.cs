@@ -9,6 +9,8 @@ using RpgChestMVC.Infrastructure;
 using RpgChestMVC.Application;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace RpgChestMVC.web
 {
@@ -62,6 +64,8 @@ namespace RpgChestMVC.web
                          ValidateLifetime = true,
                          ValidateIssuerSigningKey = true,
                          ValidIssuer = Configuration["Jwt:Issuer"],
+                         ValidAudience = Configuration["Jwt:Issuer"],
+                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
 
 
 
