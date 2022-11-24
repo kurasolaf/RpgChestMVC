@@ -8,7 +8,7 @@ using Microsoft.Extensions.Hosting;
 using RpgChestMVC.Infrastructure;
 using RpgChestMVC.Application;
 using Microsoft.Extensions.Logging;
-
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace RpgChestMVC.web
 {
@@ -50,6 +50,27 @@ namespace RpgChestMVC.web
                 options.SignIn.RequireConfirmedEmail = false;
                 options.SignIn.RequireConfirmedAccount = false;
             });
+
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                    {
+                         ValidateIssuer = true,
+                         ValidateAudience = true,
+                         ValidateLifetime = true,
+                         ValidateIssuerSigningKey = true,
+                         ValidIssuer = Configuration["Jwt:Issuer"],
+
+
+
+                    };
+
+                  });
+
+
+            
 
             /*
             // used only for debuggin purposes
