@@ -53,7 +53,7 @@ namespace RpgChestMVC.web
                 options.SignIn.RequireConfirmedAccount = false;
             });
 
-
+            /*   FOR TEST and LEARN ONLY
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -73,7 +73,7 @@ namespace RpgChestMVC.web
 
                   });
 
-
+                   */
             
 
             /*
@@ -107,7 +107,8 @@ namespace RpgChestMVC.web
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            // //for JWT Authentication
+           // app.UseAuthentication();
             app.UseRouting();
 
             app.UseAuthentication();

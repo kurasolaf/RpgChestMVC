@@ -78,7 +78,7 @@ namespace RpgChestMVC.web.Controllers
         }
 
         [HttpGet("ViewArmor/{fullArmorId}")]
-        [Authorize(Roles = "Admin, User")]
+        
         public IActionResult ViewFullArmor(int fullArmorId)
         {
             _logger.LogInformation("Im in FullArmorController/ViewFullArmor - Get");
