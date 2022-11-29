@@ -71,7 +71,7 @@ body {
 .footer {
     position: absolute;
     background-color: #5F9EA0;
-    color: black;
+    color: darkred;
     bottom: 0;
     width: 100%;
     white-space: nowrap;
