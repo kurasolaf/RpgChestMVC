@@ -1,3 +1,4 @@
+"Training ground for basic's C# & .Net".
 
 **RPG Chest MVC** project is planned as web environment to be used, as suport for some „Role Playing Game” or „ Play By Forum” with a DnD storyline. 
 In future, it should have:
